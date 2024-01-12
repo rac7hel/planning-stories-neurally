@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE xml>
 <project name="Sabre" default="build">
-	<target name="build" depends="clean,javadoc,jar"/>
+	<target name="build" depends="clean,jar"/>
 	<target name="clean">
 		<delete dir="doc"/>
 		<delete file="lib/sabre.jar"/>
