@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE xml>
+<project name="Sabre" default="build">
+	<target name="build" depends="clean,javadoc,jar"/>
+	<target name="clean">
+		<delete dir="doc"/>
+		<delete file="lib/sabre.jar"/>
+	</target>
+    <target name="javadoc">
+    	<javadoc
+    		doctitle="Sabre Narrative Planner Documentation"
+    		classpath="."
+    		sourcepath="src"
+    		destdir="doc"
+    		packagenames="
+    			edu.uky.cs.nil.sabre,
+    			edu.uky.cs.nil.sabre.util,
+    			edu.uky.cs.nil.sabre.io,
+	    		edu.uky.cs.nil.sabre.logic,
+    			edu.uky.cs.nil.sabre.graph,
+    			edu.uky.cs.nil.sabre.etree,
+    			edu.uky.cs.nil.sabre.comp,
+	    		edu.uky.cs.nil.sabre.search,
+	   			edu.uky.cs.nil.sabre.prog,
+    			edu.uky.cs.nil.sabre.hg
+    		"
+    		access="protected"
+    		source="11"
+    		use="true"
+    		author="true"
+    		version="true"
+    	/>
+    </target>
+	<target name="jar">
+        <jar destfile="lib/sabre.jar">
+        	<fileset dir="src"/>
+        	<fileset dir="bin"/>
+		    <zipgroupfileset dir="lib" includes="
+				jackson-annotations-2.16.1.jar,
+				jackson-core-2.16.1.jar,
+				jackson-databind-2.16.1.jar,
+				lombok.jar,
+				micrometer-commons-1.12.2.jar,
+				micrometer-core-1.12.2.jar,
+				micrometer-observation-1.12.2.jar,
+				reactive-streams-1.0.4.jar,
+				reactor-core-3.6.1.jar,
+				spring-beans-6.1.2.jar,
+				spring-context-6.1.2.jar,
+				spring-core-6.1.2.jar,
+				spring-jcl-6.1.2.jar,
+				spring-web-6.1.2.jar,
+				spring-webflux-6.1.2.jar
+				" />
+            <manifest>
+                <attribute name="Main-Class" value="edu.uky.cs.nil.sabre.Main"/>
+            </manifest>
+        </jar>
+    </target>
+</project>
