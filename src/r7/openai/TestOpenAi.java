@@ -1,8 +1,5 @@
 package r7.openai;
 
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileWriter;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
@@ -33,11 +30,6 @@ public class TestOpenAi {
                     .path("content")
                     .asText();
 	        System.out.println("\n\nResponse: \n" + content);
-			BufferedWriter writer;
-			writer = new BufferedWriter(new FileWriter(new File("davinciResponses.txt"), true));
-    		writer.write("PROMPT: " + prompt);
-    		writer.write("\nRESPONSE: " + response);
-    		writer.close();
 		} catch(Exception e) {
 			e.printStackTrace();
 		}
