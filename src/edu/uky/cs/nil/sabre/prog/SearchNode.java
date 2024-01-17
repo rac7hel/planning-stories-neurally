@@ -18,7 +18,7 @@ import edu.uky.cs.nil.sabre.util.ArrayIterable;
  * search space}
  * @author Stephen
  */
-class SearchNode<N> implements ProgressionNode<N> {
+public class SearchNode<N> implements ProgressionNode<N> {
 
 	/** The search node that is the root for this node */
 	public final SearchRoot<N> root;

@@ -115,4 +115,8 @@ public class ProgressionTreeSpace implements ProgressionSpace<Long> {
 		else
 			return branch;
 	}
+	
+	public ProgressionTree getTree() {
+		return tree;
+	}
 }

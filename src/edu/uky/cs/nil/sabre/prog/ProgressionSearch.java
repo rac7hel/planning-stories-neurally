@@ -390,7 +390,7 @@ public class ProgressionSearch extends Search<CompiledAction> {
 		return temporal < limit || limit == Planner.UNLIMITED_DEPTH;
 	}
 	
-	private final void expand(SearchNode<?> node, EventTree<CompiledAction> actions) {
+	public void expand(SearchNode<?> node, EventTree<CompiledAction> actions) {
 		if(actions == null)
 			return;
 		for(int i=0; i<actions.events.size(); i++) {
