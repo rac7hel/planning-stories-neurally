@@ -27,7 +27,6 @@ import edu.uky.cs.nil.sabre.util.BigArrayLong;
 
 import r7.llmsearch.PromptText;
 import r7.nl.DomainText;
-import r7.openai.OpenAi;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonMappingException;
@@ -339,7 +338,7 @@ public class LLMSearch extends GoalFirstSearch {
 			TimeUnit.SECONDS.sleep(SLEEP_SECONDS); // <-------------- wait for rate limit
 
 			ObjectMapper objectMapper = new ObjectMapper();
-			JsonNode jsonNode = objectMapper.readTree(openAi.getVector(str)
+			JsonNode jsonNode = objectMapper.readTree(openAi.getTextEmbedding(str)
 					.doOnError(error -> System.err.println("Error from LLMSearch embed(): " + error.getMessage()))
 					.block());
 

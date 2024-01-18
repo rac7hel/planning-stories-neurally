@@ -3,8 +3,6 @@ package r7.llmsearch;
 import java.io.*;
 import java.util.HashMap;
 
-import r7.openai.OpenAi;
-
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 

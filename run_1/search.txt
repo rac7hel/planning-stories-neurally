@@ -1,3 +1,1 @@
 0.0: 
-2.0: walk(Tom, Cottage, Crossroads)
-3.0: take(Bandit, BanditCoin, Chest, Camp)

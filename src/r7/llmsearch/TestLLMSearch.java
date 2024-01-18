@@ -30,9 +30,9 @@ public class TestLLMSearch {
 
 	public static void run(Session session) throws Exception{
 		Problem problem = session.getCompiledProblem();
-		//DomainText text = DomainText.get(problem, session.getGoal().value.intValue());
+		DomainText text = DomainText.get(problem, session.getGoal().value.intValue());
 		int run = 1;
-		//System.out.println(text.toString());
+		System.out.println(text.toString());
 		Result<CompiledAction> result = Worker.get(status -> {
 			ProgressionPlanner planner = new ProgressionPlanner();
 			CompiledProblem compiled = planner.compile(problem, status);
