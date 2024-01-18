@@ -1,0 +1,18 @@
+PROMPT:
+The hero is alive. The merchant is alive. The guard is alive. The bandit is alive. The bandit is a criminal. The hero is at the cottage. The merchant is at the market. The guard is at the market. The bandit is at the camp. The merchant has the medicine. The hero has the hero's coin. The bandit's coin is in the chest. The guard has the guard's sword. The bandit has the bandit's sword. The merchant has the merchant's sword. There is a path between the crossroads and the cottage. There is a path between the crossroads and the market. There is a path between the crossroads and the camp. The hero does not know where the bandit is. The merchant does not know where the hero's coin is. The merchant does not know where the bandit's coin is. The guard does not know where the bandit is. The bandit believes that the hero is at the crossroads. The hero wants to bring the medicine to the cottage. The bandit wants to collect valuable items in the chest. The merchant wants coins and is not willing to commit crimes. The guard wants to attack criminals. Characters can walk, buy, loot, attack, rob, report, and take. The story must end with the hero either being attacked or having the medicine at the cottage. List two different actions that could happen first. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+The hero walks to the crossroads.
+The bandit loots the chest.
+
+RANKS:
+
+[PROMPT]... The story begins with the following steps:\n
+The hero walks from the cottage to the crossroads.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+The bandit notices the hero walking from the cottage and decides to follow them to see if they have anything valuable.
+The guard, who is wandering near the crossroads, sees the hero and asks if they have seen any suspicious activity in the area.
+
+RANKS:

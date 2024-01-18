@@ -14,6 +14,8 @@ import edu.uky.cs.nil.sabre.logic.Value;
 import edu.uky.cs.nil.sabre.ptree.ProgressionTreeSpace;
 import edu.uky.cs.nil.sabre.search.Planner;
 import edu.uky.cs.nil.sabre.util.Worker.Status;
+import r7.llmsearch.LLMSearch;
+import r7.nl.DomainText;
 
 /**
  * A progression {@link Planner planner} is a configurable factory object that
@@ -60,6 +62,12 @@ public class ProgressionPlanner extends Planner<CompiledAction> {
 			@Override
 			public String toString() {
 				return "goal-first";
+			}
+		},
+		LLM_UCS {
+			@Override
+			public String toString() {
+				return "llm-ucs";
 			}
 		}
 	}
@@ -248,6 +256,23 @@ public class ProgressionPlanner extends Planner<CompiledAction> {
 				getEpistemicLimit(),
 				getExplanationPruning()
 			);
+			break;
+		case LLM_UCS:
+			try {
+				search = new LLMSearch(
+						compiled,
+						Planner.UNLIMITED_NODES,
+						Planner.UNLIMITED_NODES,
+						Planner.UNLIMITED_TIME,
+						getAuthorTemporalLimit(),
+						getCharacterTemporalLimit(),
+						getEpistemicLimit(),
+						new ProgressionTreeSpace(compiled, status),
+						problem.name);
+			} catch (Exception e) {
+				search = null;
+				e.printStackTrace();				
+			}
 			break;
 		default:
 			search = new ProgressionSearch(

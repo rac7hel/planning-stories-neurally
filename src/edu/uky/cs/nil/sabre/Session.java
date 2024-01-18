@@ -19,6 +19,7 @@ import edu.uky.cs.nil.sabre.search.Planner;
 import edu.uky.cs.nil.sabre.search.Result;
 import edu.uky.cs.nil.sabre.search.Search;
 import edu.uky.cs.nil.sabre.util.Worker.Status;
+import r7.nl.DomainText;
 
 /**
  * A session gathers several important elements together and provides a single

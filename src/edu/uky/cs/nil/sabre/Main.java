@@ -14,6 +14,8 @@ import edu.uky.cs.nil.sabre.search.Result;
 import edu.uky.cs.nil.sabre.search.Search;
 import edu.uky.cs.nil.sabre.util.CommandLineArguments;
 import edu.uky.cs.nil.sabre.util.Worker;
+import r7.llmsearch.*;
+import r7.nl.DomainText;
 import r7.openai.*;
 
 /**
@@ -119,6 +121,8 @@ public class Main {
 	 * goal-first search}
 	 */
 	public static final String GOAL_FIRST_OPTION = "gf";
+	
+	public static final String LLM_OPTION = "llm";
 	
 	/**
 	 * The abbreviation for {@link
@@ -311,7 +315,8 @@ public class Main {
 		(s, v) -> s.setMethod(v),
 		BEST_FIRST_OPTION, Method.BEST_FIRST,
 		EXPLANATION_FIRST_OPTION, Method.EXPLANATION_FIRST,
-		GOAL_FIRST_OPTION, Method.GOAL_FIRST
+		GOAL_FIRST_OPTION, Method.GOAL_FIRST,
+		LLM_OPTION, Method.LLM_UCS
 	);
 	
 	/**
@@ -355,9 +360,6 @@ public class Main {
 				System.out.println(USAGE);
 				return;
 			}
-			if(arguments.contains(LLM_KEY)) {
-				TestOpenAi.main(args);
-			}
 			// Configure session according to command line arguments.
 			Session session = new Session();
 			boolean verbose = arguments.contains(VERBOSE_KEY);
@@ -365,6 +367,10 @@ public class Main {
 				System.out.println(Settings.CREDITS);
 			configure(session, arguments, verbose);
 			arguments.checkUnused();
+			// Hold on
+			if(session.METHOD == "llm-ucs") {
+				
+			}
 			// Run planner.
 			Result<?> result;
 			if(verbose)
@@ -412,6 +418,15 @@ public class Main {
 			session.getCompiledProblem();
 		if(verbose)
 			print("Compiled Problem", session.getCompiledProblem());
+		
+		/*if(arguments.contains(LLM_KEY)) {
+			//TestOpenAi.main(arguments);
+			TestLLMSearch.run(session);
+			
+		} else {
+			
+		}*/
+
 		// Search
 		session.setGoal(arguments.getDouble(GOAL_KEY, session.getGoal().value));
 		session.setSearchLimit(arguments.getLong(SEARCH_LIMIT_KEY, Planner.UNLIMITED_NODES));
@@ -429,7 +444,17 @@ public class Main {
 			if(arguments.contains(HEURISTIC_WEIGHT_KEY))
 				session.setCost(new WeightedCost.Factory(session.getHeuristic(), arguments.getDouble(HEURISTIC_WEIGHT_KEY, 1)));
 			session.setExplanationPruning(arguments.getBoolean(EXPLANATION_PRUNING_KEY, true));
+			if(session.getMethod().toString().equals("llm-ucs")) {
+				if(session.getSearch() instanceof LLMSearch) {
+					LLMSearch llmSearch = ((LLMSearch) session.getSearch());
+					llmSearch.setText(DomainText.get(session.getProblem(), session.getGoal().value.intValue()));
+					llmSearch.setRun(1);
+					llmSearch.setStart(session.getState());
+					llmSearch.setGoal(session.getGoal());
+				}
+			}
 		}
+		
 		if(verbose)
 			Worker.run(s -> session.getSearch(), session.getStatus());
 		else

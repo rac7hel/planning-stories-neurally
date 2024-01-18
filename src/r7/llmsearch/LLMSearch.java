@@ -12,6 +12,7 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.LinkedHashMap;
 import java.util.concurrent.TimeUnit;
+import java.util.function.ToLongFunction;
 
 import edu.uky.cs.nil.sabre.prog.*;
 import edu.uky.cs.nil.sabre.ptree.ProgressionTreeSpace;
@@ -47,7 +48,7 @@ public class LLMSearch extends GoalFirstSearch {
 
 	private final String domain;
 	//private final Problem compiledProblem;
-	private final DomainText text; 
+	private DomainText text; 
 	protected final CostTable cost;
 
 	private String SEARCH_OUT = "search.txt";
@@ -71,9 +72,8 @@ public class LLMSearch extends GoalFirstSearch {
 		int characterTemporalLimit,
 		int epistemicLimit,
 		ProgressionTreeSpace space,
-		String domain,
-		Number goal,
-		DomainText text
+		String domain //,
+		//DomainText text
 	) throws Exception {
 		super(
 			problem,
@@ -90,19 +90,23 @@ public class LLMSearch extends GoalFirstSearch {
 			true
 		);
 		this.cost = (CostTable) super.cost;
-		//this.searchWriter = new BufferedWriter(new FileWriter(new File(SEARCH_OUT)));
-		//this.walkthroughWriter = new BufferedWriter(new FileWriter(new File(WALKTHROUGH_OUT)));
-		//this.solutionWriter = new BufferedWriter(new FileWriter(new File(SOLUTIONS_OUT)));
+		this.searchWriter = new BufferedWriter(new FileWriter(new File(SEARCH_OUT)));
+		this.walkthroughWriter = new BufferedWriter(new FileWriter(new File(WALKTHROUGH_OUT)));
+		this.possibleStoryWriter = new BufferedWriter(new FileWriter(new File(POSSIBLE_STORIES_OUT)));
 		this.domain = domain;
-		this.STRING_EMBEDDINGS_IO = "" + domain + "-string-embeddings.csv";
-		this.EXPLAINED_NODES_IN = "" + domain + "6-explained.txt";
+		//this.text = text;
+		this.STRING_EMBEDDINGS_IO = "embeddings/" + domain + "-string-embeddings.csv";
+		this.EXPLAINED_NODES_IN = "explained/" + domain + "6-explained.txt";
 		//this.compiledProblem = Grounder.compile(problem, new Status());
 		//this.compiledProblem = Grounder.compile((new DefaultParser()).parse(new File(TestGPT.URL), Problem.class), new Status());
-		this.text = text; 
 		this.stringEmbeddings = new LinkedHashMap<>();
 		this.explainedNodes = new HashSet<>();
 		getStringEmbeddings();
 		getExplainedNodes();
+	}
+	
+	public void setText(DomainText text) {
+		this.text = text;
 	}
 	
 	@Override
@@ -113,10 +117,8 @@ public class LLMSearch extends GoalFirstSearch {
 		System.out.println("Expanding node " + node.node + ": " + plan + " (" + node.getCharacter() + ")");
 		counter++;
 		/** Prune all children if this is not an author node **/
-		if(node.getCharacter() != null) {
-			System.out.println("Pruning character node");
+		if(node.getCharacter() != null)
 			return;
-		}
 		/** Write this node **/
 		double cost;
 		if(node.node == node.root) {
@@ -124,7 +126,7 @@ public class LLMSearch extends GoalFirstSearch {
 			cost = 0;
 		} else
 			cost = this.cost.getCost((long)node.node);
-		System.out.println("Cost: " + cost);
+		System.out.println(" Cost: " + cost);
 		try {
 			searchWriter.write(cost + ": " + plan.toString());
 			searchWriter.newLine();
@@ -155,17 +157,11 @@ public class LLMSearch extends GoalFirstSearch {
 				}
 			}
 			if(solution) {
-				System.out.println("Found a solution:\n" + plan);
+				System.out.println("Found a solution:\n" + planStr);
 				System.exit(1); 
 			}
-			System.out.println("Pruning children of ending");
 			return; 
-		} else if(node.getUtility(null).compareTo(this.getGoal()) >= 0) {
-			System.out.println(node.getCharacter() + ": " + plan);
-		    return; 
-		} else {
-			System.out.println("Doesn't achieve goal");
-		}
+		}  
 		
 		// Get the current state.
 		State state = (fluent) -> node.getValue(fluent);
@@ -179,7 +175,7 @@ public class LLMSearch extends GoalFirstSearch {
 		JsonNode jsonNode;
 		ArrayList<double[]> answerEmbeddings = new ArrayList<>();
 
-		/** BRB
+		
 		
 		try {
 			jsonNode = objectMapper.readTree(openAi.completeChat(new String[] {prompt})
@@ -258,8 +254,6 @@ public class LLMSearch extends GoalFirstSearch {
 			rankings.put(a, minRank);
 		}
 		
-		**/ // BRB
-		
 		/*
 		ArrayList<Integer> ranksOrdered = new ArrayList<>(rankings.values());
 		Collections.sort(ranksOrdered);
@@ -289,8 +283,8 @@ public class LLMSearch extends GoalFirstSearch {
 		System.out.println("Setting cost of " + possibleActions.length + " possible actions");
 		for(CompiledAction a : possibleActions) {
 			long child = (long)node.getChild(a).node;
-			//int rank = rankings.get(a); BRB
-			int rank = 1;
+			int rank = rankings.get(a); 
+			//int rank = 1;
 			this.cost.setCost(child, cost + rank);
 			//System.out.println("" + a + " (" + cost + " + " + rank+") " + this.cost.getCost(child));
 		}
@@ -477,9 +471,10 @@ public class LLMSearch extends GoalFirstSearch {
 	}
 
 	public void setRun(int run) {
-		SEARCH_OUT = "" + run + "GPTVectorSearch.txt";
-		WALKTHROUGH_OUT = "" + run + "walkthrough.txt";
-		POSSIBLE_STORIES_OUT = "" + run + "possibleSolutions.txt";
+		new File("run_" + run).mkdirs();
+		SEARCH_OUT = "run_" + run + "/" + SEARCH_OUT;
+		WALKTHROUGH_OUT = "run_" + run + "/" + WALKTHROUGH_OUT;
+		POSSIBLE_STORIES_OUT = "run_" + run + "/" + POSSIBLE_STORIES_OUT;
 		try {
 			this.searchWriter = new BufferedWriter(new FileWriter(new File(SEARCH_OUT)));
 			this.walkthroughWriter = new BufferedWriter(new FileWriter(new File(WALKTHROUGH_OUT)));
