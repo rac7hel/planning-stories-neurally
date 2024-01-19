@@ -29,7 +29,7 @@ public class WriteStringEmbeddings {
 		}
 		embeddingReader.close();
 		/** Find and add new embeddings **/
-		OpenAi openAi = new OpenAi();
+		OpenAI openAi = new OpenAI();
 		BufferedReader suggestionReader = new BufferedReader(new FileReader(new File(DOMAIN + "-node-suggestions.csv")));
 		line = suggestionReader.readLine(); 
 		ObjectMapper objectMapper = new ObjectMapper();

@@ -1,7 +1,7 @@
 package r7.llmsearch;
 
 public class PromptText {
-	
+		
 	/** Using **/
 	public static final String SEQUENCE_BEGINS_WITH = 
 			"The sequence begins with the following steps:\\n";
@@ -10,10 +10,12 @@ public class PromptText {
 			"Predict the next step in the sequence using one of the following options.\\n"; 
 	public static final String WHICH_HAPPENS_FIRST = WHICH_HAPPENS_NEXT.replace("next","first");
 
+	//public static final String TWO_THINGS_NEXT = 
+	        //"List two different actions that could happen next. State each as a short sentence on its own line. ";
+	// Paper version was this ^ but now:
 	public static final String TWO_THINGS_NEXT = 
-			//"Predict the next step in the sequence. Give two different answers, each on its own line. ";
-			//"Suggest the next step in the sequence. List two different options, each as a short sentence on its own line. ";
-	        "List two different actions that could happen next. State each as a short sentence on its own line. ";
+	        "List two different actions that could happen next. State each as a short sentence (e.g. 5-10 words) on its own line. ";
+	
 	public static final String TWO_THINGS_FIRST = TWO_THINGS_NEXT.replace("next", "first");
 	public static final String THREE_THINGS_NEXT = TWO_THINGS_NEXT.replace("two", "three");
 	public static final String THREE_THINGS_FIRST = TWO_THINGS_FIRST.replace("two", "three");

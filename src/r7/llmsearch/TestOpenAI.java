@@ -3,22 +3,22 @@ package r7.llmsearch;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-public class TestOpenAi {
+public class TestOpenAI {
 
 	private static String prompt;
+	private static int maxTokens = 5;
 
 	public static void main(String[] args) throws Exception {
-		OpenAi openAi = new OpenAi();
-		prompt = "Roadeez is a self-driving car startup company. ";
-		prompt += "How can investigators confirm or reject this hypothesis? ";
+		OpenAI openAI = new OpenAI();
+		openAI.setSystemRole(OpenAI.SYSTEM_ROLES[0]);
 
-		String response = openAi.completeChat(new String[] {prompt})
+		prompt = "Just like a boiled potato, I ";
+
+		String response = openAI.completeChat(new String[] {prompt}, maxTokens)
 				.doOnError(error -> System.err.println("Error from completeChat method: " + error.getMessage()))
 				.block();
 		
 		System.out.println("Succeeded");
-
-		// Handle success case
 
 		ObjectMapper objectMapper = new ObjectMapper();
 		try {
@@ -29,12 +29,11 @@ public class TestOpenAi {
                     .path("message")
                     .path("content")
                     .asText();
-	        System.out.println("\n\nResponse: \n" + content);
+	        System.out.println("\n" + prompt + content);
 		} catch(Exception e) {
 			e.printStackTrace();
 		}
 		
 		System.out.println("Finished.");
-		System.exit(0);
 	}
 }

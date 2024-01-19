@@ -39,28 +39,28 @@ public class LLMSearch extends GoalFirstSearch {
 	private static final int MAX_TOKENS = 25; // tokens per text response (need 10-15 per sentence) 25/2, 35/3
 	private static final int SLEEP_SECONDS = 10; // increase when hit rate limit
 	private static final float TEMPERATURE = 0.3f; // 
-	private static final double SCALE_FACTOR = 100.0; // decimal places to preserve from vector similarity values
-	
+	private static final double SCALE_FACTOR = 100.0; // decimal places to preserve from vector similarity values	
 	private static final boolean HANDWRITTEN_INITIAL_STATE = false;
-	
-	private final OpenAi openAi = new OpenAi();
 
+	private static final String OUT_DIR = "out/";
+	private String search_out;
+	private String walkthrough_out;
+	private String explainedNodes_in;
+	private String stringEmbeddings_io; 	
+
+	private final OpenAI openAi = new OpenAI();
 	private final String domain;
-	//private final Problem compiledProblem;
 	private DomainText text; 
 	protected final CostTable cost;
-
-	private String SEARCH_OUT = "search.txt";
-	private String WALKTHROUGH_OUT = "walkthrough.txt";
-	private String POSSIBLE_STORIES_OUT = "possibleStories.txt";
-	private String EXPLAINED_NODES_IN;
-	private String STRING_EMBEDDINGS_IO; 	
 	private BufferedWriter searchWriter; 
 	private BufferedWriter walkthroughWriter;
-	private BufferedWriter possibleStoryWriter;
 	private final HashMap<String, double[]> stringEmbeddings;
 	private final HashSet<String> explainedNodes;
 	private int counter = 0;
+
+	public void setText(DomainText text) {
+		this.text = text;
+	}
 	
 	public LLMSearch(
 		CompiledProblem problem,
@@ -71,8 +71,7 @@ public class LLMSearch extends GoalFirstSearch {
 		int characterTemporalLimit,
 		int epistemicLimit,
 		ProgressionTreeSpace space,
-		String domain //,
-		//DomainText text
+		String domain
 	) throws Exception {
 		super(
 			problem,
@@ -89,23 +88,16 @@ public class LLMSearch extends GoalFirstSearch {
 			true
 		);
 		this.cost = (CostTable) super.cost;
-		this.searchWriter = new BufferedWriter(new FileWriter(new File(SEARCH_OUT)));
-		this.walkthroughWriter = new BufferedWriter(new FileWriter(new File(WALKTHROUGH_OUT)));
-		this.possibleStoryWriter = new BufferedWriter(new FileWriter(new File(POSSIBLE_STORIES_OUT)));
 		this.domain = domain;
-		//this.text = text;
-		this.STRING_EMBEDDINGS_IO = "embeddings/" + domain + "-string-embeddings.csv";
-		this.EXPLAINED_NODES_IN = "explained/" + domain + "6-explained.txt";
-		//this.compiledProblem = Grounder.compile(problem, new Status());
-		//this.compiledProblem = Grounder.compile((new DefaultParser()).parse(new File(TestGPT.URL), Problem.class), new Status());
+		this.stringEmbeddings_io = "embeddings/" + domain + "-string-embeddings.csv";
+		this.explainedNodes_in = "explained/" + domain + "-explained.txt";
 		this.stringEmbeddings = new LinkedHashMap<>();
 		this.explainedNodes = new HashSet<>();
 		getStringEmbeddings();
 		getExplainedNodes();
-	}
-	
-	public void setText(DomainText text) {
-		this.text = text;
+		setRun();
+		this.searchWriter = new BufferedWriter(new FileWriter(new File(search_out)));
+		this.walkthroughWriter = new BufferedWriter(new FileWriter(new File(walkthrough_out)));
 	}
 	
 	@Override
@@ -113,37 +105,24 @@ public class LLMSearch extends GoalFirstSearch {
 		if(counter == MAX_NODES)
 			System.exit(1);
 		HeadPlan<CompiledAction> plan = ((ProgressionTreeSpace)space).getTree().getPlan((long)node.node);
-		System.out.println("Expanding node " + node.node + ": " + plan + " (" + node.getCharacter() + ")");
+		System.out.println("Expanding node " + node.node + ": " + plan + " (" + ((node.getCharacter()==null) ? "author" : node.getCharacter()) + ")");
 		counter++;
-		/** Prune all children if this is not an author node **/
+
+		/** If this is not an author node, prune all its children **/
 		if(node.getCharacter() != null)
-			return;
-		/** Write this node **/
-		double cost;
-		if(node.node == node.root) {
-			this.cost.setCost((long)node.node, 0.0);
-			cost = 0;
-		} else
-			cost = this.cost.getCost((long)node.node);
-		System.out.println(" Cost: " + cost);
+			return; 
+
+		/** Record having visited this node **/
 		try {
-			searchWriter.write(cost + ": " + plan.toString());
+			searchWriter.write(this.cost.getCost((long)node.node) + ": " + plan.toString());
 			searchWriter.newLine();
 			searchWriter.flush();
-		} catch(Exception e) {
-			System.out.println(e);
-		};
+		} catch(Exception e) { e.printStackTrace(); }
 
-		/** All author nodes that improve utility are endings: Do not expand their children. **/
+		/** If it's an author node that improves utility... **/
 		if(node.getCharacter()==null && node.getUtility(null).compareTo(this.getGoal()) >= 0) {
-			try {
-				possibleStoryWriter.write(plan.toString());
-				possibleStoryWriter.newLine();
-				possibleStoryWriter.flush();
-			} catch(Exception e) {
-				System.out.println("Exception trying to write possible solution: " + e);
-			}
-			/** If every step in this plan is explained, then it's a solution **/
+
+			/** Check if it's a solution using pre-computed list of explained nodes **/
 			String planStr = "";
 			boolean solution = true;
 			for(CompiledAction step : plan) {
@@ -159,29 +138,33 @@ public class LLMSearch extends GoalFirstSearch {
 				System.out.println("Found a solution:\n" + planStr);
 				System.exit(1); 
 			}
+			
+			/** It's an ending regardless, so prune its children. **/
 			return; 
 		}  
-		
-		// Get the current state.
-		State state = (fluent) -> node.getValue(fluent);
-		// Get all the actions whose preconditions are satisfied.
-		CompiledAction[] possibleActions = Utilities.toArray(problem.actions.getEvery(state), CompiledAction.class);
-		// Store the action costs.
+
+		/** Store action costs **/
 		HashMap<CompiledAction, Integer> rankings = new HashMap<>();
-		// Ask GPT what to do next.
+
+		/** Describe the current state to GPT and ask what to do next **/
+		State state = (fluent) -> node.getValue(fluent);
+		CompiledAction[] possibleActions = Utilities.toArray(problem.actions.getEvery(state), CompiledAction.class);
 		String prompt = makePrompt((long)node.node);
+
 		ObjectMapper objectMapper = new ObjectMapper();
 		JsonNode jsonNode;
-		ArrayList<double[]> answerEmbeddings = new ArrayList<>();
-
-		
 		
 		try {
-			jsonNode = objectMapper.readTree(openAi.completeChat(new String[] {prompt})
+
+			TimeUnit.SECONDS.sleep(SLEEP_SECONDS); // <-------------- wait for rate limit
+
+			jsonNode = objectMapper.readTree(openAi.completeChat(new String[] {prompt}, MAX_TOKENS)
 					.block());
+			
 			String completionText = jsonNode.path("choices").path(0).path("message").path("content").asText();
 
 			// Embed GPT's suggestions
+			ArrayList<double[]> answerEmbeddings = new ArrayList<>();		
 			String[] answers = completionText.split("\n");
 			
 			for(int i=0; i<answers.length; i++) {
@@ -190,9 +173,28 @@ public class LLMSearch extends GoalFirstSearch {
 					answerEmbeddings.add(embed(answers[i]));
 				}
 			}
+			
+			// Rank the possible next actions by their proximity to the nearest answer embedding 
 
-			TimeUnit.SECONDS.sleep(SLEEP_SECONDS); // <-------------- wait for rate limit
-						
+			for(CompiledAction a : possibleActions) {
+				double[] actionEmbedding = embed(text.action(a));
+				int minRank = Integer.MAX_VALUE;
+				for(int i=0; i<answerEmbeddings.size(); i++) {
+					double similarity = cosineSimilarity(answerEmbeddings.get(i), actionEmbedding); 
+					// ^ similarity is supposed to range from -1 to 1, but sometimes doesn't, so fix rounding errors:
+					if(similarity < -1.0)
+						similarity = -1.0;
+					else if(similarity > 1.0)
+						similarity = 1.0;
+					double scaled = (similarity + 1.0) / 2.0; // scale between 0 and 1
+					double dist = 1.0 - scaled; // convert to distance
+					int rank = (int) Math.round(SCALE_FACTOR * dist); // preserve decimal places when rounding to integer 
+					if(rank < minRank) 
+						minRank = rank;
+				}
+				rankings.put(a, minRank);
+			}
+			
 			if(plan.size() == 0) {
 				walkthroughWriter.write("PROMPT:\n" + prompt);
 				walkthroughWriter.newLine();
@@ -230,28 +232,6 @@ public class LLMSearch extends GoalFirstSearch {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-
-		
-		// Rank the possible next actions by their proximity to the nearest answer embedding 
-
-		for(CompiledAction a : possibleActions) {
-			double[] actionEmbedding = embed(text.action(a));
-			int minRank = Integer.MAX_VALUE;
-			for(int i=0; i<answerEmbeddings.size(); i++) {
-				double similarity = cosineSimilarity(answerEmbeddings.get(i), actionEmbedding); 
-				// ^ similarity is supposed to range from -1 to 1, but sometimes doesn't, so fix rounding errors:
-				if(similarity < -1.0)
-					similarity = -1.0;
-				else if(similarity > 1.0)
-					similarity = 1.0;
-				double scaled = (similarity + 1.0) / 2.0; // scale between 0 and 1
-				double dist = 1.0 - scaled; // convert to distance
-				int rank = (int) Math.round(SCALE_FACTOR * dist); // preserve decimal places when rounding to integer 
-				if(rank < minRank) 
-					minRank = rank;
-			}
-			rankings.put(a, minRank);
-		}
 		
 		/*
 		ArrayList<Integer> ranksOrdered = new ArrayList<>(rankings.values());
@@ -283,20 +263,17 @@ public class LLMSearch extends GoalFirstSearch {
 		for(CompiledAction a : possibleActions) {
 			long child = (long)node.getChild(a).node;
 			int rank = rankings.get(a); 
-			//int rank = 1;
-			this.cost.setCost(child, cost + rank);
-			//System.out.println("" + a + " (" + cost + " + " + rank+") " + this.cost.getCost(child));
+			this.cost.setCost(child, this.cost.getCost((long)node.node) + rank);
 		}
 		
 		// Expand the node as usual.
-		//super.expand(node, actions); // TODO: is this right?
 		for(CompiledAction a : possibleActions)
 			expand(node, a);
 	}
 
 	
 	private void getExplainedNodes() throws IOException{
-		BufferedReader reader = new BufferedReader(new FileReader(new File(EXPLAINED_NODES_IN))); 
+		BufferedReader reader = new BufferedReader(new FileReader(new File(explainedNodes_in))); 
 		String line = reader.readLine();
 		while(line != null) {
 			String[] vals = line.split(";");
@@ -308,11 +285,28 @@ public class LLMSearch extends GoalFirstSearch {
 		reader.close();
 	}
 	
+	private void setRun() {
+		int i=0;
+		File run_dir;
+		do {
+			run_dir = new File(OUT_DIR + "run_" + ++i);						
+		} while (run_dir.exists()); 
+		run_dir.mkdirs();
+		this.search_out = OUT_DIR + "run_" + i + "/" + "search.txt";
+		this.walkthrough_out = OUT_DIR + "run_" + i + "/" + "walkthrough.txt";
+		try {
+			this.searchWriter = new BufferedWriter(new FileWriter(new File(search_out)));
+			this.walkthroughWriter = new BufferedWriter(new FileWriter(new File(walkthrough_out)));
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+	
 	/** 
 	 * Get all previously stored string embeddings from file  
 	 **/
 	private void getStringEmbeddings() throws IOException {
-		BufferedReader reader = new BufferedReader(new FileReader(new File(STRING_EMBEDDINGS_IO)));
+		BufferedReader reader = new BufferedReader(new FileReader(new File(stringEmbeddings_io)));
 		String line = reader.readLine();
 		while(line != null) {
 			String[] vals = line.split(",");
@@ -469,20 +463,6 @@ public class LLMSearch extends GoalFirstSearch {
 		}
 	}
 
-	public void setRun(int run) {
-		new File("run_" + run).mkdirs();
-		SEARCH_OUT = "run_" + run + "/" + SEARCH_OUT;
-		WALKTHROUGH_OUT = "run_" + run + "/" + WALKTHROUGH_OUT;
-		POSSIBLE_STORIES_OUT = "run_" + run + "/" + POSSIBLE_STORIES_OUT;
-		try {
-			this.searchWriter = new BufferedWriter(new FileWriter(new File(SEARCH_OUT)));
-			this.walkthroughWriter = new BufferedWriter(new FileWriter(new File(WALKTHROUGH_OUT)));
-			this.possibleStoryWriter = new BufferedWriter(new FileWriter(new File(POSSIBLE_STORIES_OUT)));
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-	}
-		
 	public static double cosineSimilarity(double[] vectorA, double[] vectorB) {
 	    double dotProduct = 0.0;
 	    double normA = 0.0;

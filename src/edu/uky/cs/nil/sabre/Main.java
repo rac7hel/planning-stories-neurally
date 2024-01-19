@@ -16,7 +16,6 @@ import edu.uky.cs.nil.sabre.util.CommandLineArguments;
 import edu.uky.cs.nil.sabre.util.Worker;
 import r7.llmsearch.*;
 import r7.nl.DomainText;
-import r7.openai.*;
 
 /**
  * Configures a {@link Session session} according to command line arguments,
@@ -26,8 +25,6 @@ import r7.openai.*;
  * @author Stephen G. Ware
  */
 public class Main {
-
-	public static final String LLM_KEY = "-llm";
 	
 	/** The command line key for the usage message */
 	public static final String HELP_KEY = "-help";
@@ -73,7 +70,7 @@ public class Main {
 	 * method}
 	 */
 	public static final String METHOD_KEY = "-m";
-	
+
 	/**
 	 * The command line key for the {@link ProgressionPlanner#getCost() cost
 	 * function}
@@ -191,6 +188,7 @@ public class Main {
 		pad("   " + BEST_FIRST_OPTION) +				"A* best-first (default)\n" +
 		pad("   " + EXPLANATION_FIRST_OPTION) +			"explanation-first: explain actions before achieving the goal\n" +
 		pad("   " + GOAL_FIRST_OPTION) +				"goal-first: achieve the goal before explaining actions\n" +
+		pad("   " + LLM_OPTION) +                       "llm-ucs: ask GPT which actions to explore\n" +
 		pad(COST_KEY + " OPTION") +						"how plan cost is measured; options include:\n" +
 		pad("   " + ZERO_COST_OPTION) +					"always zero\n" +
 		pad("   " + PLAN_SIZE_COST_OPTION) +			"number of actions in the plan\n" +
@@ -360,6 +358,13 @@ public class Main {
 				System.out.println(USAGE);
 				return;
 			}
+
+			/* Test
+			if(arguments.get(METHOD_KEY).equals(LLM_OPTION)) {
+				TestOpenAI.main(new String[] {});
+				System.exit(0);
+			}*/
+			
 			// Configure session according to command line arguments.
 			Session session = new Session();
 			boolean verbose = arguments.contains(VERBOSE_KEY);
@@ -367,16 +372,14 @@ public class Main {
 				System.out.println(Settings.CREDITS);
 			configure(session, arguments, verbose);
 			arguments.checkUnused();
-			// Hold on
-			if(session.METHOD == "llm-ucs") {
-				
-			}
+
 			// Run planner.
 			Result<?> result;
 			if(verbose)
 				result = Worker.get(s -> session.getResult(), session.getStatus());
 			else
 				result = session.getResult();
+
 			// Print result.
 			if(verbose)
 				System.out.println(session.getPrinter().toString(result));
@@ -419,14 +422,6 @@ public class Main {
 		if(verbose)
 			print("Compiled Problem", session.getCompiledProblem());
 		
-		/*if(arguments.contains(LLM_KEY)) {
-			//TestOpenAi.main(arguments);
-			TestLLMSearch.run(session);
-			
-		} else {
-			
-		}*/
-
 		// Search
 		session.setGoal(arguments.getDouble(GOAL_KEY, session.getGoal().value));
 		session.setSearchLimit(arguments.getLong(SEARCH_LIMIT_KEY, Planner.UNLIMITED_NODES));
@@ -448,7 +443,6 @@ public class Main {
 				if(session.getSearch() instanceof LLMSearch) {
 					LLMSearch llmSearch = ((LLMSearch) session.getSearch());
 					llmSearch.setText(DomainText.get(session.getProblem(), session.getGoal().value.intValue()));
-					llmSearch.setRun(1);
 					llmSearch.setStart(session.getState());
 					llmSearch.setGoal(session.getGoal());
 				}

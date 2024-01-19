@@ -8,11 +8,13 @@ import org.springframework.web.reactive.function.client.WebClient;
 import reactor.core.publisher.Mono;
 
 @Component
-public class OpenAi {
+public class OpenAI {
 
-	/* https://platform.openai.com/docs/models/model-endpoint-compatibility 
-	 *  01/18/2024 */
-	private static final String[] ENDPOINTS = new String[] { 
+	private static final String URL = "https://api.openai.com/";	
+
+    private static final String[] ENDPOINTS = new String[] { 
+			/* https://platform.openai.com/docs/models/model-endpoint-compatibility 
+			 *  01/18/2024 */
 			"v1/assistants", // All models except gpt-3.5-turbo-0301 supported. retrieval tool requires gpt-4-1106-preview or gpt-3.5-turbo-1106.
 			"v1/audio/transcriptions", // whisper-1
 			"v1/audio/translations", // whisper-1
@@ -23,11 +25,15 @@ public class OpenAi {
 			"v1/fine_tuning/jobs", // gpt-3.5-turbo, babbage-002, davinci-002
 			"v1/moderations", // text-moderation-stable, text-moderation-latest
 			"v1/images/generations" // dall-e-2, dall-e-3
+	}; 	
+
+	private static final String EMBEDDING_MODEL = "text-embedding-ada-002";
+	private static final String[] BASE_MODELS = new String[] {
+			"davinci-002",
+			"babbage-002"
 	};
-	
-	private static final String URL = "https://api.openai.com/";	
-    private static final String EMBEDDING_MODEL = "text-embedding-ada-002";
-    private static final String[] CHAT_MODELS = new String[]{ 
+
+    protected static final String[] CHAT_MODELS = new String[]{ 
     		"gpt-3.5-turbo-1106", // New Updated GPT 3.5 Turbo.
     		"gpt-3.5-turbo", // Currently points to gpt-3.5-turbo-0613.	
     		"gpt-3.5-turbo-instruct", 
@@ -36,13 +42,13 @@ public class OpenAi {
     		"gpt-4", 
     		"gpt-4-32k", 
     		"gpt-4-0613", 
-    		"gpt-4-32k-0613" 
+    		"gpt-4-32k-0613"
     }; 
-    
-    private static final String[] SYSTEM_ROLES = new String[] {
+
+    protected static final String[] SYSTEM_ROLES = new String[] {
     		"You are a helpful assistant.",
-    		"You are outlining a story.",
-    		"You are helping the user outline a story."
+    		"You are outlining a branching story.",
+    		"You are helping the user outline a branching story."
     };
 
     private final String apiKey = System.getenv("OPENAI_KEY");
@@ -53,17 +59,33 @@ public class OpenAi {
             .defaultHeader(HttpHeaders.AUTHORIZATION, "Bearer " + apiKey)
             .build();
 
-    public OpenAi() {
+    private String chatModel = CHAT_MODELS[0];
+    private String systemRole = SYSTEM_ROLES[2];    
+
+    public OpenAI() {
     	System.out.println((apiKey != null ? "Found API key" : "Could not find API key."));    	
     }
     
-    public Mono<String> completeChat(String[] messages) {
-        String requestJson = "{\"model\":\"" + CHAT_MODELS[1] + 
-        		"\",\"messages\":[{\"role\": \"system\", \"content\": \"" + SYSTEM_ROLES[1] + 
-        		"\"},";
+    public void setChatModel(String model) {
+    	this.chatModel = model;
+    }
+    
+    public void setSystemRole(String role) {
+    	this.systemRole = role;
+    }
+    
+    public Mono<String> completeChat(String[] messages){
+    	return completeChat(messages, -1);
+    }
+    
+    public Mono<String> completeChat(String[] messages, int maxTokens) {
+    	String maxTokenStr = (maxTokens == -1) ? "" : ",\"max_tokens\":" + maxTokens;
+        String requestJson = "{\"model\":\"" + chatModel + 
+        		"\",\"messages\":["; // + 
+        		//"{\"role\": \"system\", \"content\": \"" + systemRole + "\"},";
         for (String m : messages)
             requestJson += "{\"role\": \"user\", \"content\": \"" + m + "\"},";
-        requestJson = requestJson.substring(0, requestJson.length() - 1) + "]}";
+        requestJson = requestJson.substring(0, requestJson.length() - 1) + "]" + maxTokenStr + "}";
         return webClient.post()
                 .uri(URL + ENDPOINTS[4])
                 .body(BodyInserters.fromValue(requestJson))

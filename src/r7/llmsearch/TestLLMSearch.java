@@ -51,7 +51,6 @@ public class TestLLMSearch {
 					//session.getGoal(),
 					//text
 				);
-			search.setRun(run);
 			search.setStart(compiled.start);
 			search.setGoal(session.getGoal());
 			System.out.println(search);
