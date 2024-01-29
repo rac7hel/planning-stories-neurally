@@ -40,13 +40,7 @@ public class RaidersText extends DomainText {
 
 	@Override
 	public String actionTypes() {
-		return /*"Characters can "
-				+ "travel from one place to another, "
-				+ "give an item to another character, "
-				+ "take an item from another character by force, "
-				+ "dig up the Ark, "
-				+ "and open the Ark. ";*/
-				"Characters can travel, give, take, dig, and open. ";
+		return "Characters can travel, give, take, dig, and open. ";
 	}
 	
 	@Override
@@ -154,7 +148,7 @@ public class RaidersText extends DomainText {
 				if(arg0.equals("Jones"))
 					str = arg0 + " opens the Ark and dies.";
 				else
-					str = arg0 + " open the Ark and die."; // die applies only to individuals, so use plural U.S. Army here
+					str = arg0 + " open the Ark and die."; 
 				break;
 			default:
 				throw new RuntimeException(NO_ACTION + action);

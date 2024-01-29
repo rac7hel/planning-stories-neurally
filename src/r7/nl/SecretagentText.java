@@ -7,13 +7,11 @@ import edu.uky.cs.nil.sabre.comp.CompiledAction;
 import edu.uky.cs.nil.sabre.logic.Expression;
 import edu.uky.cs.nil.sabre.logic.Parameter;
 import edu.uky.cs.nil.sabre.logic.True;
-import edu.uky.cs.nil.sabre.util.ImmutableArray;
 
 public class SecretagentText extends DomainText {
 
 	public SecretagentText(Expression initial, int goal) {
 		super(initial, goal);
-		this.handwrittenInitial = "TODO: Write initial state";
 		agents.put("SecretAgent", "The secret agent");
 		agents.put("Mastermind", "The mastermind");
 		places.put("Headquarters","The headquarters");
@@ -27,9 +25,7 @@ public class SecretagentText extends DomainText {
 		others.put("Guarded", "guarded");
 		others.put("Unguarded", "unguarded");
 	}
-	
-	/** Main Functions **/
-	
+		
 	@Override
 	public String fluent(Fluent fluent, Expression value) {
 		String str = believes(fluent, value);
@@ -82,8 +78,6 @@ public class SecretagentText extends DomainText {
 		}
 		return clean(str) + ".";
 	}
-
-	/** Simple Functions **/
 	
 	@Override
 	public String characterGoals() {

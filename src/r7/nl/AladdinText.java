@@ -12,7 +12,6 @@ public class AladdinText extends DomainText {
 
 	public AladdinText(Expression initial, int goal) {
 		super(initial, goal);
-		this.handwrittenInitial = "TODO: Write initial state";
 		agents.put("Aladdin","Aladdin");
 		agents.put("Jafar","Jafar");
 		agents.put("Jasmine","Jasmine");
@@ -23,9 +22,7 @@ public class AladdinText extends DomainText {
 		containers.put("Lamp","The magic lamp");
 		others.put("Lamp","The magic lamp");
 	}
-		
-	/** Main Functions **/
-	
+			
 	@Override
 	public String fluent(Fluent fluent, Expression value) {
 		String str = believes(fluent, value);
@@ -155,8 +152,6 @@ public class AladdinText extends DomainText {
 		}
 		return clean(str) + ".";
 	}
-
-	/** Simple Functions **/
 	
 	@Override
 	public String characterGoals() {

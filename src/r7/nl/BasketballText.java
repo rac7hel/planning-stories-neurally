@@ -13,7 +13,6 @@ public class BasketballText extends DomainText {
 
 	public BasketballText(Expression initial, int goal) {
 		super(initial, goal);
-		this.handwrittenInitial = "TODO: Write initial state";
 		agents.put("Alice","Alice");
 		agents.put("Bob","Bob");
 		agents.put("Charlie","Charlie");
@@ -26,9 +25,7 @@ public class BasketballText extends DomainText {
 		others.put("Theft","theft");
 		others.put("Murder","murder");
 	}
-	
-	/** Main Functions **/
-	
+		
 	@Override
 	public String fluent(Fluent fluent, Expression value) {
 		String str = believes(fluent, value);
@@ -117,8 +114,6 @@ public class BasketballText extends DomainText {
 		}
 		return clean(str) + ".";
 	}
-
-	/** Simple Functions **/
 	
 	@Override
 	public String characterGoals() {

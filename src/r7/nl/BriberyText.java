@@ -7,21 +7,17 @@ import edu.uky.cs.nil.sabre.comp.CompiledAction;
 import edu.uky.cs.nil.sabre.logic.Expression;
 import edu.uky.cs.nil.sabre.logic.Parameter;
 import edu.uky.cs.nil.sabre.logic.True;
-import edu.uky.cs.nil.sabre.util.ImmutableArray;
 
 public class BriberyText extends DomainText {
 
 	public BriberyText(Expression initial, int goal) {
 		super(initial, goal);
-		this.handwrittenInitial = "TODO: Write initial state";
 		agents.put("Hero","The hero");
 		agents.put("Villain", "The villain");
 		agents.put("President","The President");
 		places.put("Bank","The bank");
 	}
-	
-	/** Main Functions **/
-	
+		
 	@Override
 	public String fluent(Fluent fluent, Expression value) {
 		String str = believes(fluent, value);
@@ -81,8 +77,6 @@ public class BriberyText extends DomainText {
 		}
 		return clean(str) + ".";
 	}
-
-	/** Simple Functions **/
 	
 	@Override
 	public String characterGoals() {

@@ -359,12 +359,6 @@ public class Main {
 				return;
 			}
 
-			/* Test
-			if(arguments.get(METHOD_KEY).equals(LLM_OPTION)) {
-				TestOpenAI.main(new String[] {});
-				System.exit(0);
-			}*/
-			
 			// Configure session according to command line arguments.
 			Session session = new Session();
 			boolean verbose = arguments.contains(VERBOSE_KEY);

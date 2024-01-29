@@ -7,13 +7,11 @@ import edu.uky.cs.nil.sabre.comp.CompiledAction;
 import edu.uky.cs.nil.sabre.logic.Expression;
 import edu.uky.cs.nil.sabre.logic.Parameter;
 import edu.uky.cs.nil.sabre.logic.True;
-import edu.uky.cs.nil.sabre.util.ImmutableArray;
 
 public class SpaceText extends DomainText {
 
 	public SpaceText(Expression initial, int goal) {
 		super(initial, goal);
-		this.handwrittenInitial = "TODO: Write initial state";
 		agents.put("Zoe","Zoe");
 		agents.put("Lizard","The lizard");
 		places.put("Cave","The cave");
@@ -26,9 +24,7 @@ public class SpaceText extends DomainText {
 		others.put("Stunned", "stunned");
 		others.put("Dead", "dead");
 	}
-	
-	/** Main Functions **/
-	
+		
 	@Override
 	public String fluent(Fluent fluent, Expression value) {
 		String str = believes(fluent, value);
@@ -127,8 +123,6 @@ public class SpaceText extends DomainText {
 		}
 		return clean(str) + ".";
 	}
-
-	/** Simple Functions **/
 	
 	@Override
 	public String characterGoals() {

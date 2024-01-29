@@ -13,7 +13,6 @@ public class HospitalText extends DomainText {
 
 	public HospitalText(Expression initial, int goal) {
 		super(initial, goal);
-		this.handwrittenInitial = "TODO: Write initial state";
 		agents.put("Hathaway","Dr. Hathaway");
 		agents.put("Jones","Jones");
 		agents.put("Ross","Ross");
@@ -28,9 +27,7 @@ public class HospitalText extends DomainText {
 		others.put("TreatmentA", "Treatment A");
 		others.put("TreatmentB", "Treatment B");
 	}
-	
-	/** Main Functions **/
-	
+		
 	@Override
 	public String fluent(Fluent fluent, Expression value) {
 		String str = believes(fluent, value);
@@ -94,8 +91,6 @@ public class HospitalText extends DomainText {
 		}
 		return clean(str) + ".";
 	}
-
-	/** Simple Functions **/
 	
 	@Override
 	public String characterGoals() {

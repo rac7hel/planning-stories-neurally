@@ -8,9 +8,9 @@ import edu.uky.cs.nil.sabre.logic.Expression;
 import edu.uky.cs.nil.sabre.logic.Parameter;
 import edu.uky.cs.nil.sabre.logic.True;
 
-public class TemplateText extends DomainText {
+public class TextTemplate extends DomainText {
 
-	public TemplateText(Expression initial, int goal) {
+	public TextTemplate(Expression initial, int goal) {
 		super(initial, goal);
 		this.handwrittenInitial = "TODO: Write initial state";
 		// Add entities to these lists (with long spelling / Capitalized if they might start a sentence)

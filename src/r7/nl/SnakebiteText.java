@@ -7,13 +7,11 @@ import edu.uky.cs.nil.sabre.comp.CompiledAction;
 import edu.uky.cs.nil.sabre.logic.Expression;
 import edu.uky.cs.nil.sabre.logic.Parameter;
 import edu.uky.cs.nil.sabre.logic.True;
-import edu.uky.cs.nil.sabre.util.ImmutableArray;
 
 public class SnakebiteText extends DomainText {
 
 	public SnakebiteText(Expression initial, int goal) {
 		super(initial, goal);
-		this.handwrittenInitial = "TODO: Write initial state";
 		agents.put("Hank","Hank");
 		agents.put("Timmy","Timmy");
 		agents.put("Will", "Sheriff Will");
@@ -25,9 +23,7 @@ public class SnakebiteText extends DomainText {
 		others.put("Antivenom","The antivenom");
 		others.put("Snakebite", "snakebite");
 	}
-	
-	/** Main Functions **/
-	
+		
 	@Override
 	public String fluent(Fluent fluent, Expression value) {
 		String str = believes(fluent, value);
@@ -128,8 +124,6 @@ public class SnakebiteText extends DomainText {
 		}
 		return clean(str) + ".";
 	}
-
-	/** Simple Functions **/
 	
 	@Override
 	public String characterGoals() {

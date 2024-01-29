@@ -5,7 +5,6 @@ import edu.uky.cs.nil.sabre.Fluent;
 import edu.uky.cs.nil.sabre.HeadPlan;
 import edu.uky.cs.nil.sabre.Problem;
 import edu.uky.cs.nil.sabre.comp.CompiledAction;
-import edu.uky.cs.nil.sabre.comp.CompiledProblem;
 import edu.uky.cs.nil.sabre.logic.Effect;
 import edu.uky.cs.nil.sabre.logic.Expression;
 import edu.uky.cs.nil.sabre.logic.Unknown;
@@ -92,7 +91,7 @@ public abstract class DomainText {
 			return new FantasyText(problem.initial, goal);
 		case "gramma":
 			if(GRAMMA_SCRAMBLED)
-				return new GrammaTextWonky(problem.initial, goal);
+				return new GrammaTextScrambled(problem.initial, goal);
 			else
 				return new GrammaText(problem.initial, goal); 			
 		case "hospital":

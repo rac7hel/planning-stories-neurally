@@ -7,6 +7,7 @@ public class TestOpenAI {
 
 	private static String prompt;
 	private static int maxTokens = 5;
+	private static float temperature = 0.3f;
 
 	public static void main(String[] args) throws Exception {
 		OpenAI openAI = new OpenAI();
@@ -14,7 +15,7 @@ public class TestOpenAI {
 
 		prompt = "Just like a boiled potato, I ";
 
-		String response = openAI.completeChat(new String[] {prompt}, maxTokens)
+		String response = openAI.completeChat(new String[] {prompt}, maxTokens, temperature)
 				.doOnError(error -> System.err.println("Error from completeChat method: " + error.getMessage()))
 				.block();
 		

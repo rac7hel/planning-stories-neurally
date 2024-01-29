@@ -9,20 +9,10 @@ import edu.uky.cs.nil.sabre.logic.True;
 import edu.uky.cs.nil.sabre.logic.Unknown;
 import edu.uky.cs.nil.sabre.util.ImmutableArray;
 
-public class GrammaTextWonky extends DomainText {
+public class GrammaTextScrambled extends DomainText {
 
-	public GrammaTextWonky(Expression initial, int goal) {
+	public GrammaTextScrambled(Expression initial, int goal) {
 		super(initial, goal);
-		/*this.handwrittenInitial = "The Hero is at his cottage with his grandmother and wants to bring her a special medicine. "
-				+ "A Merchant works at the market selling items for one coin each. "
-				+ "Currently the Merchant's only items for sale are a sword and the medicine that the Hero wants. "
-				+ "There is a Bandit at a nearby camp. "
-				+ "A crossroads connects the cottage, the market, and the camp. "
-				+ "There is a Guard at the market who wants to attack criminals. "
-				+ "The Hero and the Guard do not know where the Bandit is. "
-				+ "The Hero has one coin, and there is one coin in the Bandit's chest. "
-				+ "The Bandit is a criminal who wants coins. "
-				+ "The Merchant wants coins but is not a criminal. ";*/
 		agents.put("Merchant","The Hero");
 		agents.put("Guard","The Merchant");
 		agents.put("Bandit", "The Guard");
@@ -49,32 +39,12 @@ public class GrammaTextWonky extends DomainText {
 	
 	@Override
 	public String actionTypes() {
-				/**"An action can be: "
-				+ "a character walking from one place to another, "
-				+ "a character buying an item from the Merchant, "
-				+ "a character looting an item from another character, "
-				+ "a character attacking another character, "
-				+ "a character robbing an item from another character, "
-				+ "a character reporting the Bandit's location to the Guard, "
-				+ "a character taking an item from the chest at the Camp";**/
-		/*return "Characters can "
-				+ "walk between connected places, "
-				+ "buy items from the Merchant, "
-				+ "loot items from a character who has been attacked, "
-				+ "attack with a sword, "
-				+ "rob characters who are unarmed, "
-				+ "tell the Guard where the Bandit is, "
-				+ "and take items from the chest at the Camp. "; */
 		return "Characters can walk, buy, loot, attack, rob, report, and take. ";
 	}
 	
 	@Override
 	public String goal() {
 		return "The story must end with the Bandit either being attacked or having the dirt at the basketball court. ";
-		/*return "The sequence must involve the Hero "
-				+ "either being attacked "
-				+ "or walking back to the Cottage with the medicine. ";
-				*/
 	}
 
 	@Override

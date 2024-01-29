@@ -7,13 +7,11 @@ import edu.uky.cs.nil.sabre.comp.CompiledAction;
 import edu.uky.cs.nil.sabre.logic.Expression;
 import edu.uky.cs.nil.sabre.logic.Parameter;
 import edu.uky.cs.nil.sabre.logic.True;
-import edu.uky.cs.nil.sabre.util.ImmutableArray;
 
 public class DeerhunterText extends DomainText {
 
 	public DeerhunterText(Expression initial, int goal) {
 		super(initial, goal);
-		this.handwrittenInitial = "TODO: Write initial state";
 		agents.put("Bubba","Bubba");
 		agents.put("Clerk","The clerk");
 		agents.put("Bambi","Bambi");
@@ -24,9 +22,7 @@ public class DeerhunterText extends DomainText {
 		others.put("Rifle","The rifle");
 		others.put("Ammo","The ammunition");
 	}
-	
-	/** Main Functions **/
-	
+		
 	@Override
 	public String fluent(Fluent fluent, Expression value) {
 		String str = believes(fluent, value);
@@ -108,8 +104,6 @@ public class DeerhunterText extends DomainText {
 		}
 		return clean(str) + ".";
 	}
-
-	/** Simple Functions **/
 	
 	@Override
 	public String characterGoals() {

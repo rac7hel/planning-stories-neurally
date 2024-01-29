@@ -12,22 +12,22 @@ public class OpenAI {
 
 	private static final String URL = "https://api.openai.com/";	
 
+	/** from OpenAI, 01/18/2024 **/
     private static final String[] ENDPOINTS = new String[] { 
-			/* https://platform.openai.com/docs/models/model-endpoint-compatibility 
-			 *  01/18/2024 */
-			"v1/assistants", // All models except gpt-3.5-turbo-0301 supported. retrieval tool requires gpt-4-1106-preview or gpt-3.5-turbo-1106.
-			"v1/audio/transcriptions", // whisper-1
-			"v1/audio/translations", // whisper-1
-			"v1/audio/speech", // tts-1, tts-1-hd
-			"v1/chat/completions", // gpt-4 and dated model releases, gpt-4-1106-preview, gpt-4-vision-preview, gpt-4-32k and dated model releases, gpt-3.5-turbo and dated model releases, gpt-3.5-turbo-16k and dated model releases, fine-tuned versions of gpt-3.5-turbo
-			"v1/completions", // (Legacy) gpt-3.5-turbo-instruct, babbage-002, davinci-002
-			"v1/embeddings", // text-embedding-ada-002
-			"v1/fine_tuning/jobs", // gpt-3.5-turbo, babbage-002, davinci-002
-			"v1/moderations", // text-moderation-stable, text-moderation-latest
-			"v1/images/generations" // dall-e-2, dall-e-3
+			"v1/assistants", 
+			"v1/audio/transcriptions", 
+			"v1/audio/translations", 
+			"v1/audio/speech", 
+			"v1/chat/completions", 
+			"v1/completions", 
+			"v1/embeddings", 
+			"v1/fine_tuning/jobs", 
+			"v1/moderations", 
+			"v1/images/generations"
 	}; 	
 
 	private static final String EMBEDDING_MODEL = "text-embedding-ada-002";
+
 	private static final String[] BASE_MODELS = new String[] {
 			"davinci-002",
 			"babbage-002"
@@ -45,10 +45,11 @@ public class OpenAI {
     		"gpt-4-32k-0613"
     }; 
 
+    /** This is new, haven't tested these **/
     protected static final String[] SYSTEM_ROLES = new String[] {
     		"You are a helpful assistant.",
     		"You are outlining a branching story.",
-    		"You are helping the user outline a branching story."
+    		"You are helping the user outline a branching story." // ...?
     };
 
     private final String apiKey = System.getenv("OPENAI_KEY");
@@ -74,18 +75,15 @@ public class OpenAI {
     	this.systemRole = role;
     }
     
-    public Mono<String> completeChat(String[] messages){
-    	return completeChat(messages, -1);
-    }
-    
-    public Mono<String> completeChat(String[] messages, int maxTokens) {
-    	String maxTokenStr = (maxTokens == -1) ? "" : ",\"max_tokens\":" + maxTokens;
-        String requestJson = "{\"model\":\"" + chatModel + 
-        		"\",\"messages\":["; // + 
-        		//"{\"role\": \"system\", \"content\": \"" + systemRole + "\"},";
+    public Mono<String> completeChat(String[] messages, int maxTokens, float temperature) {
+    	String requestJson = "{\"model\":\"" + chatModel + 
+        		"\",\"messages\":[" + 
+        		"{\"role\": \"system\", \"content\": \"" + systemRole + "\"},";
         for (String m : messages)
             requestJson += "{\"role\": \"user\", \"content\": \"" + m + "\"},";
-        requestJson = requestJson.substring(0, requestJson.length() - 1) + "]" + maxTokenStr + "}";
+        requestJson = requestJson.substring(0, requestJson.length() - 1) + "]" +
+        		",\"max_tokens\":" + maxTokens +
+        		",\"temperature\":" + temperature + "}";
         return webClient.post()
                 .uri(URL + ENDPOINTS[4])
                 .body(BodyInserters.fromValue(requestJson))

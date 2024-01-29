@@ -7,13 +7,11 @@ import edu.uky.cs.nil.sabre.comp.CompiledAction;
 import edu.uky.cs.nil.sabre.logic.Expression;
 import edu.uky.cs.nil.sabre.logic.Parameter;
 import edu.uky.cs.nil.sabre.logic.True;
-import edu.uky.cs.nil.sabre.util.ImmutableArray;
 
 public class FantasyText extends DomainText {
 
 	public FantasyText(Expression initial, int goal) {
 		super(initial, goal);
-		this.handwrittenInitial = "TODO: Write initial state";
 		agents.put("Talia","Talia");
 		agents.put("Rory","Rory");
 		agents.put("Vince","Vince");
@@ -23,9 +21,7 @@ public class FantasyText extends DomainText {
 		others.put("Money","The money");
 		others.put("Treasure","The treasure");
 	}
-	
-	/** Main Functions **/
-	
+		
 	@Override
 	public String fluent(Fluent fluent, Expression value) {
 		String str = believes(fluent, value);
@@ -106,14 +102,11 @@ public class FantasyText extends DomainText {
 		case "eat":
 			str += arg0 + " eats " + args.get(1);
 			break;
-			// sg may not like my changes here, probs use his
 		default:
 			throw new RuntimeException(NO_ACTION + action);
 		}
 		return clean(str) + ".";
 	}
-
-	/** Simple Functions **/
 	
 	@Override
 	public String characterGoals() {

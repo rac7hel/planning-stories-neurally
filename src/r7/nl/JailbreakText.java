@@ -12,7 +12,6 @@ public class JailbreakText extends DomainText {
 
 	public JailbreakText(Expression initial, int goal) {
 		super(initial, goal);
-		this.handwrittenInitial = "TODO: Write initial state";
 		agents.put("Ernest","Ernest");
 		agents.put("Roy","Roy");
 		agents.put("Bully","The bully");
@@ -26,9 +25,7 @@ public class JailbreakText extends DomainText {
 		others.put("Clothes","The clothes");
 		others.put("Knife","The knife");
 	}
-	
-	/** Main Functions **/
-	
+		
 	@Override
 	public String fluent(Fluent fluent, Expression value) {
 		String str = believes(fluent, value);
@@ -140,8 +137,6 @@ public class JailbreakText extends DomainText {
 		}
 		return clean(str).replaceAll(" A "," a ") + ".";
 	}
-
-	/** Simple Functions **/
 	
 	@Override
 	public String characterGoals() {

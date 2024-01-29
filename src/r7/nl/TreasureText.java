@@ -11,7 +11,6 @@ public class TreasureText extends DomainText {
 
 	public TreasureText(Expression initial, int goal) {
 		super(initial, goal);
-		this.handwrittenInitial = "TODO: Write initial state";
 		agents.put("Hawkins","Jim Hawkins");
 		agents.put("Silver","Long John Silver");
 		places.put("Port","Port Royal");
@@ -19,12 +18,8 @@ public class TreasureText extends DomainText {
 		others.put("Treasure", "The treasure");
 		others.put("Buried","buried");
 	}
-	
-	/** Main Functions **/
-	
+		
 	@Override
-	// Add a case for every property
-	// Capitalize as if they're the the start of the sentence
 	public String fluent(Fluent fluent, Expression value) {
 		String str = believes(fluent, value);
 		ArrayList<String> args = new ArrayList<>();
@@ -49,7 +44,6 @@ public class TreasureText extends DomainText {
 	}
 	
 	@Override
-	// Add a case for every action
 	public String action(CompiledAction action) {
 		String name = action.signature.name;
 		ArrayList<String> args = new ArrayList<String>();
@@ -74,8 +68,6 @@ public class TreasureText extends DomainText {
 		}
 		return clean(str) + ".";
 	}
-
-	/** Simple Functions **/
 	
 	@Override
 	public String characterGoals() {
