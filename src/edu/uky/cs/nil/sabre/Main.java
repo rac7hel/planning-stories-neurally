@@ -433,13 +433,8 @@ public class Main {
 			if(arguments.contains(HEURISTIC_WEIGHT_KEY))
 				session.setCost(new WeightedCost.Factory(session.getHeuristic(), arguments.getDouble(HEURISTIC_WEIGHT_KEY, 1)));
 			session.setExplanationPruning(arguments.getBoolean(EXPLANATION_PRUNING_KEY, true));
-			if(session.getMethod().toString().equals("llm-ucs")) {
-				if(session.getSearch() instanceof LLMSearch) {
-					LLMSearch llmSearch = ((LLMSearch) session.getSearch());
-					llmSearch.setText(DomainText.get(session.getProblem(), session.getGoal().value.intValue()));
-					llmSearch.setStart(session.getState());
-					llmSearch.setGoal(session.getGoal());
-				}
+			if(session.getSearch() instanceof LLMSearch) {
+				((LLMSearch) session.getSearch()).configureDomainText(session.getGoal().value.intValue());
 			}
 		}
 		

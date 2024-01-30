@@ -101,7 +101,7 @@ public class TextTester {
 						text.actionTypes() + 
 						text.characterGoals();
 		if(plan.size() > 0) {
-			prompt += PromptText.SEQUENCE_BEGINS_WITH;
+			prompt += PromptText.STORY_BEGINS_WITH;
 			for(CompiledAction action : plan) 
 				prompt += text.action(action) + "\\n";
 			prompt += PromptText.TWO_THINGS_NEXT;

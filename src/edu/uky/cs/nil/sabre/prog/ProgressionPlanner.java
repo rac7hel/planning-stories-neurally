@@ -15,7 +15,6 @@ import edu.uky.cs.nil.sabre.ptree.ProgressionTreeSpace;
 import edu.uky.cs.nil.sabre.search.Planner;
 import edu.uky.cs.nil.sabre.util.Worker.Status;
 import r7.llmsearch.LLMSearch;
-import r7.nl.DomainText;
 
 /**
  * A progression {@link Planner planner} is a configurable factory object that

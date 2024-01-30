@@ -10,8 +10,8 @@ public class TestOpenAI {
 	private static float temperature = 0.3f;
 
 	public static void main(String[] args) throws Exception {
-		OpenAI openAI = new OpenAI();
-		openAI.setSystemRole(OpenAI.SYSTEM_ROLES[0]);
+		OpenAIComponent openAI = new OpenAIComponent();
+		openAI.setSystemRole("You are a philosopher");
 
 		prompt = "Just like a boiled potato, I ";
 
