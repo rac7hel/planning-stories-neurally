@@ -1,6 +1,6 @@
 # planning-stories-neurally
 
-Integrates [GPT](https://openai.com/blog/openai-api) prompting into the [Sabre Narrative Planner](https://github.com/sgware/sabre) for research and experimentation involving LLM-guided search methodologies. 
+Integrates [GPT](https://openai.com/blog/openai-api) prompting into the [Sabre Narrative Planner](https://github.com/sgware/sabre) for research and experimentation involving LLM-guided search methodologies for planning-based story generation. 
 
 ## Purpose
 
