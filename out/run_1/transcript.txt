@@ -1,0 +1,111 @@
+PROMPT:
+The hero is alive. The merchant is alive. The guard is alive. The bandit is alive. The hero is at the cottage. The merchant is at the market. The guard is at the market. The bandit is at the camp. The merchant has the medicine. The hero has the hero's coin. The bandit's coin is in the chest. The guard has the guard's sword. The bandit has the bandit's sword. The merchant has the merchant's sword. The hero does not know where the bandit is. The merchant does not know where the hero's coin is. The merchant does not know where the bandit's coin is. The guard does not know where the bandit is. The bandit believes that the hero is at the crossroads. The hero wants to bring the medicine to the cottage. The bandit wants to collect valuable items in the chest. The merchant wants coins and is not willing to commit crimes. The guard wants to attack criminals. Characters can walk, buy, loot, attack, rob, report, and take. The story must end with the hero either being attacked or having the medicine at the cottage. List two different actions that could happen first. State each as a short sentence (e.g. 5-10 words) on its own line. 
+
+SUGGESTIONS:
+1. The hero decides to search for the bandit at the crossroads.
+2. The merchant buys information about the band
+
+ACTION COSTS:
+walk(Merchant, Market, Crossroads) -> 7
+attack(Merchant, Merchant, Market) -> 10
+attack(Merchant, Guard, Market) -> 9
+attack(Guard, Merchant, Market) -> 9
+report(Merchant, Camp, Market) -> 7
+walk(Guard, Market, Crossroads) -> 7
+attack(Guard, Guard, Market) -> 10
+walk(Tom, Cottage, Crossroads) -> 5
+attack(Tom, Tom, Cottage) -> 8
+walk(Bandit, Camp, Crossroads) -> 5
+take(Bandit, BanditCoin, Chest, Camp) -> 8
+attack(Bandit, Bandit, Camp) -> 8
+
+[PROMPT]... The story begins with the following steps:\n
+The hero walks from the cottage to the crossroads.
+List two different actions that could happen next. State each as a short sentence (e.g. 5-10 words) on its own line. 
+
+SUGGESTIONS:
+The hero is attacked by the bandit at the crossroads.
+The hero successfully reaches the cottage with the medicine.
+
+ACTION COSTS:
+walk(Merchant, Market, Crossroads) -> 7
+attack(Merchant, Merchant, Market) -> 8
+attack(Merchant, Guard, Market) -> 7
+attack(Guard, Merchant, Market) -> 6
+report(Merchant, Camp, Market) -> 6
+walk(Guard, Market, Crossroads) -> 7
+attack(Guard, Guard, Market) -> 8
+walk(Tom, Crossroads, Cottage) -> 4
+walk(Tom, Crossroads, Market) -> 5
+walk(Tom, Crossroads, Camp) -> 4
+attack(Tom, Tom, Crossroads) -> 6
+walk(Bandit, Camp, Crossroads) -> 4
+take(Bandit, BanditCoin, Chest, Camp) -> 7
+attack(Bandit, Bandit, Camp) -> 6
+
+[PROMPT]... The story begins with the following steps:\n
+The bandit walks from the camp to the crossroads.
+List two different actions that could happen next. State each as a short sentence (e.g. 5-10 words) on its own line. 
+
+SUGGESTIONS:
+The bandit sees the hero at the crossroads and attacks.
+The bandit reaches the chest and starts looting.
+
+ACTION COSTS:
+walk(Merchant, Market, Crossroads) -> 7
+attack(Merchant, Merchant, Market) -> 8
+attack(Merchant, Guard, Market) -> 6
+attack(Guard, Merchant, Market) -> 6
+report(Merchant, Camp, Market) -> 5
+walk(Guard, Market, Crossroads) -> 7
+attack(Guard, Guard, Market) -> 8
+walk(Tom, Cottage, Crossroads) -> 5
+attack(Tom, Tom, Cottage) -> 6
+walk(Bandit, Crossroads, Cottage) -> 4
+walk(Bandit, Crossroads, Market) -> 4
+walk(Bandit, Crossroads, Camp) -> 4
+attack(Bandit, Bandit, Crossroads) -> 5
+
+[PROMPT]... The story begins with the following steps:\n
+The merchant walks from the market to the crossroads.
+List two different actions that could happen next. State each as a short sentence (e.g. 5-10 words) on its own line. 
+
+SUGGESTIONS:
+The merchant encounters the hero at the crossroads and offers to trade.
+The guard reports the bandit's location to the hero
+
+ACTION COSTS:
+walk(Merchant, Crossroads, Cottage) -> 5
+walk(Merchant, Crossroads, Market) -> 5
+walk(Merchant, Crossroads, Camp) -> 5
+attack(Merchant, Merchant, Crossroads) -> 8
+walk(Guard, Market, Crossroads) -> 7
+attack(Guard, Guard, Market) -> 8
+walk(Tom, Cottage, Crossroads) -> 6
+attack(Tom, Tom, Cottage) -> 8
+walk(Bandit, Camp, Crossroads) -> 6
+take(Bandit, BanditCoin, Chest, Camp) -> 6
+attack(Bandit, Bandit, Camp) -> 6
+
+[PROMPT]... The story begins with the following steps:\n
+The merchant reports seeing the bandit at the camp to the guard.
+List two different actions that could happen next. State each as a short sentence (e.g. 5-10 words) on its own line. 
+
+SUGGESTIONS:
+The guard attacks the bandit at the camp.
+The hero successfully brings the medicine to the cottage.
+
+ACTION COSTS:
+walk(Merchant, Market, Crossroads) -> 9
+attack(Merchant, Merchant, Market) -> 9
+attack(Merchant, Guard, Market) -> 5
+attack(Guard, Merchant, Market) -> 4
+report(Merchant, Camp, Market) -> 4
+walk(Guard, Market, Crossroads) -> 7
+attack(Guard, Guard, Market) -> 5
+report(Guard, Camp, Market) -> 4
+walk(Tom, Cottage, Crossroads) -> 5
+attack(Tom, Tom, Cottage) -> 8
+walk(Bandit, Camp, Crossroads) -> 5
+take(Bandit, BanditCoin, Chest, Camp) -> 6
+attack(Bandit, Bandit, Camp) -> 5
