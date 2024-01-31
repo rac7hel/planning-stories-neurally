@@ -21,6 +21,6 @@ Run Sabre with `-m llm` for the LLM-UCS search method. To run the example proble
 This searches the `gramma` problem with LLM-UCS, limited to 5 nodes by default. (Configurations in `LLMSearch.java`)
 
 Writes two output files: 
-	- `out/search.txt` lists each node in the order visited 
-	- `out/transcript.txt` shows the full conversation with GPT and resulting action costs at each step.
+- `out/search.txt` lists each node in the order visited 
+- `out/transcript.txt` shows the full conversation with GPT and resulting action costs at each step.
 
