@@ -1,4 +1,4 @@
-package r7.nl;
+package r7.domaintext;
 
 import java.util.ArrayList;
 
@@ -8,26 +8,22 @@ import edu.uky.cs.nil.sabre.logic.Expression;
 import edu.uky.cs.nil.sabre.logic.Parameter;
 import edu.uky.cs.nil.sabre.logic.True;
 
-public class TextTemplate extends DomainText {
+public class TemplateText extends DomainText {
 
-	public TextTemplate(Expression initial, int goal) {
+	public TemplateText(Expression initial, int goal) {
 		super(initial, goal);
 		this.handwrittenInitial = "TODO: Write initial state";
-		// Add entities to these lists (with long spelling / Capitalized if they might start a sentence)
-		// Add all the agents
-		agents.put("Hank","Hank");
-		// Add all the places
-		places.put("Ranch","The ranch");
-		// If there are any containers, add them to this.containers
-		// Add all the items and other entities
-		others.put("Snakebite", "snakebite");
+		// Add entities to these lists (with long spelling / Capitalized if they might start a sentence)		
+		agents.put("Hank","Hank"); // Add all the agents		
+		places.put("Ranch","The ranch"); // Add all the places
+		// If there are any containers, add them to this.containers		
+		others.put("Snakebite", "snakebite"); // Add all the items and other entities here
 	}
 	
 	/** Main Functions **/
 	
 	@Override
-	// Add a case for every property
-	// Capitalize as if they're the the start of the sentence
+	// Add a case for every property. Capitalize as if they're the start of the sentence
 	public String fluent(Fluent fluent, Expression value) {
 		String str = believes(fluent, value);
 		ArrayList<String> args = new ArrayList<>();
@@ -73,22 +69,19 @@ public class TextTemplate extends DomainText {
 	/** Simple Functions **/
 	
 	@Override
-	// Describe all the character goals
-	public String characterGoals() {
+	public String characterGoals() { // Describe all the character goals
 		return "Everyone wants people they love to be healthy and free. "
 				+ "Everyone wants to have the items they own. "
 				+ "The sheriff wants stolen items to be returned to their owners. ";
 	}
 	
 	@Override
-	// List the actions by name only
-	public String actionTypes() {
+	public String actionTypes() { // List the actions by name only
 		return "Characters can get bitten by a snake, die, travel, give, tie up, untie, take, and heal. ";
 	}
 
 	@Override
-	// Describe each different goal / "problem" configuration
-	public String goal() {
+	public String goal() { // Describe each different goal / problem configuration
 		String text = "The story must end with ";
 		switch(goal) {
 		case 1: 

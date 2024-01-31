@@ -1,4 +1,4 @@
-package r7.nl;
+package r7.domaintext;
 
 import java.util.ArrayList;
 
@@ -94,19 +94,19 @@ public class BasketballText extends DomainText {
 		case "steal":
 			str += arg0 + " steals " + args.get(3) + " from " + args.get(1);
 			break;
-		case "playBasketball": 
+		case "play_basketball": 
 			str += arg0 + " and " + args.get(1) + " play basketball and feel better";
 			break;
 		case "kill":
 			str += arg0 + " kills " + args.get(1) + " with " + args.get(3);
 			break;
-		case "findClues":
+		case "find_clues":
 			str += arg0 + " searches " + args.get(3) + " for clues";
 			break;
-		case "shareClues":
+		case "share_clues":
 			str += arg0 + " shares clues with " + args.get(1);
 			break;
-		case "suspectOfCrime":
+		case "suspect_of_crime":
 			str += arg0 + " suspects " + args.get(1) + " of " + args.get(2);
 			break;
 		default:

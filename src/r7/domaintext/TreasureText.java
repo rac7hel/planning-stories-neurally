@@ -1,4 +1,4 @@
-package r7.nl;
+package r7.domaintext;
 
 import java.util.ArrayList;
 

@@ -1,4 +1,4 @@
-package r7.nl;
+package r7.domaintext;
 import java.util.LinkedHashMap;
 
 import edu.uky.cs.nil.sabre.Fluent;
@@ -11,22 +11,18 @@ import edu.uky.cs.nil.sabre.logic.Unknown;
 
 public abstract class DomainText {
 	
-	public final static boolean GRAMMA_SCRAMBLED = false;
-
+	public static final String NO_ACTION = "Action not implemented: ";
+	public static final String NO_FLUENT = "Fluent not implemented: ";
+	public static final String NO_METHOD = "Not implemented.";
+	public static final boolean GRAMMA_SCRAMBLED = false;
 	public final LinkedHashMap<String, String> agents = new LinkedHashMap<>();
 	public final LinkedHashMap<String, String> places = new LinkedHashMap<>();
 	public final LinkedHashMap<String, String> containers = new LinkedHashMap<>();
 	public final LinkedHashMap<String, String> others = new LinkedHashMap<>();
-	
-	public String handwrittenInitial;
-	
-	public static final String NO_ACTION = "Action not implemented: ";
-	public static final String NO_FLUENT = "Fluent not implemented: ";
-	public static final String NO_METHOD = "Not implemented.";
-
-	public final Expression initial;
 	public final int goal;
-
+	public final Expression initial;	
+	public String handwrittenInitial;	
+	
 	public abstract String characterGoals();
 	public abstract String actionTypes();
 	public abstract String goal();
@@ -102,8 +98,8 @@ public abstract class DomainText {
 			return new RaidersText(problem.initial, goal);
 		case "secretagent":
 			return new SecretagentText(problem.initial, goal);
-		case "snakebite":
-			return new SnakebiteText(problem.initial, goal);
+		case "western":
+			return new WesternText(problem.initial, goal);
 		case "space":
 			return new SpaceText(problem.initial, goal);
 		case "treasure":

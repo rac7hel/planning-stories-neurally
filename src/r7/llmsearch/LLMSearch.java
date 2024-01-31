@@ -13,8 +13,7 @@ import edu.uky.cs.nil.sabre.comp.CompiledProblem;
 import edu.uky.cs.nil.sabre.etree.EventTree;
 import edu.uky.cs.nil.sabre.prog.*;
 import edu.uky.cs.nil.sabre.ptree.ProgressionTreeSpace;
-
-import r7.nl.DomainText;
+import r7.domaintext.DomainText;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;

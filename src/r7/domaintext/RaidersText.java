@@ -1,4 +1,4 @@
-package r7.nl;
+package r7.domaintext;
 
 import edu.uky.cs.nil.sabre.Fluent;
 import edu.uky.cs.nil.sabre.comp.CompiledAction;

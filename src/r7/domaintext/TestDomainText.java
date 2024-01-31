@@ -1,4 +1,4 @@
-package r7.nl;
+package r7.domaintext;
 
 import java.io.BufferedWriter;
 import java.io.File;
@@ -16,7 +16,7 @@ import edu.uky.cs.nil.sabre.util.Worker.Status;
 
 import r7.llmsearch.PromptText;
 
-public class TextTester {
+public class TestDomainText {
 	
 	public static final LinkedHashMap<String, int[]> DOMAINS = new LinkedHashMap<>(); 
 	public static DomainText text;
@@ -30,7 +30,7 @@ public class TextTester {
 		DOMAINS.put("aladdin", new int[] {2});
 		DOMAINS.put("hospital", new int[] {1, 2});
 		DOMAINS.put("basketball", new int[] {1, 2});
-		DOMAINS.put("snakebite", new int[] {1});
+		DOMAINS.put("western", new int[] {1});
 		DOMAINS.put("fantasy", new int[] {1, 2, 3});
 		DOMAINS.put("space", new int[] {1, 4});
 		DOMAINS.put("raiders", new int[] {1});
@@ -41,7 +41,7 @@ public class TextTester {
 		Parser parser = new DefaultParser();
 		for(String domain : DOMAINS.keySet()) {
 			for(int goal : DOMAINS.get(domain)) {
-				String URL = "../problems_sg/" + domain + ".txt";
+				String URL = "../../sabre-benchmarks/problems/" + domain + ".txt";
 				Problem problem = parser.parse(new File(URL), Problem.class);
 				compiledProblem = Grounder.compile(problem, new Status());
 				text = DomainText.get(compiledProblem, goal);
@@ -52,7 +52,7 @@ public class TextTester {
 							 testActionTypes() + 
 							 testGoal() + 
 							 testActions();
-					BufferedWriter writer = new BufferedWriter(new FileWriter(new File("io/text-" + domain + "-" + goal + ".txt")));
+					BufferedWriter writer = new BufferedWriter(new FileWriter(new File("../out/text-" + domain + "-" + goal + ".txt")));
 					writer.write(str);
 					writer.newLine();
 					writer.close();				

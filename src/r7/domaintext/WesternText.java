@@ -1,4 +1,4 @@
-package r7.nl;
+package r7.domaintext;
 
 import java.util.ArrayList;
 
@@ -8,9 +8,9 @@ import edu.uky.cs.nil.sabre.logic.Expression;
 import edu.uky.cs.nil.sabre.logic.Parameter;
 import edu.uky.cs.nil.sabre.logic.True;
 
-public class SnakebiteText extends DomainText {
+public class WesternText extends DomainText {
 
-	public SnakebiteText(Expression initial, int goal) {
+	public WesternText(Expression initial, int goal) {
 		super(initial, goal);
 		agents.put("Hank","Hank");
 		agents.put("Timmy","Timmy");

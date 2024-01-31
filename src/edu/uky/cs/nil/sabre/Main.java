@@ -14,8 +14,8 @@ import edu.uky.cs.nil.sabre.search.Result;
 import edu.uky.cs.nil.sabre.search.Search;
 import edu.uky.cs.nil.sabre.util.CommandLineArguments;
 import edu.uky.cs.nil.sabre.util.Worker;
+import r7.domaintext.DomainText;
 import r7.llmsearch.*;
-import r7.nl.DomainText;
 
 /**
  * Configures a {@link Session session} according to command line arguments,

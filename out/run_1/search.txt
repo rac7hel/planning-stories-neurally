@@ -1,5 +1,0 @@
-0.0: 
-5.0: report(Merchant, Camp, Market)
-6.0: take(Bandit, BanditCoin, Chest, Camp)
-7.0: attack(Merchant, Guard, Market)
-7.0: attack(Guard, Merchant, Market)
