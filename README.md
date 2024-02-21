@@ -6,6 +6,8 @@ Integrates [GPT](https://openai.com/blog/openai-api) prompting into the [Sabre N
 
 Assign action costs based on what GPT says should happen next in the story. 
 
+![LLM-guided search process](/images/diagram.png)
+
 ## Installation
 
 To run, you must have a valid [OpenAI API key](https://platform.openai.com/api-keys) stored in an environment variable called OPENAI_KEY. 
