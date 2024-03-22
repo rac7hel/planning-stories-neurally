@@ -28,9 +28,9 @@ Writes two output files:
 
 ## Paper
 
-[Preprint](https://www.techrxiv.org/doi/full/10.36227/techrxiv.171085113.35202301/v1)
+[View preprint](https://www.techrxiv.org/doi/full/10.36227/techrxiv.171085113.35202301/v1)
 
-Rachelyn Farrell, Stephen G Ware. Planning Stories Neurally. TechRxiv. March 19, 2024. DOI: 10.36227/techrxiv.171085113.35202301/v1
+	Rachelyn Farrell, Stephen G Ware. Planning Stories Neurally. TechRxiv. March 19, 2024. DOI: 10.36227/techrxiv.171085113.35202301/v1
 
 ## Results 
 
