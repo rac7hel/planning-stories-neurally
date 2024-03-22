@@ -34,4 +34,4 @@ Writes two output files:
 
 ## Results 
 
-Search results for the [Sabre benchmark problems](https://github.com/sgware/sabre-benchmarks) are included [here](results/).
+Search results on the [Sabre benchmark problems](https://github.com/sgware/sabre-benchmarks) are discussed in the paper. The complete transcripts from these searches are included [here](results/).
