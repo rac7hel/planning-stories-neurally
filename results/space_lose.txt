@@ -1,0 +1,88 @@
+PROMPT:
+Zoe is at the ship. The lizard is at the cave. The lizard is the guardian of the surface. Zoe is healthy. The lizard is healthy. The surface is safe. Zoe and the lizard each want to have friends and be healthy and safe. Characters can teleport to and from the ship, walk, attack, stun, kill, break free, and make peace. Landforms can begin to erupt and erupt. The story must end with either the surface being uninhabitable, Zoe and the lizard being friends, or one of them being dead. List two different actions that could happen first. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+Zoe teleports to the cave.
+The lizard attacks Zoe.
+
+RANKS:
+teleport_from_ship(Zoe, Ship, Surface) -> 4
+walk(Lizard, Cave, Surface) -> 7
+begin_erupt(Surface) -> 11
+
+[PROMPT]... The story begins with the following steps:\n
+Zoe teleports from the ship to the surface.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+Zoe approaches the lizard cautiously.
+The lizard roars and readies to attack.
+
+RANKS:
+teleport_to_ship(Zoe, Surface, Ship) -> 8
+walk(Zoe, Surface, Cave) -> 6
+walk(Lizard, Cave, Surface) -> 6
+begin_erupt(Surface) -> 9
+
+[PROMPT]... The story begins with the following steps:\n
+The lizard walks from the cave to the surface.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+Zoe approaches the lizard cautiously.
+The lizard stops and stares at Zoe.
+
+RANKS:
+teleport_from_ship(Zoe, Ship, Surface) -> 7
+walk(Lizard, Surface, Cave) -> 6
+begin_erupt(Surface) -> 11
+
+[PROMPT]... The story begins with the following steps:\n
+Zoe teleports from the ship to the surface.
+Zoe walks from the surface to the cave.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+Zoe and the lizard engage in a battle.
+The lizard breaks free from the cave.
+
+RANKS:
+walk(Zoe, Cave, Surface) -> 6
+walk(Lizard, Cave, Surface) -> 2
+attack(Zoe, Lizard, Cave) -> 2
+make_peace(Zoe, Lizard, Cave) -> 4
+attack(Lizard, Zoe, Cave) -> 3
+make_peace(Lizard, Zoe, Cave) -> 4
+begin_erupt(Surface) -> 9
+
+[PROMPT]... The story begins with the following steps:\n
+Zoe teleports from the ship to the surface.
+The lizard walks from the cave to the surface.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+Zoe and the lizard engage in a battle.
+The lizard stuns Zoe.
+
+RANKS:
+teleport_to_ship(Zoe, Surface, Ship) -> 8
+walk(Zoe, Surface, Cave) -> 7
+walk(Lizard, Surface, Cave) -> 8
+attack(Zoe, Lizard, Surface) -> 2
+make_peace(Zoe, Lizard, Surface) -> 4
+attack(Lizard, Zoe, Surface) -> 2
+make_peace(Lizard, Zoe, Surface) -> 4
+begin_erupt(Surface) -> 11
+
+[PROMPT]... The story begins with the following steps:\n
+The surface begins to erupt.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+Zoe and the lizard battle each other.
+The surface continues to erupt, making it increasingly difficult to stay safe
+
+RANKS:
+teleport_from_ship(Zoe, Ship, Surface) -> 7
+walk(Lizard, Cave, Surface) -> 8
+erupt(Surface) -> 5

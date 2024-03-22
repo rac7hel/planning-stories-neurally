@@ -1,0 +1,2417 @@
+PROMPT:
+Indiana Jones is in the USA. The Nazis are at Tanis. The U.S. Army is in the USA. The Ark is at Tanis. The Ark is dangerous. Indiana Jones is alive. The Nazis are alive. The U.S. Army is alive. The Nazis do not know where the Ark is. The U.S. Army does not know where the Ark is. Indiana Jones wants the U.S. Army to have the Ark. The U.S. Army wants to have the Ark. The Nazis want to be immortal. Characters can travel, give, take, dig, and open. The story must end with the Nazis being dead and the U.S. Army having the Ark. List two different actions that could happen first. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+Indiana Jones travels to Tanis.
+The U.S. Army digs for the Ark.
+
+RANKS:
+travel(Jones, USA, Tanis) -> 4
+travel(Nazis, Tanis, USA) -> 7
+travel(USArmy, USA, Tanis) -> 6
+
+[PROMPT]... The story begins with the following steps:\n
+Jones travels from USA to Tanis.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+Indiana Jones digs up the Ark.
+The U.S. Army takes the Ark from Indiana Jones.
+
+RANKS:
+travel(Jones, Tanis, USA) -> 10
+travel(Nazis, Tanis, USA) -> 9
+travel(USArmy, USA, Tanis) -> 7
+dig(Jones, Ark, Tanis) -> 3
+
+[PROMPT]... The story begins with the following steps:\n
+The U.S. Army travels from USA to Tanis.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+Indiana Jones digs for the Ark.
+The U.S. Army fights the Nazis.
+
+RANKS:
+travel(Jones, USA, Tanis) -> 11
+travel(Nazis, Tanis, USA) -> 7
+travel(USArmy, Tanis, USA) -> 7
+
+[PROMPT]... The story begins with the following steps:\n
+The Nazis travel from Tanis to USA.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+Indiana Jones takes the Ark from Tanis.
+The U.S. Army defeats the Nazis.
+
+RANKS:
+travel(Jones, USA, Tanis) -> 7
+travel(Nazis, USA, Tanis) -> 8
+travel(USArmy, USA, Tanis) -> 7
+
+[PROMPT]... The story begins with the following steps:\n
+Jones travels from USA to Tanis.
+Jones digs up the Ark.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+Jones opens the Ark. 
+The U.S. Army takes the Ark from Jones.
+
+RANKS:
+travel(Jones, Tanis, USA) -> 9
+travel(Nazis, Tanis, USA) -> 10
+travel(USArmy, USA, Tanis) -> 8
+give(Jones, Ark, Nazis, Tanis) -> 5
+take(Nazis, Ark, Jones, Tanis) -> 4
+open(Jones, Ark, Tanis) -> 3
+
+[PROMPT]... The story begins with the following steps:\n
+Jones travels from USA to Tanis.
+Jones digs up the Ark.
+Jones opens the Ark and dies.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+The U.S. Army takes the Ark from Jones.
+The Nazis are killed by the U.S. Army
+
+RANKS:
+travel(Nazis, Tanis, USA) -> 6
+travel(USArmy, USA, Tanis) -> 8
+take(Nazis, Ark, Jones, Tanis) -> 4
+
+[PROMPT]... The story begins with the following steps:\n
+Jones travels from USA to Tanis.
+The U.S. Army travels from USA to Tanis.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+Indiana Jones digs for the Ark.
+The U.S. Army battles the Nazis.
+
+RANKS:
+travel(Jones, Tanis, USA) -> 11
+travel(Nazis, Tanis, USA) -> 7
+travel(USArmy, Tanis, USA) -> 7
+dig(Jones, Ark, Tanis) -> 4
+
+[PROMPT]... The story begins with the following steps:\n
+Jones travels from USA to Tanis.
+Jones digs up the Ark.
+The Nazis take the Ark from Jones.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+Jones fights the Nazis and takes back the Ark.
+The U.S. Army arrives and defeats the Nazis,
+
+RANKS:
+open(Nazis, Ark, Tanis) -> 8
+travel(Jones, Tanis, USA) -> 9
+travel(Nazis, Tanis, USA) -> 7
+travel(USArmy, USA, Tanis) -> 8
+give(Nazis, Ark, Jones, Tanis) -> 5
+
+[PROMPT]... The story begins with the following steps:\n
+Jones travels from USA to Tanis.
+Jones digs up the Ark.
+Jones gives the Ark to the Nazis.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+The U.S. Army takes the Ark from the Nazis.
+Jones opens the Ark, killing the Nazis.
+
+RANKS:
+open(Nazis, Ark, Tanis) -> 5
+travel(Jones, Tanis, USA) -> 10
+travel(Nazis, Tanis, USA) -> 7
+travel(USArmy, USA, Tanis) -> 7
+give(Nazis, Ark, Jones, Tanis) -> 5
+
+[PROMPT]... The story begins with the following steps:\n
+Jones travels from USA to Tanis.
+The Nazis travel from Tanis to USA.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+Indiana Jones digs for the Ark.
+The U.S. Army takes the Ark from Indiana Jones.
+
+RANKS:
+travel(Jones, Tanis, USA) -> 10
+travel(Nazis, USA, Tanis) -> 10
+travel(USArmy, USA, Tanis) -> 7
+dig(Jones, Ark, Tanis) -> 4
+
+[PROMPT]... The story begins with the following steps:\n
+The U.S. Army travels from USA to Tanis.
+The Nazis travel from Tanis to USA.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+Indiana Jones digs for the Ark in Tanis.
+The U.S. Army battles the Nazis in USA.
+
+RANKS:
+travel(Jones, USA, Tanis) -> 7
+travel(Nazis, USA, Tanis) -> 7
+travel(USArmy, Tanis, USA) -> 6
+
+[PROMPT]... The story begins with the following steps:\n
+The U.S. Army travels from USA to Tanis.
+The U.S. Army travels from Tanis to USA.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+Indiana Jones digs for the Ark.
+The U.S. Army battles the Nazis.
+
+RANKS:
+travel(Jones, USA, Tanis) -> 11
+travel(Nazis, Tanis, USA) -> 7
+travel(USArmy, USA, Tanis) -> 7
+
+[PROMPT]... The story begins with the following steps:\n
+Jones travels from USA to Tanis.
+Jones travels from Tanis to USA.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+Jones digs for the Ark at Tanis.
+Jones opens the Ark with the U.S. Army present.
+
+RANKS:
+travel(Jones, USA, Tanis) -> 7
+travel(Nazis, Tanis, USA) -> 10
+travel(USArmy, USA, Tanis) -> 8
+
+[PROMPT]... The story begins with the following steps:\n
+The Nazis travel from Tanis to USA.
+Jones travels from USA to Tanis.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+Jones opens the Ark.
+The U.S. Army takes the Ark.
+
+RANKS:
+travel(Jones, Tanis, USA) -> 9
+travel(Nazis, USA, Tanis) -> 10
+travel(USArmy, USA, Tanis) -> 7
+dig(Jones, Ark, Tanis) -> 4
+
+[PROMPT]... The story begins with the following steps:\n
+The Nazis travel from Tanis to USA.
+The U.S. Army travels from USA to Tanis.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+Indiana Jones digs for the Ark.
+The U.S. Army opens the Ark.
+
+RANKS:
+travel(Jones, USA, Tanis) -> 11
+travel(Nazis, USA, Tanis) -> 10
+travel(USArmy, Tanis, USA) -> 7
+
+[PROMPT]... The story begins with the following steps:\n
+Jones travels from USA to Tanis.
+Jones digs up the Ark.
+Jones opens the Ark and dies.
+The Nazis take the Ark from Jones.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+The U.S. Army defeats the Nazis and takes the Ark.
+The U.S. Army uses the
+
+RANKS:
+open(Nazis, Ark, Tanis) -> 6
+travel(Nazis, Tanis, USA) -> 8
+travel(USArmy, USA, Tanis) -> 8
+
+[PROMPT]... The story begins with the following steps:\n
+The Nazis travel from Tanis to USA.
+The Nazis travel from USA to Tanis.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+Indiana Jones and the U.S. Army team up to fight the Nazis.
+Indiana Jones and the U.S
+
+RANKS:
+travel(Jones, USA, Tanis) -> 9
+travel(Nazis, Tanis, USA) -> 8
+travel(USArmy, USA, Tanis) -> 8
+
+[PROMPT]... The story begins with the following steps:\n
+Jones travels from USA to Tanis.
+Jones digs up the Ark.
+The U.S. Army travels from USA to Tanis.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+Jones opens the Ark.
+The U.S. Army defeats the Nazis.
+
+RANKS:
+travel(Jones, Tanis, USA) -> 9
+travel(Nazis, Tanis, USA) -> 7
+travel(USArmy, Tanis, USA) -> 7
+give(Jones, Ark, Nazis, Tanis) -> 6
+take(Nazis, Ark, Jones, Tanis) -> 7
+give(Jones, Ark, USArmy, Tanis) -> 5
+take(USArmy, Ark, Jones, Tanis) -> 6
+open(Jones, Ark, Tanis) -> 3
+
+[PROMPT]... The story begins with the following steps:\n
+Jones travels from USA to Tanis.
+The U.S. Army travels from USA to Tanis.
+Jones digs up the Ark.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+Jones opens the Ark.
+The U.S. Army defeats the Nazis.
+
+RANKS:
+travel(Jones, Tanis, USA) -> 9
+travel(Nazis, Tanis, USA) -> 7
+travel(USArmy, Tanis, USA) -> 7
+give(Jones, Ark, Nazis, Tanis) -> 6
+take(Nazis, Ark, Jones, Tanis) -> 7
+give(Jones, Ark, USArmy, Tanis) -> 5
+take(USArmy, Ark, Jones, Tanis) -> 6
+open(Jones, Ark, Tanis) -> 3
+
+[PROMPT]... The story begins with the following steps:\n
+Jones travels from USA to Tanis.
+Jones digs up the Ark.
+Jones travels from Tanis to USA.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+Jones gives the Ark to the U.S. Army.
+The U.S. Army defeats the Nazis.
+
+RANKS:
+travel(Jones, USA, Tanis) -> 10
+travel(Nazis, Tanis, USA) -> 7
+travel(USArmy, USA, Tanis) -> 8
+give(Jones, Ark, USArmy, USA) -> 0
+take(USArmy, Ark, Jones, USA) -> 2
+open(Jones, Ark, USA) -> 7
+
+[PROMPT]... The story begins with the following steps:\n
+Jones travels from USA to Tanis.
+Jones digs up the Ark.
+Jones opens the Ark and dies.
+The Nazis travel from Tanis to USA.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+The U.S. Army takes the Ark from the Nazis.
+The Nazis are killed by the U.S
+
+RANKS:
+travel(Nazis, USA, Tanis) -> 6
+travel(USArmy, USA, Tanis) -> 7
+
+[PROMPT]... The story begins with the following steps:\n
+Jones travels from USA to Tanis.
+Jones digs up the Ark.
+The Nazis take the Ark from Jones.
+The Nazis give the Ark to Jones.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+Jones opens the Ark, releasing a powerful force that kills the Nazis.
+The U.S. Army takes the Ark
+
+RANKS:
+travel(Jones, Tanis, USA) -> 10
+travel(Nazis, Tanis, USA) -> 9
+travel(USArmy, USA, Tanis) -> 7
+give(Jones, Ark, Nazis, Tanis) -> 4
+take(Nazis, Ark, Jones, Tanis) -> 5
+open(Jones, Ark, Tanis) -> 4
+
+[PROMPT]... The story begins with the following steps:\n
+Jones travels from USA to Tanis.
+Jones digs up the Ark.
+Jones travels from Tanis to USA.
+Jones gives the Ark to the U.S. Army.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+The U.S. Army opens the Ark and gains its power.
+The Nazis are killed by the U.
+
+RANKS:
+travel(Jones, USA, Tanis) -> 12
+open(USArmy, Ark, USA) -> 4
+travel(Nazis, Tanis, USA) -> 6
+travel(USArmy, USA, Tanis) -> 8
+give(USArmy, Ark, Jones, USA) -> 5
+
+[PROMPT]... The story begins with the following steps:\n
+The U.S. Army travels from USA to Tanis.
+Jones travels from USA to Tanis.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+Jones and the U.S. Army search for the Ark.
+Jones and the U.S. Army battle the
+
+RANKS:
+travel(Jones, Tanis, USA) -> 9
+travel(Nazis, Tanis, USA) -> 10
+travel(USArmy, Tanis, USA) -> 8
+dig(Jones, Ark, Tanis) -> 5
+
+[PROMPT]... The story begins with the following steps:\n
+Jones travels from USA to Tanis.
+Jones digs up the Ark.
+The Nazis travel from Tanis to USA.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+Jones gives the Ark to the U.S. Army.
+The U.S. Army defeats the Nazis.
+
+RANKS:
+travel(Jones, Tanis, USA) -> 9
+travel(Nazis, USA, Tanis) -> 8
+travel(USArmy, USA, Tanis) -> 8
+open(Jones, Ark, Tanis) -> 7
+
+[PROMPT]... The story begins with the following steps:\n
+Jones travels from USA to Tanis.
+Jones digs up the Ark.
+Jones gives the Ark to the Nazis.
+The Nazis open the Ark and die.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+The U.S. Army takes the Ark from the Nazis.
+Jones escapes from the Nazis.
+
+RANKS:
+travel(Jones, Tanis, USA) -> 8
+take(Jones, Ark, Nazis, Tanis) -> 4
+travel(USArmy, USA, Tanis) -> 7
+
+[PROMPT]... The story begins with the following steps:\n
+Jones travels from USA to Tanis.
+Jones digs up the Ark.
+Jones gives the Ark to the Nazis.
+The Nazis give the Ark to Jones.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+Jones opens the Ark, killing the Nazis.
+Jones gives the Ark to the U.S. Army.
+
+RANKS:
+travel(Jones, Tanis, USA) -> 9
+travel(Nazis, Tanis, USA) -> 9
+travel(USArmy, USA, Tanis) -> 8
+give(Jones, Ark, Nazis, Tanis) -> 3
+take(Nazis, Ark, Jones, Tanis) -> 4
+open(Jones, Ark, Tanis) -> 4
+
+[PROMPT]... The story begins with the following steps:\n
+Jones travels from USA to Tanis.
+The Nazis travel from Tanis to USA.
+Jones digs up the Ark.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+Jones gives the Ark to the U.S. Army. 
+The U.S. Army defeats the Nazis.
+
+RANKS:
+travel(Jones, Tanis, USA) -> 9
+travel(Nazis, USA, Tanis) -> 8
+travel(USArmy, USA, Tanis) -> 8
+open(Jones, Ark, Tanis) -> 7
+
+[PROMPT]... The story begins with the following steps:\n
+Jones travels from USA to Tanis.
+Jones digs up the Ark.
+Jones opens the Ark and dies.
+The U.S. Army travels from USA to Tanis.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+The U.S. Army takes the Ark.
+The Nazis are killed by the U.S. Army.
+
+RANKS:
+travel(Nazis, Tanis, USA) -> 6
+travel(USArmy, Tanis, USA) -> 7
+take(Nazis, Ark, Jones, Tanis) -> 7
+take(USArmy, Ark, Jones, Tanis) -> 3
+
+[PROMPT]... The story begins with the following steps:\n
+Jones travels from USA to Tanis.
+The U.S. Army travels from USA to Tanis.
+The Nazis travel from Tanis to USA.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+Indiana Jones and the U.S. Army team up to fight the Nazis.
+Indiana Jones and the U.S
+
+RANKS:
+travel(Jones, Tanis, USA) -> 9
+travel(Nazis, USA, Tanis) -> 8
+travel(USArmy, Tanis, USA) -> 8
+dig(Jones, Ark, Tanis) -> 9
+
+[PROMPT]... The story begins with the following steps:\n
+Jones travels from USA to Tanis.
+The U.S. Army travels from USA to Tanis.
+The U.S. Army travels from Tanis to USA.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+Indiana Jones and the U.S. Army dig for the Ark at Tanis.
+Indiana Jones and the U.
+
+RANKS:
+travel(Jones, Tanis, USA) -> 8
+travel(Nazis, Tanis, USA) -> 8
+travel(USArmy, USA, Tanis) -> 6
+dig(Jones, Ark, Tanis) -> 6
+
+[PROMPT]... The story begins with the following steps:\n
+Jones travels from USA to Tanis.
+Jones digs up the Ark.
+The Nazis take the Ark from Jones.
+The Nazis travel from Tanis to USA.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+Jones opens the Ark, destroying the Nazis.
+The U.S. Army takes the Ark from the Nazis.
+
+RANKS:
+travel(Jones, Tanis, USA) -> 10
+travel(Nazis, USA, Tanis) -> 7
+travel(USArmy, USA, Tanis) -> 7
+give(Nazis, Ark, USArmy, USA) -> 2
+open(Nazis, Ark, USA) -> 6
+
+[PROMPT]... The story begins with the following steps:\n
+The Nazis travel from Tanis to USA.
+Jones travels from USA to Tanis.
+Jones digs up the Ark.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+Jones opens the Ark.
+The U.S. Army takes the Ark.
+
+RANKS:
+travel(Jones, Tanis, USA) -> 9
+travel(Nazis, USA, Tanis) -> 10
+travel(USArmy, USA, Tanis) -> 7
+open(Jones, Ark, Tanis) -> 3
+
+[PROMPT]... The story begins with the following steps:\n
+Jones travels from USA to Tanis.
+Jones digs up the Ark.
+The U.S. Army travels from USA to Tanis.
+Jones opens the Ark and dies.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+The U.S. Army takes the Ark.
+The Nazis are killed by the U.S. Army.
+
+RANKS:
+travel(Nazis, Tanis, USA) -> 6
+travel(USArmy, Tanis, USA) -> 7
+take(Nazis, Ark, Jones, Tanis) -> 7
+take(USArmy, Ark, Jones, Tanis) -> 3
+
+[PROMPT]... The story begins with the following steps:\n
+Jones travels from USA to Tanis.
+The U.S. Army travels from USA to Tanis.
+Jones digs up the Ark.
+Jones opens the Ark and dies.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+The U.S. Army takes the Ark.
+The Nazis are killed by the U.S. Army.
+
+RANKS:
+travel(Nazis, Tanis, USA) -> 6
+travel(USArmy, Tanis, USA) -> 7
+take(Nazis, Ark, Jones, Tanis) -> 7
+take(USArmy, Ark, Jones, Tanis) -> 3
+
+[PROMPT]... The story begins with the following steps:\n
+Jones travels from USA to Tanis.
+Jones digs up the Ark.
+Jones travels from Tanis to USA.
+The U.S. Army takes the Ark from Jones.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+Jones opens the Ark.
+The U.S. Army destroys the Nazis with the power of the Ark.
+
+RANKS:
+travel(Jones, USA, Tanis) -> 10
+open(USArmy, Ark, USA) -> 5
+travel(Nazis, Tanis, USA) -> 8
+travel(USArmy, USA, Tanis) -> 8
+give(USArmy, Ark, Jones, USA) -> 6
+
+[PROMPT]... The story begins with the following steps:\n
+Jones travels from USA to Tanis.
+Jones digs up the Ark.
+The Nazis take the Ark from Jones.
+The Nazis open the Ark and die.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+Jones gives the Ark to the U.S. Army.
+The U.S. Army takes the Ark and
+
+RANKS:
+travel(Jones, Tanis, USA) -> 9
+take(Jones, Ark, Nazis, Tanis) -> 4
+travel(USArmy, USA, Tanis) -> 8
+
+[PROMPT]... The story begins with the following steps:\n
+Jones travels from USA to Tanis.
+Jones digs up the Ark.
+The Nazis take the Ark from Jones.
+The U.S. Army travels from USA to Tanis.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+Jones opens the Ark.
+The U.S. Army takes the Ark from the Nazis.
+
+RANKS:
+open(Nazis, Ark, Tanis) -> 7
+travel(Jones, Tanis, USA) -> 9
+travel(Nazis, Tanis, USA) -> 7
+travel(USArmy, Tanis, USA) -> 7
+give(Nazis, Ark, Jones, Tanis) -> 5
+give(Nazis, Ark, USArmy, Tanis) -> 2
+
+[PROMPT]... The story begins with the following steps:\n
+Jones travels from USA to Tanis.
+Jones digs up the Ark.
+Jones gives the Ark to the Nazis.
+The Nazis travel from Tanis to USA.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+Jones takes the Ark back from the Nazis.
+The U.S. Army opens the Ark and destroys the Nazis.
+
+RANKS:
+travel(Jones, Tanis, USA) -> 8
+travel(Nazis, USA, Tanis) -> 8
+travel(USArmy, USA, Tanis) -> 8
+give(Nazis, Ark, USArmy, USA) -> 4
+open(Nazis, Ark, USA) -> 5
+
+[PROMPT]... The story begins with the following steps:\n
+Jones travels from USA to Tanis.
+Jones digs up the Ark.
+Jones gives the Ark to the Nazis.
+The U.S. Army travels from USA to Tanis.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+Jones opens the Ark, revealing its power.
+The U.S. Army defeats the Nazis and takes the Ark.
+
+RANKS:
+open(Nazis, Ark, Tanis) -> 6
+travel(Jones, Tanis, USA) -> 10
+travel(Nazis, Tanis, USA) -> 8
+travel(USArmy, Tanis, USA) -> 8
+give(Nazis, Ark, Jones, Tanis) -> 6
+give(Nazis, Ark, USArmy, Tanis) -> 3
+
+[PROMPT]... The story begins with the following steps:\n
+The U.S. Army travels from USA to Tanis.
+The Nazis travel from Tanis to USA.
+The U.S. Army travels from Tanis to USA.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+Indiana Jones digs for the Ark. 
+The U.S. Army opens the Ark.
+
+RANKS:
+travel(Jones, USA, Tanis) -> 10
+travel(Nazis, USA, Tanis) -> 10
+travel(USArmy, USA, Tanis) -> 7
+
+[PROMPT]... The story begins with the following steps:\n
+Jones travels from USA to Tanis.
+Jones digs up the Ark.
+The Nazis take the Ark from Jones.
+Jones travels from Tanis to USA.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+The U.S. Army goes to Tanis to take the Ark from the Nazis.
+The U.S
+
+RANKS:
+open(Nazis, Ark, Tanis) -> 7
+travel(Jones, USA, Tanis) -> 7
+travel(Nazis, Tanis, USA) -> 4
+travel(USArmy, USA, Tanis) -> 4
+
+[PROMPT]... The story begins with the following steps:\n
+Jones travels from USA to Tanis.
+The Nazis travel from Tanis to USA.
+The U.S. Army travels from USA to Tanis.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+Indiana Jones finds the Ark.
+The U.S. Army takes the Ark from Indiana Jones.
+
+RANKS:
+travel(Jones, Tanis, USA) -> 10
+travel(Nazis, USA, Tanis) -> 10
+travel(USArmy, Tanis, USA) -> 7
+dig(Jones, Ark, Tanis) -> 5
+
+[PROMPT]... The story begins with the following steps:\n
+The U.S. Army travels from USA to Tanis.
+The Nazis travel from Tanis to USA.
+Jones travels from USA to Tanis.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+Indiana Jones digs for the Ark.
+The U.S. Army defeats the Nazis.
+
+RANKS:
+travel(Jones, Tanis, USA) -> 11
+travel(Nazis, USA, Tanis) -> 8
+travel(USArmy, Tanis, USA) -> 7
+dig(Jones, Ark, Tanis) -> 4
+
+[PROMPT]... The story begins with the following steps:\n
+The U.S. Army travels from USA to Tanis.
+The Nazis travel from Tanis to USA.
+The Nazis travel from USA to Tanis.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+Indiana Jones digs for the Ark at Tanis.
+The U.S. Army fights the Nazis at Tanis.
+
+RANKS:
+travel(Jones, USA, Tanis) -> 7
+travel(Nazis, Tanis, USA) -> 4
+travel(USArmy, Tanis, USA) -> 4
+
+[PROMPT]... The story begins with the following steps:\n
+The U.S. Army travels from USA to Tanis.
+The U.S. Army travels from Tanis to USA.
+The Nazis travel from Tanis to USA.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+Indiana Jones digs for the Ark.
+The U.S. Army opens the Ark.
+
+RANKS:
+travel(Jones, USA, Tanis) -> 11
+travel(Nazis, USA, Tanis) -> 10
+travel(USArmy, USA, Tanis) -> 7
+
+[PROMPT]... The story begins with the following steps:\n
+The U.S. Army travels from USA to Tanis.
+The U.S. Army travels from Tanis to USA.
+The U.S. Army travels from USA to Tanis.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+Indiana Jones digs for the Ark.
+The U.S. Army opens the Ark.
+
+RANKS:
+travel(Jones, USA, Tanis) -> 11
+travel(Nazis, Tanis, USA) -> 10
+travel(USArmy, Tanis, USA) -> 7
+
+[PROMPT]... The story begins with the following steps:\n
+Jones travels from USA to Tanis.
+Jones digs up the Ark.
+Jones opens the Ark and dies.
+The Nazis take the Ark from Jones.
+The Nazis open the Ark and die.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+The U.S. Army takes the Ark from the Nazis.
+The U.S. Army seals the Ark
+
+RANKS:
+travel(USArmy, USA, Tanis) -> 7
+
+[PROMPT]... The story begins with the following steps:\n
+Jones travels from USA to Tanis.
+Jones digs up the Ark.
+The U.S. Army travels from USA to Tanis.
+Jones gives the Ark to the U.S. Army.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+The U.S. Army opens the Ark.
+The Nazis are killed by the U.S. Army.
+
+RANKS:
+give(USArmy, Ark, Jones, Tanis) -> 4
+travel(Jones, Tanis, USA) -> 11
+open(USArmy, Ark, Tanis) -> 3
+give(USArmy, Ark, Nazis, Tanis) -> 5
+travel(Nazis, Tanis, USA) -> 6
+travel(USArmy, Tanis, USA) -> 7
+
+[PROMPT]... The story begins with the following steps:\n
+Jones travels from USA to Tanis.
+The U.S. Army travels from USA to Tanis.
+Jones digs up the Ark.
+Jones gives the Ark to the U.S. Army.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+The U.S. Army opens the Ark.
+The Nazis are killed by the U.S. Army.
+
+RANKS:
+give(USArmy, Ark, Jones, Tanis) -> 4
+travel(Jones, Tanis, USA) -> 11
+open(USArmy, Ark, Tanis) -> 3
+give(USArmy, Ark, Nazis, Tanis) -> 5
+travel(Nazis, Tanis, USA) -> 6
+travel(USArmy, Tanis, USA) -> 7
+
+[PROMPT]... The story begins with the following steps:\n
+Jones travels from USA to Tanis.
+Jones digs up the Ark.
+The Nazis take the Ark from Jones.
+The Nazis give the Ark to Jones.
+Jones opens the Ark and dies.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+Jones gives the Ark to the U.S. Army.
+The U.S. Army defeats the Nazis.
+
+RANKS:
+travel(Nazis, Tanis, USA) -> 7
+travel(USArmy, USA, Tanis) -> 8
+take(Nazis, Ark, Jones, Tanis) -> 6
+
+[PROMPT]... The story begins with the following steps:\n
+Jones travels from USA to Tanis.
+Jones digs up the Ark.
+The Nazis take the Ark from Jones.
+The Nazis give the Ark to Jones.
+Jones gives the Ark to the Nazis.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+Jones opens the Ark, killing the Nazis.
+The U.S. Army takes the Ark from the Nazis.
+
+RANKS:
+open(Nazis, Ark, Tanis) -> 5
+travel(Jones, Tanis, USA) -> 10
+travel(Nazis, Tanis, USA) -> 7
+travel(USArmy, USA, Tanis) -> 7
+give(Nazis, Ark, Jones, Tanis) -> 5
+
+[PROMPT]... The story begins with the following steps:\n
+Jones travels from USA to Tanis.
+Jones digs up the Ark.
+Jones travels from Tanis to USA.
+Jones gives the Ark to the U.S. Army.
+The U.S. Army open the Ark and die.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+Jones defeats the Nazis.
+The U.S. Army seals the Ark away safely.
+
+RANKS:
+travel(Jones, USA, Tanis) -> 10
+travel(Nazis, Tanis, USA) -> 8
+take(Jones, Ark, USArmy, USA) -> 5
+
+[PROMPT]... The story begins with the following steps:\n
+Jones travels from USA to Tanis.
+Jones digs up the Ark.
+Jones gives the Ark to the Nazis.
+The Nazis give the Ark to Jones.
+Jones gives the Ark to the Nazis.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+Jones opens the Ark, killing the Nazis.
+Jones gives the Ark to the U.S. Army.
+
+RANKS:
+open(Nazis, Ark, Tanis) -> 5
+travel(Jones, Tanis, USA) -> 9
+travel(Nazis, Tanis, USA) -> 9
+travel(USArmy, USA, Tanis) -> 8
+give(Nazis, Ark, Jones, Tanis) -> 5
+
+[PROMPT]... The story begins with the following steps:\n
+Jones travels from USA to Tanis.
+Jones digs up the Ark.
+The Nazis take the Ark from Jones.
+The Nazis travel from Tanis to USA.
+The Nazis give the Ark to the U.S. Army.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+Jones opens the Ark, releasing a powerful force that kills the Nazis.
+The U.S. Army takes possession
+
+RANKS:
+open(USArmy, Ark, USA) -> 7
+give(USArmy, Ark, Nazis, USA) -> 7
+travel(Jones, Tanis, USA) -> 10
+travel(Nazis, USA, Tanis) -> 9
+travel(USArmy, USA, Tanis) -> 7
+
+[PROMPT]... The story begins with the following steps:\n
+Jones travels from USA to Tanis.
+Jones travels from Tanis to USA.
+Jones travels from USA to Tanis.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+Jones opens the Ark.
+Jones gives the Ark to the U.S. Army.
+
+RANKS:
+travel(Jones, Tanis, USA) -> 9
+travel(Nazis, Tanis, USA) -> 10
+travel(USArmy, USA, Tanis) -> 8
+dig(Jones, Ark, Tanis) -> 4
+
+[PROMPT]... The story begins with the following steps:\n
+The Nazis travel from Tanis to USA.
+Jones travels from USA to Tanis.
+The U.S. Army travels from USA to Tanis.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+Jones and the U.S. Army team up to fight the Nazis.
+Jones and the U.S. Army
+
+RANKS:
+travel(Jones, Tanis, USA) -> 8
+travel(Nazis, USA, Tanis) -> 8
+travel(USArmy, Tanis, USA) -> 8
+dig(Jones, Ark, Tanis) -> 9
+
+[PROMPT]... The story begins with the following steps:\n
+The Nazis travel from Tanis to USA.
+The U.S. Army travels from USA to Tanis.
+The U.S. Army travels from Tanis to USA.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+Indiana Jones digs for the Ark at Tanis.
+The U.S. Army opens the Ark at USA.
+
+RANKS:
+travel(Jones, USA, Tanis) -> 7
+travel(Nazis, USA, Tanis) -> 8
+travel(USArmy, USA, Tanis) -> 7
+
+[PROMPT]... The story begins with the following steps:\n
+Jones travels from USA to Tanis.
+Jones digs up the Ark.
+The U.S. Army travels from USA to Tanis.
+Jones gives the Ark to the Nazis.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+The Nazis open the Ark.
+The U.S. Army takes the Ark from the Nazis.
+
+RANKS:
+open(Nazis, Ark, Tanis) -> 3
+travel(Jones, Tanis, USA) -> 11
+travel(Nazis, Tanis, USA) -> 7
+travel(USArmy, Tanis, USA) -> 7
+give(Nazis, Ark, Jones, Tanis) -> 4
+give(Nazis, Ark, USArmy, Tanis) -> 2
+
+[PROMPT]... The story begins with the following steps:\n
+Jones travels from USA to Tanis.
+Jones digs up the Ark.
+The U.S. Army travels from USA to Tanis.
+The U.S. Army takes the Ark from Jones.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+Jones opens the Ark.
+The U.S. Army destroys the Nazis.
+
+RANKS:
+give(USArmy, Ark, Jones, Tanis) -> 6
+travel(Jones, Tanis, USA) -> 9
+open(USArmy, Ark, Tanis) -> 7
+give(USArmy, Ark, Nazis, Tanis) -> 5
+travel(Nazis, Tanis, USA) -> 7
+travel(USArmy, Tanis, USA) -> 7
+
+[PROMPT]... The story begins with the following steps:\n
+Jones travels from USA to Tanis.
+The U.S. Army travels from USA to Tanis.
+Jones digs up the Ark.
+Jones gives the Ark to the Nazis.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+The U.S. Army takes the Ark from the Nazis.
+Jones opens the Ark, killing the Nazis.
+
+RANKS:
+open(Nazis, Ark, Tanis) -> 5
+travel(Jones, Tanis, USA) -> 10
+travel(Nazis, Tanis, USA) -> 7
+travel(USArmy, Tanis, USA) -> 7
+give(Nazis, Ark, Jones, Tanis) -> 5
+give(Nazis, Ark, USArmy, Tanis) -> 2
+
+[PROMPT]... The story begins with the following steps:\n
+Jones travels from USA to Tanis.
+The U.S. Army travels from USA to Tanis.
+Jones digs up the Ark.
+The U.S. Army takes the Ark from Jones.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+Jones opens the Ark.
+The U.S. Army destroys the Nazis with the power of the Ark.
+
+RANKS:
+give(USArmy, Ark, Jones, Tanis) -> 6
+travel(Jones, Tanis, USA) -> 9
+open(USArmy, Ark, Tanis) -> 5
+give(USArmy, Ark, Nazis, Tanis) -> 4
+travel(Nazis, Tanis, USA) -> 8
+travel(USArmy, Tanis, USA) -> 8
+
+[PROMPT]... The story begins with the following steps:\n
+Jones travels from USA to Tanis.
+Jones digs up the Ark.
+The Nazis take the Ark from Jones.
+The Nazis give the Ark to Jones.
+The Nazis take the Ark from Jones.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+Jones opens the Ark, killing the Nazis.
+The U.S. Army takes the Ark from Jones.
+
+RANKS:
+open(Nazis, Ark, Tanis) -> 5
+travel(Jones, Tanis, USA) -> 9
+travel(Nazis, Tanis, USA) -> 9
+travel(USArmy, USA, Tanis) -> 8
+give(Nazis, Ark, Jones, Tanis) -> 5
+
+[PROMPT]... The story begins with the following steps:\n
+Jones travels from USA to Tanis.
+Jones digs up the Ark.
+Jones travels from Tanis to USA.
+Jones gives the Ark to the U.S. Army.
+The U.S. Army gives the Ark to Jones.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+Jones opens the Ark.
+The U.S. Army destroys the Ark.
+
+RANKS:
+travel(Jones, USA, Tanis) -> 10
+travel(Nazis, Tanis, USA) -> 10
+travel(USArmy, USA, Tanis) -> 8
+give(Jones, Ark, USArmy, USA) -> 5
+take(USArmy, Ark, Jones, USA) -> 4
+open(Jones, Ark, USA) -> 3
+
+[PROMPT]... The story begins with the following steps:\n
+Jones travels from USA to Tanis.
+Jones digs up the Ark.
+Jones gives the Ark to the Nazis.
+The Nazis open the Ark and die.
+Jones takes the Ark from the Nazis.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+Jones gives the Ark to the U.S. Army.
+The U.S. Army takes the Ark.
+
+RANKS:
+travel(Jones, Tanis, USA) -> 9
+travel(USArmy, USA, Tanis) -> 7
+open(Jones, Ark, Tanis) -> 7
+
+[PROMPT]... The story begins with the following steps:\n
+Jones travels from USA to Tanis.
+Jones digs up the Ark.
+Jones gives the Ark to the Nazis.
+The Nazis give the Ark to Jones.
+Jones opens the Ark and dies.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+Jones gives the Ark to the U.S. Army.
+The U.S. Army defeats the Nazis.
+
+RANKS:
+travel(Nazis, Tanis, USA) -> 7
+travel(USArmy, USA, Tanis) -> 8
+take(Nazis, Ark, Jones, Tanis) -> 6
+
+[PROMPT]... The story begins with the following steps:\n
+Jones travels from USA to Tanis.
+Jones digs up the Ark.
+Jones gives the Ark to the Nazis.
+The Nazis give the Ark to Jones.
+The Nazis take the Ark from Jones.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+Jones opens the Ark, killing the Nazis.
+Jones gives the Ark to the U.S. Army.
+
+RANKS:
+open(Nazis, Ark, Tanis) -> 5
+travel(Jones, Tanis, USA) -> 9
+travel(Nazis, Tanis, USA) -> 9
+travel(USArmy, USA, Tanis) -> 8
+give(Nazis, Ark, Jones, Tanis) -> 5
+
+[PROMPT]... The story begins with the following steps:\n
+Jones travels from USA to Tanis.
+Jones digs up the Ark.
+Jones opens the Ark and dies.
+The U.S. Army travels from USA to Tanis.
+The U.S. Army takes the Ark from Jones.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+The U.S. Army gives the Ark to the USA.
+The Nazis are killed by the U.S.
+
+RANKS:
+open(USArmy, Ark, Tanis) -> 5
+give(USArmy, Ark, Nazis, Tanis) -> 3
+travel(Nazis, Tanis, USA) -> 6
+travel(USArmy, Tanis, USA) -> 7
+
+[PROMPT]... The story begins with the following steps:\n
+The Nazis travel from Tanis to USA.
+Jones travels from USA to Tanis.
+Jones digs up the Ark.
+Jones opens the Ark and dies.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+The U.S. Army takes the Ark.
+The Nazis are killed by the U.S. Army.
+
+RANKS:
+travel(Nazis, USA, Tanis) -> 7
+travel(USArmy, USA, Tanis) -> 7
+
+[PROMPT]... The story begins with the following steps:\n
+Jones travels from USA to Tanis.
+Jones digs up the Ark.
+The U.S. Army travels from USA to Tanis.
+Jones opens the Ark and dies.
+The U.S. Army takes the Ark from Jones.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+The U.S. Army destroys the Ark.
+The Nazis are killed by the U.S. Army.
+
+RANKS:
+open(USArmy, Ark, Tanis) -> 4
+give(USArmy, Ark, Nazis, Tanis) -> 4
+travel(Nazis, Tanis, USA) -> 6
+travel(USArmy, Tanis, USA) -> 8
+
+[PROMPT]... The story begins with the following steps:\n
+Jones travels from USA to Tanis.
+The U.S. Army travels from USA to Tanis.
+Jones digs up the Ark.
+Jones opens the Ark and dies.
+The U.S. Army takes the Ark from Jones.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+The U.S. Army uses the Ark to defeat the Nazis.
+The U.S. Army gives the Ark
+
+RANKS:
+open(USArmy, Ark, Tanis) -> 5
+give(USArmy, Ark, Nazis, Tanis) -> 3
+travel(Nazis, Tanis, USA) -> 8
+travel(USArmy, Tanis, USA) -> 8
+
+[PROMPT]... The story begins with the following steps:\n
+Jones travels from USA to Tanis.
+Jones digs up the Ark.
+The Nazis take the Ark from Jones.
+The U.S. Army travels from USA to Tanis.
+The Nazis give the Ark to the U.S. Army.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+Jones opens the Ark.
+The U.S. Army destroys the Ark.
+
+RANKS:
+give(USArmy, Ark, Jones, Tanis) -> 5
+travel(Jones, Tanis, USA) -> 9
+open(USArmy, Ark, Tanis) -> 4
+give(USArmy, Ark, Nazis, Tanis) -> 4
+travel(Nazis, Tanis, USA) -> 10
+travel(USArmy, Tanis, USA) -> 8
+
+[PROMPT]... The story begins with the following steps:\n
+Jones travels from USA to Tanis.
+The U.S. Army travels from USA to Tanis.
+Jones travels from Tanis to USA.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+Jones and the U.S. Army team up to fight the Nazis.
+Jones and the U.S. Army
+
+RANKS:
+travel(Jones, USA, Tanis) -> 9
+travel(Nazis, Tanis, USA) -> 8
+travel(USArmy, Tanis, USA) -> 8
+
+[PROMPT]... The story begins with the following steps:\n
+Jones travels from USA to Tanis.
+Jones digs up the Ark.
+Jones gives the Ark to the Nazis.
+Jones travels from Tanis to USA.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+The U.S. Army takes the Ark from the Nazis.
+Indiana Jones opens the Ark, killing the Nazis.
+
+RANKS:
+open(Nazis, Ark, Tanis) -> 4
+travel(Jones, USA, Tanis) -> 11
+travel(Nazis, Tanis, USA) -> 7
+travel(USArmy, USA, Tanis) -> 7
+
+[PROMPT]... The story begins with the following steps:\n
+Jones travels from USA to Tanis.
+Jones travels from Tanis to USA.
+The U.S. Army travels from USA to Tanis.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+Jones and the U.S. Army team up to fight the Nazis.
+Jones and the U.S. Army
+
+RANKS:
+travel(Jones, USA, Tanis) -> 9
+travel(Nazis, Tanis, USA) -> 8
+travel(USArmy, Tanis, USA) -> 8
+
+[PROMPT]... The story begins with the following steps:\n
+Jones travels from USA to Tanis.
+Jones digs up the Ark.
+Jones opens the Ark and dies.
+The Nazis take the Ark from Jones.
+The Nazis travel from Tanis to USA.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+The U.S. Army takes the Ark from the Nazis.
+The U.S. Army kills the Nazis.
+
+RANKS:
+travel(Nazis, USA, Tanis) -> 7
+travel(USArmy, USA, Tanis) -> 7
+give(Nazis, Ark, USArmy, USA) -> 2
+open(Nazis, Ark, USA) -> 7
+
+[PROMPT]... The story begins with the following steps:\n
+Jones travels from USA to Tanis.
+Jones digs up the Ark.
+Jones opens the Ark and dies.
+The Nazis take the Ark from Jones.
+The U.S. Army travels from USA to Tanis.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+The U.S. Army fights the Nazis and defeats them.
+The U.S. Army takes the Ark
+
+RANKS:
+open(Nazis, Ark, Tanis) -> 8
+travel(Nazis, Tanis, USA) -> 7
+travel(USArmy, Tanis, USA) -> 7
+give(Nazis, Ark, USArmy, Tanis) -> 4
+
+[PROMPT]... The story begins with the following steps:\n
+Jones travels from USA to Tanis.
+Jones digs up the Ark.
+The U.S. Army travels from USA to Tanis.
+The Nazis take the Ark from Jones.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+Jones opens the Ark.
+The U.S. Army defeats the Nazis.
+
+RANKS:
+open(Nazis, Ark, Tanis) -> 8
+travel(Jones, Tanis, USA) -> 9
+travel(Nazis, Tanis, USA) -> 7
+travel(USArmy, Tanis, USA) -> 7
+give(Nazis, Ark, Jones, Tanis) -> 7
+give(Nazis, Ark, USArmy, Tanis) -> 5
+
+[PROMPT]... The story begins with the following steps:\n
+Jones travels from USA to Tanis.
+Jones digs up the Ark.
+The U.S. Army travels from USA to Tanis.
+The Nazis travel from Tanis to USA.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+Jones opens the Ark.
+The U.S. Army takes the Ark.
+
+RANKS:
+travel(Jones, Tanis, USA) -> 9
+travel(Nazis, USA, Tanis) -> 10
+travel(USArmy, Tanis, USA) -> 7
+give(Jones, Ark, USArmy, Tanis) -> 3
+take(USArmy, Ark, Jones, Tanis) -> 3
+open(Jones, Ark, Tanis) -> 3
+
+[PROMPT]... The story begins with the following steps:\n
+Jones travels from USA to Tanis.
+Jones digs up the Ark.
+The U.S. Army travels from USA to Tanis.
+The U.S. Army travels from Tanis to USA.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+Jones opens the Ark.
+The U.S. Army defeats the Nazis.
+
+RANKS:
+travel(Jones, Tanis, USA) -> 9
+travel(Nazis, Tanis, USA) -> 7
+travel(USArmy, USA, Tanis) -> 8
+give(Jones, Ark, Nazis, Tanis) -> 6
+take(Nazis, Ark, Jones, Tanis) -> 7
+open(Jones, Ark, Tanis) -> 3
+
+[PROMPT]... The story begins with the following steps:\n
+Jones travels from USA to Tanis.
+The U.S. Army travels from USA to Tanis.
+Jones digs up the Ark.
+The Nazis take the Ark from Jones.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+Jones opens the Ark.
+The U.S. Army defeats the Nazis.
+
+RANKS:
+open(Nazis, Ark, Tanis) -> 8
+travel(Jones, Tanis, USA) -> 9
+travel(Nazis, Tanis, USA) -> 7
+travel(USArmy, Tanis, USA) -> 7
+give(Nazis, Ark, Jones, Tanis) -> 7
+give(Nazis, Ark, USArmy, Tanis) -> 5
+
+[PROMPT]... The story begins with the following steps:\n
+Jones travels from USA to Tanis.
+The U.S. Army travels from USA to Tanis.
+Jones digs up the Ark.
+The Nazis travel from Tanis to USA.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+Jones opens the Ark.
+The U.S. Army takes the Ark.
+
+RANKS:
+travel(Jones, Tanis, USA) -> 9
+travel(Nazis, USA, Tanis) -> 10
+travel(USArmy, Tanis, USA) -> 7
+give(Jones, Ark, USArmy, Tanis) -> 3
+take(USArmy, Ark, Jones, Tanis) -> 3
+open(Jones, Ark, Tanis) -> 3
+
+[PROMPT]... The story begins with the following steps:\n
+Jones travels from USA to Tanis.
+The U.S. Army travels from USA to Tanis.
+Jones digs up the Ark.
+The U.S. Army travels from Tanis to USA.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+Jones gives the Ark to the U.S. Army.
+The U.S. Army defeats the Nazis.
+
+RANKS:
+travel(Jones, Tanis, USA) -> 9
+travel(Nazis, Tanis, USA) -> 7
+travel(USArmy, USA, Tanis) -> 8
+give(Jones, Ark, Nazis, Tanis) -> 3
+take(Nazis, Ark, Jones, Tanis) -> 6
+open(Jones, Ark, Tanis) -> 7
+
+[PROMPT]... The story begins with the following steps:\n
+Jones travels from USA to Tanis.
+Jones digs up the Ark.
+Jones opens the Ark and dies.
+The Nazis travel from Tanis to USA.
+The Nazis travel from USA to Tanis.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+The U.S. Army takes the Ark from the Nazis.
+The Nazis are killed by the U.S.
+
+RANKS:
+travel(Nazis, Tanis, USA) -> 6
+travel(USArmy, USA, Tanis) -> 7
+take(Nazis, Ark, Jones, Tanis) -> 4
+
+[PROMPT]... The story begins with the following steps:\n
+Jones travels from USA to Tanis.
+Jones digs up the Ark.
+Jones travels from Tanis to USA.
+Jones gives the Ark to the U.S. Army.
+The Nazis travel from Tanis to USA.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+The U.S. Army opens the Ark.
+The Nazis are killed by the U.S. Army.
+
+RANKS:
+travel(Jones, USA, Tanis) -> 11
+open(USArmy, Ark, USA) -> 3
+give(USArmy, Ark, Nazis, USA) -> 5
+travel(Nazis, USA, Tanis) -> 7
+travel(USArmy, USA, Tanis) -> 7
+give(USArmy, Ark, Jones, USA) -> 4
+
+[PROMPT]... The story begins with the following steps:\n
+The U.S. Army travels from USA to Tanis.
+Jones travels from USA to Tanis.
+Jones digs up the Ark.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+Jones opens the Ark.
+The U.S. Army defeats the Nazis.
+
+RANKS:
+travel(Jones, Tanis, USA) -> 9
+travel(Nazis, Tanis, USA) -> 7
+travel(USArmy, Tanis, USA) -> 7
+give(Jones, Ark, Nazis, Tanis) -> 6
+take(Nazis, Ark, Jones, Tanis) -> 7
+give(Jones, Ark, USArmy, Tanis) -> 5
+take(USArmy, Ark, Jones, Tanis) -> 6
+open(Jones, Ark, Tanis) -> 3
+
+[PROMPT]... The story begins with the following steps:\n
+Jones travels from USA to Tanis.
+Jones digs up the Ark.
+Jones gives the Ark to the Nazis.
+The U.S. Army travels from USA to Tanis.
+The Nazis give the Ark to the U.S. Army.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+Jones opens the Ark.
+The U.S. Army destroys the Nazis.
+
+RANKS:
+give(USArmy, Ark, Jones, Tanis) -> 6
+travel(Jones, Tanis, USA) -> 9
+open(USArmy, Ark, Tanis) -> 7
+give(USArmy, Ark, Nazis, Tanis) -> 5
+travel(Nazis, Tanis, USA) -> 7
+travel(USArmy, Tanis, USA) -> 7
+
+[PROMPT]... The story begins with the following steps:\n
+Jones travels from USA to Tanis.
+The Nazis travel from Tanis to USA.
+Jones travels from Tanis to USA.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+Jones and the U.S. Army dig for the Ark.
+Jones and the U.S. Army battle the
+
+RANKS:
+travel(Jones, USA, Tanis) -> 10
+travel(Nazis, USA, Tanis) -> 10
+travel(USArmy, USA, Tanis) -> 8
+
+[PROMPT]... The story begins with the following steps:\n
+Jones travels from USA to Tanis.
+The Nazis travel from Tanis to USA.
+The Nazis travel from USA to Tanis.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+Jones opens the Ark.
+The U.S. Army takes the Ark.
+
+RANKS:
+travel(Jones, Tanis, USA) -> 9
+travel(Nazis, Tanis, USA) -> 10
+travel(USArmy, USA, Tanis) -> 7
+dig(Jones, Ark, Tanis) -> 4
+
+[PROMPT]... The story begins with the following steps:\n
+The Nazis travel from Tanis to USA.
+Jones travels from USA to Tanis.
+Jones travels from Tanis to USA.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+Jones takes the Ark from Tanis.
+The U.S. Army defeats the Nazis.
+
+RANKS:
+travel(Jones, USA, Tanis) -> 6
+travel(Nazis, USA, Tanis) -> 8
+travel(USArmy, USA, Tanis) -> 8
+
+[PROMPT]... The story begins with the following steps:\n
+The Nazis travel from Tanis to USA.
+The Nazis travel from USA to Tanis.
+The Nazis travel from Tanis to USA.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+Indiana Jones and the U.S. Army team up to fight the Nazis.
+Indiana Jones finds the Ark and gives
+
+RANKS:
+travel(Jones, USA, Tanis) -> 11
+travel(Nazis, USA, Tanis) -> 8
+travel(USArmy, USA, Tanis) -> 8
+
+[PROMPT]... The story begins with the following steps:\n
+The Nazis travel from Tanis to USA.
+The Nazis travel from USA to Tanis.
+The U.S. Army travels from USA to Tanis.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+Indiana Jones takes the Ark from the Nazis.
+The U.S. Army defeats the Nazis.
+
+RANKS:
+travel(Jones, USA, Tanis) -> 10
+travel(Nazis, Tanis, USA) -> 7
+travel(USArmy, Tanis, USA) -> 7
+
+[PROMPT]... The story begins with the following steps:\n
+Jones travels from USA to Tanis.
+Jones digs up the Ark.
+Jones travels from Tanis to USA.
+Jones opens the Ark and dies.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+The U.S. Army takes the Ark from Jones.
+The U.S. Army defeats the Nazis.
+
+RANKS:
+travel(Nazis, Tanis, USA) -> 7
+travel(USArmy, USA, Tanis) -> 8
+take(USArmy, Ark, Jones, USA) -> 0
+
+[PROMPT]... The story begins with the following steps:\n
+Jones travels from USA to Tanis.
+Jones digs up the Ark.
+Jones travels from Tanis to USA.
+The Nazis travel from Tanis to USA.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+Jones gives the Ark to the U.S. Army.
+The U.S. Army defeats the Nazis.
+
+RANKS:
+travel(Jones, USA, Tanis) -> 10
+travel(Nazis, USA, Tanis) -> 8
+travel(USArmy, USA, Tanis) -> 8
+give(Jones, Ark, Nazis, USA) -> 3
+take(Nazis, Ark, Jones, USA) -> 6
+give(Jones, Ark, USArmy, USA) -> 0
+take(USArmy, Ark, Jones, USA) -> 2
+open(Jones, Ark, USA) -> 7
+
+[PROMPT]... The story begins with the following steps:\n
+Jones travels from USA to Tanis.
+Jones digs up the Ark.
+Jones opens the Ark and dies.
+The Nazis travel from Tanis to USA.
+The U.S. Army travels from USA to Tanis.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+The U.S. Army takes the Ark.
+The Nazis are killed by the U.S. Army.
+
+RANKS:
+travel(Nazis, USA, Tanis) -> 7
+travel(USArmy, Tanis, USA) -> 7
+take(USArmy, Ark, Jones, Tanis) -> 3
+
+[PROMPT]... The story begins with the following steps:\n
+Jones travels from USA to Tanis.
+Jones digs up the Ark.
+The Nazis take the Ark from Jones.
+The Nazis give the Ark to Jones.
+The U.S. Army travels from USA to Tanis.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+Jones opens the Ark.
+The U.S. Army defeats the Nazis.
+
+RANKS:
+travel(Jones, Tanis, USA) -> 9
+travel(Nazis, Tanis, USA) -> 7
+travel(USArmy, Tanis, USA) -> 7
+give(Jones, Ark, Nazis, Tanis) -> 6
+take(Nazis, Ark, Jones, Tanis) -> 7
+give(Jones, Ark, USArmy, Tanis) -> 5
+take(USArmy, Ark, Jones, Tanis) -> 6
+open(Jones, Ark, Tanis) -> 3
+
+[PROMPT]... The story begins with the following steps:\n
+Jones travels from USA to Tanis.
+Jones digs up the Ark.
+Jones travels from Tanis to USA.
+The U.S. Army takes the Ark from Jones.
+The U.S. Army open the Ark and die.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+Jones defeats the Nazis.
+The U.S. Army secures the Ark.
+
+RANKS:
+travel(Jones, USA, Tanis) -> 10
+travel(Nazis, Tanis, USA) -> 8
+take(Jones, Ark, USArmy, USA) -> 4
+
+[PROMPT]... The story begins with the following steps:\n
+Jones travels from USA to Tanis.
+Jones digs up the Ark.
+The Nazis take the Ark from Jones.
+The Nazis open the Ark and die.
+Jones takes the Ark from the Nazis.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+Jones gives the Ark to the U.S. Army.
+The U.S. Army takes the Ark.
+
+RANKS:
+travel(Jones, Tanis, USA) -> 9
+travel(USArmy, USA, Tanis) -> 7
+open(Jones, Ark, Tanis) -> 7
+
+[PROMPT]... The story begins with the following steps:\n
+Jones travels from USA to Tanis.
+Jones digs up the Ark.
+Jones gives the Ark to the Nazis.
+The Nazis travel from Tanis to USA.
+The Nazis give the Ark to the U.S. Army.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+The U.S. Army opens the Ark.
+The Nazis are killed by the U.S. Army.
+
+RANKS:
+open(USArmy, Ark, USA) -> 3
+give(USArmy, Ark, Nazis, USA) -> 5
+travel(Jones, Tanis, USA) -> 11
+travel(Nazis, USA, Tanis) -> 7
+travel(USArmy, USA, Tanis) -> 7
+
+[PROMPT]... The story begins with the following steps:\n
+Jones travels from USA to Tanis.
+Jones digs up the Ark.
+The U.S. Army travels from USA to Tanis.
+Jones gives the Ark to the U.S. Army.
+The U.S. Army open the Ark and die.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+Jones defeats the Nazis.
+The U.S. Army takes the Ark back to the USA.
+
+RANKS:
+travel(Jones, Tanis, USA) -> 9
+travel(Nazis, Tanis, USA) -> 8
+take(Jones, Ark, USArmy, Tanis) -> 4
+
+[PROMPT]... The story begins with the following steps:\n
+Jones travels from USA to Tanis.
+The U.S. Army travels from USA to Tanis.
+Jones digs up the Ark.
+Jones gives the Ark to the U.S. Army.
+The U.S. Army open the Ark and die.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+Jones takes the Ark away from the U.S. Army.
+Jones destroys the Ark.
+
+RANKS:
+travel(Jones, Tanis, USA) -> 8
+travel(Nazis, Tanis, USA) -> 10
+take(Jones, Ark, USArmy, Tanis) -> 0
+
+[PROMPT]... The story begins with the following steps:\n
+Jones travels from USA to Tanis.
+Jones digs up the Ark.
+The U.S. Army travels from USA to Tanis.
+Jones gives the Ark to the Nazis.
+The Nazis give the Ark to the U.S. Army.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+Jones opens the Ark. 
+The U.S. Army takes the Ark.
+
+RANKS:
+give(USArmy, Ark, Jones, Tanis) -> 3
+travel(Jones, Tanis, USA) -> 9
+open(USArmy, Ark, Tanis) -> 4
+give(USArmy, Ark, Nazis, Tanis) -> 4
+travel(Nazis, Tanis, USA) -> 10
+travel(USArmy, Tanis, USA) -> 7
+
+[PROMPT]... The story begins with the following steps:\n
+Jones travels from USA to Tanis.
+The U.S. Army travels from USA to Tanis.
+Jones digs up the Ark.
+Jones gives the Ark to the Nazis.
+The Nazis give the Ark to the U.S. Army.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+Jones opens the Ark.
+The U.S. Army destroys the Ark.
+
+RANKS:
+give(USArmy, Ark, Jones, Tanis) -> 5
+travel(Jones, Tanis, USA) -> 9
+open(USArmy, Ark, Tanis) -> 4
+give(USArmy, Ark, Nazis, Tanis) -> 4
+travel(Nazis, Tanis, USA) -> 10
+travel(USArmy, Tanis, USA) -> 8
+
+[PROMPT]... The story begins with the following steps:\n
+Jones travels from USA to Tanis.
+Jones digs up the Ark.
+Jones travels from Tanis to USA.
+Jones opens the Ark and dies.
+The U.S. Army takes the Ark from Jones.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+The U.S. Army uses the Ark to defeat the Nazis.
+The U.S. Army destroys the
+
+RANKS:
+open(USArmy, Ark, USA) -> 5
+travel(Nazis, Tanis, USA) -> 8
+travel(USArmy, USA, Tanis) -> 8
+
+[PROMPT]... The story begins with the following steps:\n
+Jones travels from USA to Tanis.
+Jones digs up the Ark.
+Jones travels from Tanis to USA.
+The Nazis travel from Tanis to USA.
+Jones gives the Ark to the U.S. Army.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+The U.S. Army opens the Ark.
+The Nazis are killed by the U.S. Army.
+
+RANKS:
+travel(Jones, USA, Tanis) -> 11
+open(USArmy, Ark, USA) -> 3
+give(USArmy, Ark, Nazis, USA) -> 5
+travel(Nazis, USA, Tanis) -> 7
+travel(USArmy, USA, Tanis) -> 7
+give(USArmy, Ark, Jones, USA) -> 4
+
+[PROMPT]... The story begins with the following steps:\n
+Jones travels from USA to Tanis.
+The U.S. Army travels from USA to Tanis.
+Jones digs up the Ark.
+Jones gives the Ark to the U.S. Army.
+The U.S. Army open the Ark and die.
+Jones takes the Ark from the U.S. Army.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+Jones takes the Ark to the USA.
+The U.S. Army secures the Ark in a safe location.
+
+RANKS:
+travel(Jones, Tanis, USA) -> 6
+travel(Nazis, Tanis, USA) -> 9
+give(Jones, Ark, Nazis, Tanis) -> 5
+take(Nazis, Ark, Jones, Tanis) -> 6
+open(Jones, Ark, Tanis) -> 6
+
+[PROMPT]... The story begins with the following steps:\n
+The U.S. Army travels from USA to Tanis.
+The U.S. Army travels from Tanis to USA.
+Jones travels from USA to Tanis.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+Indiana Jones takes the Ark from Tanis.
+The U.S. Army defeats the Nazis.
+
+RANKS:
+travel(Jones, Tanis, USA) -> 8
+travel(Nazis, Tanis, USA) -> 7
+travel(USArmy, USA, Tanis) -> 7
+dig(Jones, Ark, Tanis) -> 6
+
+[PROMPT]... The story begins with the following steps:\n
+Jones travels from USA to Tanis.
+Jones travels from Tanis to USA.
+The Nazis travel from Tanis to USA.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+Jones opens the Ark.
+The U.S. Army defeats the Nazis.
+
+RANKS:
+travel(Jones, USA, Tanis) -> 10
+travel(Nazis, USA, Tanis) -> 8
+travel(USArmy, USA, Tanis) -> 8
+
+[PROMPT]... The story begins with the following steps:\n
+The Nazis travel from Tanis to USA.
+Jones travels from USA to Tanis.
+The Nazis travel from USA to Tanis.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+Jones opens the Ark.
+The U.S. Army takes the Ark.
+
+RANKS:
+travel(Jones, Tanis, USA) -> 9
+travel(Nazis, Tanis, USA) -> 10
+travel(USArmy, USA, Tanis) -> 7
+dig(Jones, Ark, Tanis) -> 4
+
+[PROMPT]... The story begins with the following steps:\n
+The Nazis travel from Tanis to USA.
+The U.S. Army travels from USA to Tanis.
+The Nazis travel from USA to Tanis.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+Indiana Jones digs for the Ark at Tanis.
+The U.S. Army fights the Nazis at Tanis.
+
+RANKS:
+travel(Jones, USA, Tanis) -> 7
+travel(Nazis, Tanis, USA) -> 4
+travel(USArmy, Tanis, USA) -> 4
+
+[PROMPT]... The story begins with the following steps:\n
+The Nazis travel from Tanis to USA.
+The Nazis travel from USA to Tanis.
+Jones travels from USA to Tanis.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+Jones opens the Ark.
+The U.S. Army takes the Ark.
+
+RANKS:
+travel(Jones, Tanis, USA) -> 9
+travel(Nazis, Tanis, USA) -> 10
+travel(USArmy, USA, Tanis) -> 7
+dig(Jones, Ark, Tanis) -> 4
+
+[PROMPT]... The story begins with the following steps:\n
+Jones travels from USA to Tanis.
+Jones digs up the Ark.
+The U.S. Army travels from USA to Tanis.
+Jones travels from Tanis to USA.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+The U.S. Army defeats the Nazis.
+The U.S. Army takes the Ark.
+
+RANKS:
+travel(Jones, USA, Tanis) -> 11
+travel(Nazis, Tanis, USA) -> 7
+travel(USArmy, Tanis, USA) -> 7
+open(Jones, Ark, USA) -> 9
+
+[PROMPT]... The story begins with the following steps:\n
+Jones travels from USA to Tanis.
+The U.S. Army travels from USA to Tanis.
+Jones digs up the Ark.
+Jones travels from Tanis to USA.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+Jones opens the Ark.
+The U.S. Army defeats the Nazis.
+
+RANKS:
+travel(Jones, USA, Tanis) -> 10
+travel(Nazis, Tanis, USA) -> 7
+travel(USArmy, Tanis, USA) -> 7
+open(Jones, Ark, USA) -> 3
+
+[PROMPT]... The story begins with the following steps:\n
+Jones travels from USA to Tanis.
+Jones digs up the Ark.
+Jones travels from Tanis to USA.
+The U.S. Army travels from USA to Tanis.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+Jones opens the Ark.
+The U.S. Army takes the Ark.
+
+RANKS:
+travel(Jones, USA, Tanis) -> 10
+travel(Nazis, Tanis, USA) -> 10
+travel(USArmy, Tanis, USA) -> 7
+open(Jones, Ark, USA) -> 3
+
+[PROMPT]... The story begins with the following steps:\n
+Jones travels from USA to Tanis.
+Jones digs up the Ark.
+Jones travels from Tanis to USA.
+Jones gives the Ark to the U.S. Army.
+The U.S. Army travels from USA to Tanis.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+The U.S. Army opens the Ark.
+The U.S. Army defeats the Nazis.
+
+RANKS:
+travel(Jones, USA, Tanis) -> 11
+open(USArmy, Ark, Tanis) -> 3
+give(USArmy, Ark, Nazis, Tanis) -> 5
+travel(Nazis, Tanis, USA) -> 7
+travel(USArmy, Tanis, USA) -> 7
+
+[PROMPT]... The story begins with the following steps:\n
+Jones travels from USA to Tanis.
+Jones digs up the Ark.
+The Nazis travel from Tanis to USA.
+Jones opens the Ark and dies.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+The U.S. Army takes the Ark.
+The Nazis are killed by the U.S. Army.
+
+RANKS:
+travel(Nazis, USA, Tanis) -> 7
+travel(USArmy, USA, Tanis) -> 7
+
+[PROMPT]... The story begins with the following steps:\n
+Jones travels from USA to Tanis.
+Jones digs up the Ark.
+Jones gives the Ark to the Nazis.
+The Nazis open the Ark and die.
+The U.S. Army travels from USA to Tanis.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+The U.S. Army takes the Ark.
+The U.S. Army destroys the Ark.
+
+RANKS:
+travel(Jones, Tanis, USA) -> 11
+take(Jones, Ark, Nazis, Tanis) -> 6
+travel(USArmy, Tanis, USA) -> 7
+
+[PROMPT]... The story begins with the following steps:\n
+Jones travels from USA to Tanis.
+The Nazis travel from Tanis to USA.
+Jones digs up the Ark.
+Jones opens the Ark and dies.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+The U.S. Army takes the Ark from Jones' body.
+The Nazis are killed by the U.S
+
+RANKS:
+travel(Nazis, USA, Tanis) -> 6
+travel(USArmy, USA, Tanis) -> 8
+
+[PROMPT]... The story begins with the following steps:\n
+Jones travels from USA to Tanis.
+Jones digs up the Ark.
+Jones opens the Ark and dies.
+The U.S. Army travels from USA to Tanis.
+The Nazis travel from Tanis to USA.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+The U.S. Army takes the Ark from Jones.
+The U.S. Army defeats the Nazis.
+
+RANKS:
+travel(Nazis, USA, Tanis) -> 8
+travel(USArmy, Tanis, USA) -> 7
+take(USArmy, Ark, Jones, Tanis) -> 0
+
+[PROMPT]... The story begins with the following steps:\n
+Jones travels from USA to Tanis.
+The U.S. Army travels from USA to Tanis.
+The U.S. Army travels from Tanis to USA.
+Jones digs up the Ark.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+Jones opens the Ark.
+The U.S. Army defeats the Nazis.
+
+RANKS:
+travel(Jones, Tanis, USA) -> 9
+travel(Nazis, Tanis, USA) -> 7
+travel(USArmy, USA, Tanis) -> 8
+give(Jones, Ark, Nazis, Tanis) -> 6
+take(Nazis, Ark, Jones, Tanis) -> 7
+open(Jones, Ark, Tanis) -> 3
+
+[PROMPT]... The story begins with the following steps:\n
+Jones travels from USA to Tanis.
+The U.S. Army travels from USA to Tanis.
+The U.S. Army travels from Tanis to USA.
+The U.S. Army travels from USA to Tanis.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+Indiana Jones and the U.S. Army dig in Tanis to find the Ark.
+Indiana Jones opens the Ark
+
+RANKS:
+travel(Jones, Tanis, USA) -> 8
+travel(Nazis, Tanis, USA) -> 8
+travel(USArmy, Tanis, USA) -> 6
+dig(Jones, Ark, Tanis) -> 6
+
+[PROMPT]... The story begins with the following steps:\n
+Jones travels from USA to Tanis.
+Jones digs up the Ark.
+The Nazis take the Ark from Jones.
+The Nazis travel from Tanis to USA.
+The Nazis open the Ark and die.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+The U.S. Army takes the Ark from the Nazis.
+Indiana Jones gives the Ark to the U.
+
+RANKS:
+travel(Jones, Tanis, USA) -> 10
+travel(USArmy, USA, Tanis) -> 7
+take(USArmy, Ark, Nazis, USA) -> 0
+
+[PROMPT]... The story begins with the following steps:\n
+Jones travels from USA to Tanis.
+Jones digs up the Ark.
+The U.S. Army travels from USA to Tanis.
+Jones opens the Ark and dies.
+The Nazis travel from Tanis to USA.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+The U.S. Army takes the Ark back to the USA.
+The U.S. Army defeats the Nazis
+
+RANKS:
+travel(Nazis, USA, Tanis) -> 8
+travel(USArmy, Tanis, USA) -> 6
+take(USArmy, Ark, Jones, Tanis) -> 3
+
+[PROMPT]... The story begins with the following steps:\n
+Jones travels from USA to Tanis.
+The U.S. Army travels from USA to Tanis.
+Jones digs up the Ark.
+Jones opens the Ark and dies.
+The Nazis travel from Tanis to USA.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+The U.S. Army takes the Ark from Jones.
+The U.S. Army defeats the Nazis.
+
+RANKS:
+travel(Nazis, USA, Tanis) -> 8
+travel(USArmy, Tanis, USA) -> 7
+take(USArmy, Ark, Jones, Tanis) -> 0
+
+[PROMPT]... The story begins with the following steps:\n
+Jones travels from USA to Tanis.
+Jones digs up the Ark.
+Jones travels from Tanis to USA.
+The U.S. Army takes the Ark from Jones.
+The U.S. Army gives the Ark to Jones.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+Jones opens the Ark.
+The U.S. Army defeats the Nazis.
+
+RANKS:
+travel(Jones, USA, Tanis) -> 10
+travel(Nazis, Tanis, USA) -> 7
+travel(USArmy, USA, Tanis) -> 8
+give(Jones, Ark, USArmy, USA) -> 5
+take(USArmy, Ark, Jones, USA) -> 6
+open(Jones, Ark, USA) -> 3
+
+[PROMPT]... The story begins with the following steps:\n
+Jones travels from USA to Tanis.
+Jones digs up the Ark.
+The Nazis take the Ark from Jones.
+The U.S. Army travels from USA to Tanis.
+The Nazis give the Ark to Jones.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+Jones opens the Ark.
+The U.S. Army defeats the Nazis.
+
+RANKS:
+travel(Jones, Tanis, USA) -> 9
+travel(Nazis, Tanis, USA) -> 7
+travel(USArmy, Tanis, USA) -> 7
+give(Jones, Ark, Nazis, Tanis) -> 6
+take(Nazis, Ark, Jones, Tanis) -> 7
+give(Jones, Ark, USArmy, Tanis) -> 5
+take(USArmy, Ark, Jones, Tanis) -> 6
+open(Jones, Ark, Tanis) -> 3
+
+[PROMPT]... The story begins with the following steps:\n
+Jones travels from USA to Tanis.
+Jones digs up the Ark.
+Jones gives the Ark to the Nazis.
+The Nazis travel from Tanis to USA.
+The Nazis open the Ark and die.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+The U.S. Army takes the Ark from the Nazis.
+The U.S. Army travels back to the
+
+RANKS:
+travel(Jones, Tanis, USA) -> 10
+travel(USArmy, USA, Tanis) -> 7
+take(USArmy, Ark, Nazis, USA) -> 0
+
+[PROMPT]... The story begins with the following steps:\n
+Jones travels from USA to Tanis.
+Jones digs up the Ark.
+The Nazis take the Ark from Jones.
+Jones travels from Tanis to USA.
+The Nazis travel from Tanis to USA.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+Jones opens the Ark.
+The U.S. Army takes the Ark from the Nazis.
+
+RANKS:
+travel(Jones, USA, Tanis) -> 10
+travel(Nazis, USA, Tanis) -> 7
+travel(USArmy, USA, Tanis) -> 7
+give(Nazis, Ark, Jones, USA) -> 5
+give(Nazis, Ark, USArmy, USA) -> 2
+open(Nazis, Ark, USA) -> 7
+
+[PROMPT]... The story begins with the following steps:\n
+Jones travels from USA to Tanis.
+Jones digs up the Ark.
+The Nazis take the Ark from Jones.
+Jones travels from Tanis to USA.
+The U.S. Army travels from USA to Tanis.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+The U.S. Army opens the Ark.
+The U.S. Army defeats the Nazis.
+
+RANKS:
+open(Nazis, Ark, Tanis) -> 7
+travel(Jones, USA, Tanis) -> 11
+travel(Nazis, Tanis, USA) -> 7
+travel(USArmy, Tanis, USA) -> 7
+give(Nazis, Ark, USArmy, Tanis) -> 5
+
+[PROMPT]... The story begins with the following steps:\n
+The U.S. Army travels from USA to Tanis.
+The Nazis travel from Tanis to USA.
+Jones travels from USA to Tanis.
+Jones digs up the Ark.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+Jones opens the Ark.
+The U.S. Army takes the Ark.
+
+RANKS:
+travel(Jones, Tanis, USA) -> 9
+travel(Nazis, USA, Tanis) -> 10
+travel(USArmy, Tanis, USA) -> 7
+give(Jones, Ark, USArmy, Tanis) -> 3
+take(USArmy, Ark, Jones, Tanis) -> 3
+open(Jones, Ark, Tanis) -> 3
+
+[PROMPT]... The story begins with the following steps:\n
+The U.S. Army travels from USA to Tanis.
+The Nazis travel from Tanis to USA.
+The Nazis travel from USA to Tanis.
+The Nazis travel from Tanis to USA.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+Indiana Jones digs up the Ark.
+The U.S. Army takes the Ark.
+
+RANKS:
+travel(Jones, USA, Tanis) -> 11
+travel(Nazis, USA, Tanis) -> 10
+travel(USArmy, Tanis, USA) -> 7
+
+[PROMPT]... The story begins with the following steps:\n
+The U.S. Army travels from USA to Tanis.
+The Nazis travel from Tanis to USA.
+The Nazis travel from USA to Tanis.
+The U.S. Army travels from Tanis to USA.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+Indiana Jones digs for the Ark at Tanis.
+The U.S. Army opens the Ark at Tanis.
+
+RANKS:
+travel(Jones, USA, Tanis) -> 7
+travel(Nazis, Tanis, USA) -> 8
+travel(USArmy, USA, Tanis) -> 4
+
+[PROMPT]... The story begins with the following steps:\n
+Jones travels from USA to Tanis.
+Jones digs up the Ark.
+The U.S. Army travels from USA to Tanis.
+Jones gives the Ark to the U.S. Army.
+The U.S. Army gives the Ark to Jones.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+Jones opens the Ark.
+The U.S. Army defeats the Nazis.
+
+RANKS:
+travel(Jones, Tanis, USA) -> 9
+travel(Nazis, Tanis, USA) -> 7
+travel(USArmy, Tanis, USA) -> 7
+give(Jones, Ark, Nazis, Tanis) -> 6
+take(Nazis, Ark, Jones, Tanis) -> 7
+give(Jones, Ark, USArmy, Tanis) -> 5
+take(USArmy, Ark, Jones, Tanis) -> 6
+open(Jones, Ark, Tanis) -> 3
+
+[PROMPT]... The story begins with the following steps:\n
+Jones travels from USA to Tanis.
+The U.S. Army travels from USA to Tanis.
+Jones digs up the Ark.
+Jones gives the Ark to the U.S. Army.
+The U.S. Army gives the Ark to Jones.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+Jones opens the Ark.
+The U.S. Army destroys the Nazis.
+
+RANKS:
+travel(Jones, Tanis, USA) -> 9
+travel(Nazis, Tanis, USA) -> 7
+travel(USArmy, Tanis, USA) -> 7
+give(Jones, Ark, Nazis, Tanis) -> 6
+take(Nazis, Ark, Jones, Tanis) -> 7
+give(Jones, Ark, USArmy, Tanis) -> 5
+take(USArmy, Ark, Jones, Tanis) -> 6
+open(Jones, Ark, Tanis) -> 3
+
+[PROMPT]... The story begins with the following steps:\n
+Jones travels from USA to Tanis.
+Jones digs up the Ark.
+The U.S. Army travels from USA to Tanis.
+Jones gives the Ark to the Nazis.
+The Nazis open the Ark and die.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+The U.S. Army takes the Ark.
+Jones escapes from the Nazis.
+
+RANKS:
+travel(Jones, Tanis, USA) -> 8
+take(Jones, Ark, Nazis, Tanis) -> 4
+travel(USArmy, Tanis, USA) -> 7
+take(USArmy, Ark, Nazis, Tanis) -> 2
+
+[PROMPT]... The story begins with the following steps:\n
+Jones travels from USA to Tanis.
+Jones digs up the Ark.
+Jones travels from Tanis to USA.
+Jones gives the Ark to the U.S. Army.
+The U.S. Army gives the Ark to Jones.
+Jones opens the Ark and dies.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+The U.S. Army destroys the Ark.
+The U.S. Army seals the Ark away in a
+
+RANKS:
+travel(Nazis, Tanis, USA) -> 10
+travel(USArmy, USA, Tanis) -> 8
+take(USArmy, Ark, Jones, USA) -> 4
+
+[PROMPT]... The story begins with the following steps:\n
+Jones travels from USA to Tanis.
+Jones digs up the Ark.
+Jones opens the Ark and dies.
+The U.S. Army travels from USA to Tanis.
+The U.S. Army takes the Ark from Jones.
+The U.S. Army gives the Ark to the Nazis.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+The Nazis open the Ark and are killed by its power.
+The U.S. Army takes the Ark back
+
+RANKS:
+open(Nazis, Ark, Tanis) -> 2
+travel(Nazis, Tanis, USA) -> 9
+travel(USArmy, Tanis, USA) -> 7
+give(Nazis, Ark, USArmy, Tanis) -> 5
+
+[PROMPT]... The story begins with the following steps:\n
+Jones travels from USA to Tanis.
+The U.S. Army travels from USA to Tanis.
+Jones digs up the Ark.
+Jones opens the Ark and dies.
+The U.S. Army takes the Ark from Jones.
+The U.S. Army gives the Ark to the Nazis.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+The U.S. Army uses the Ark to destroy the Nazis.
+The U.S. Army takes the Ark
+
+RANKS:
+open(Nazis, Ark, Tanis) -> 6
+travel(Nazis, Tanis, USA) -> 8
+travel(USArmy, Tanis, USA) -> 7
+give(Nazis, Ark, USArmy, Tanis) -> 4
+
+[PROMPT]... The story begins with the following steps:\n
+Jones travels from USA to Tanis.
+Jones digs up the Ark.
+Jones opens the Ark and dies.
+The Nazis take the Ark from Jones.
+The Nazis travel from Tanis to USA.
+The Nazis give the Ark to the U.S. Army.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+Indiana Jones is resurrected by the power of the Ark.
+The U.S. Army defeats the Nazis and takes
+
+RANKS:
+open(USArmy, Ark, USA) -> 8
+give(USArmy, Ark, Nazis, USA) -> 7
+travel(Nazis, USA, Tanis) -> 9
+travel(USArmy, USA, Tanis) -> 9
+
+[PROMPT]... The story begins with the following steps:\n
+Jones travels from USA to Tanis.
+Jones digs up the Ark.
+Jones opens the Ark and dies.
+The U.S. Army travels from USA to Tanis.
+The Nazis travel from Tanis to USA.
+The U.S. Army takes the Ark from Jones.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+The U.S. Army uses the Ark to defeat the Nazis.
+The Nazis are killed by the U.S
+
+RANKS:
+open(USArmy, Ark, Tanis) -> 5
+travel(Nazis, USA, Tanis) -> 6
+travel(USArmy, Tanis, USA) -> 8

@@ -1,0 +1,705 @@
+PROMPT:
+Alice is alive. Bob is alive. Charlie is alive. The detective is alive. Alice is angry. Charlie is angry. Alice is downtown. Bob is at Bob's house. Charlie is downtown. The detective is downtown. Bob has the basketball. Charlie has the bat. Alice wants to be happy. Bob wants everyone to be happy. Charlie wants Alice to be dead. The detective wants to search for clues and arrest citizens for crimes. Characters can travel, steal, play basketball, and kill. Police characters can arrest, find clues, share clues, and suspect citizens of crimes. The story must end with a character either being arrested or feeling better. List two different actions that could happen first. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+Alice steals the basketball from Bob.
+Charlie threatens Alice with the bat.
+
+RANKS:
+findClues(Sherlock, Murder, Basketball, Downtown) -> 11
+findClues(Sherlock, Murder, Bat, Downtown) -> 11
+travel(Alice, Downtown, HomeB) -> 7
+travel(Alice, Downtown, BasketballCourt) -> 6
+travel(Bob, HomeB, BasketballCourt) -> 6
+travel(Bob, HomeB, Downtown) -> 9
+travel(Charlie, Downtown, HomeB) -> 9
+kill(Charlie, Alice, Murder, Bat, Downtown) -> 1
+travel(Charlie, Downtown, BasketballCourt) -> 9
+steal(Alice, Charlie, Theft, Bat, Downtown) -> 3
+travel(Sherlock, Downtown, HomeB) -> 9
+travel(Sherlock, Downtown, BasketballCourt) -> 8
+findClues(Sherlock, Theft, Basketball, Downtown) -> 11
+findClues(Sherlock, Theft, Bat, Downtown) -> 11
+
+[PROMPT]... The story begins with the following steps:\n
+Charlie kills Alice with the bat.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+The detective finds clues that lead to Charlie's arrest.
+Bob finds solace in playing basketball.
+
+RANKS:
+findClues(Sherlock, Murder, Basketball, Downtown) -> 5
+travel(Charlie, Downtown, HomeB) -> 8
+travel(Charlie, Downtown, BasketballCourt) -> 8
+findClues(Sherlock, Murder, Bat, Downtown) -> 5
+travel(Sherlock, Downtown, HomeB) -> 6
+travel(Bob, HomeB, BasketballCourt) -> 5
+travel(Sherlock, Downtown, BasketballCourt) -> 7
+travel(Bob, HomeB, Downtown) -> 8
+findClues(Sherlock, Theft, Basketball, Downtown) -> 5
+findClues(Sherlock, Theft, Bat, Downtown) -> 5
+
+[PROMPT]... The story begins with the following steps:\n
+Alice steals the bat from Charlie.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+The detective finds clues that lead to Alice's arrest.
+Bob and Alice reconcile and Bob gives Alice the basketball.
+
+RANKS:
+findClues(Sherlock, Murder, Basketball, Downtown) -> 5
+findClues(Sherlock, Murder, Bat, Downtown) -> 5
+travel(Alice, Downtown, HomeB) -> 8
+travel(Alice, Downtown, BasketballCourt) -> 8
+travel(Bob, HomeB, BasketballCourt) -> 6
+steal(Charlie, Alice, Theft, Bat, Downtown) -> 8
+travel(Bob, HomeB, Downtown) -> 9
+travel(Charlie, Downtown, HomeB) -> 9
+travel(Charlie, Downtown, BasketballCourt) -> 9
+travel(Sherlock, Downtown, HomeB) -> 6
+travel(Sherlock, Downtown, BasketballCourt) -> 7
+findClues(Sherlock, Theft, Basketball, Downtown) -> 5
+findClues(Sherlock, Theft, Bat, Downtown) -> 5
+kill(Alice, Charlie, Murder, Bat, Downtown) -> 8
+
+[PROMPT]... The story begins with the following steps:\n
+Alice travels from downtown to the basketball court.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+Bob steals the basketball from Alice.
+The detective arrests Bob for theft.
+
+RANKS:
+findClues(Sherlock, Murder, Basketball, Downtown) -> 7
+travel(Charlie, Downtown, HomeB) -> 8
+travel(Charlie, Downtown, BasketballCourt) -> 8
+travel(Alice, BasketballCourt, HomeB) -> 5
+travel(Alice, BasketballCourt, Downtown) -> 7
+findClues(Sherlock, Murder, Bat, Downtown) -> 7
+travel(Sherlock, Downtown, HomeB) -> 5
+travel(Bob, HomeB, BasketballCourt) -> 5
+travel(Sherlock, Downtown, BasketballCourt) -> 8
+travel(Bob, HomeB, Downtown) -> 7
+findClues(Sherlock, Theft, Basketball, Downtown) -> 7
+findClues(Sherlock, Theft, Bat, Downtown) -> 7
+
+[PROMPT]... The story begins with the following steps:\n
+Bob travels from Bob's house to the basketball court.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+Alice steals the basketball from Bob.
+The detective suspects Alice of theft.
+
+RANKS:
+findClues(Sherlock, Murder, Basketball, Downtown) -> 7
+findClues(Sherlock, Murder, Bat, Downtown) -> 7
+travel(Alice, Downtown, HomeB) -> 7
+travel(Alice, Downtown, BasketballCourt) -> 6
+travel(Bob, BasketballCourt, HomeB) -> 6
+travel(Bob, BasketballCourt, Downtown) -> 7
+travel(Charlie, Downtown, HomeB) -> 9
+kill(Charlie, Alice, Murder, Bat, Downtown) -> 8
+travel(Charlie, Downtown, BasketballCourt) -> 9
+steal(Alice, Charlie, Theft, Bat, Downtown) -> 4
+travel(Sherlock, Downtown, HomeB) -> 8
+travel(Sherlock, Downtown, BasketballCourt) -> 8
+findClues(Sherlock, Theft, Basketball, Downtown) -> 7
+findClues(Sherlock, Theft, Bat, Downtown) -> 7
+
+[PROMPT]... The story begins with the following steps:\n
+Charlie kills Alice with the bat.
+The detective searches downtown for clues.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+The detective finds evidence linking Charlie to Alice's murder.
+Charlie is arrested.
+
+RANKS:
+findClues(Sherlock, Murder, Basketball, Downtown) -> 6
+travel(Charlie, Downtown, HomeB) -> 8
+travel(Charlie, Downtown, BasketballCourt) -> 8
+findClues(Sherlock, Murder, Bat, Downtown) -> 6
+travel(Sherlock, Downtown, HomeB) -> 7
+travel(Bob, HomeB, BasketballCourt) -> 11
+travel(Sherlock, Downtown, BasketballCourt) -> 8
+travel(Bob, HomeB, Downtown) -> 11
+findClues(Sherlock, Theft, Basketball, Downtown) -> 6
+findClues(Sherlock, Theft, Bat, Downtown) -> 6
+
+[PROMPT]... The story begins with the following steps:\n
+Charlie kills Alice with the bat.
+The detective searches downtown for clues.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+The detective finds evidence linking Charlie to Alice's death. 
+The detective arrests Charlie.
+
+RANKS:
+findClues(Sherlock, Murder, Basketball, Downtown) -> 7
+travel(Charlie, Downtown, HomeB) -> 9
+travel(Charlie, Downtown, BasketballCourt) -> 9
+findClues(Sherlock, Murder, Bat, Downtown) -> 7
+travel(Sherlock, Downtown, HomeB) -> 7
+travel(Bob, HomeB, BasketballCourt) -> 11
+travel(Sherlock, Downtown, BasketballCourt) -> 8
+travel(Bob, HomeB, Downtown) -> 11
+findClues(Sherlock, Theft, Basketball, Downtown) -> 7
+findClues(Sherlock, Theft, Bat, Downtown) -> 7
+
+[PROMPT]... The story begins with the following steps:\n
+Charlie kills Alice with the bat.
+The detective searches downtown for clues.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+Bob finds the bat and turns it in to the detective as evidence.
+The detective arrests Charlie for Alice's murder.
+
+RANKS:
+findClues(Sherlock, Murder, Basketball, Downtown) -> 7
+travel(Charlie, Downtown, HomeB) -> 9
+travel(Charlie, Downtown, BasketballCourt) -> 10
+findClues(Sherlock, Murder, Bat, Downtown) -> 7
+travel(Sherlock, Downtown, HomeB) -> 6
+travel(Bob, HomeB, BasketballCourt) -> 8
+travel(Sherlock, Downtown, BasketballCourt) -> 8
+travel(Bob, HomeB, Downtown) -> 9
+findClues(Sherlock, Theft, Basketball, Downtown) -> 7
+findClues(Sherlock, Theft, Bat, Downtown) -> 7
+
+[PROMPT]... The story begins with the following steps:\n
+Charlie kills Alice with the bat.
+The detective searches downtown for clues.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+Bob finds the bat and takes it to the detective.
+The detective arrests Charlie for Alice's murder.
+
+RANKS:
+findClues(Sherlock, Murder, Basketball, Downtown) -> 7
+travel(Charlie, Downtown, HomeB) -> 9
+travel(Charlie, Downtown, BasketballCourt) -> 10
+findClues(Sherlock, Murder, Bat, Downtown) -> 7
+travel(Sherlock, Downtown, HomeB) -> 6
+travel(Bob, HomeB, BasketballCourt) -> 8
+travel(Sherlock, Downtown, BasketballCourt) -> 8
+suspectOfCrime(Sherlock, Charlie, Murder, Bat, Downtown) -> 3
+travel(Bob, HomeB, Downtown) -> 8
+findClues(Sherlock, Theft, Basketball, Downtown) -> 7
+findClues(Sherlock, Theft, Bat, Downtown) -> 7
+
+[PROMPT]... The story begins with the following steps:\n
+Charlie kills Alice with the bat.
+Bob travels from Bob's house to the basketball court.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+The detective finds clues that link Charlie to Alice's death.
+The detective arrests Charlie for Alice's murder.
+
+RANKS:
+findClues(Sherlock, Murder, Basketball, Downtown) -> 6
+travel(Charlie, Downtown, HomeB) -> 9
+travel(Charlie, Downtown, BasketballCourt) -> 10
+findClues(Sherlock, Murder, Bat, Downtown) -> 6
+travel(Sherlock, Downtown, HomeB) -> 7
+travel(Sherlock, Downtown, BasketballCourt) -> 8
+travel(Bob, BasketballCourt, HomeB) -> 11
+travel(Bob, BasketballCourt, Downtown) -> 11
+findClues(Sherlock, Theft, Basketball, Downtown) -> 6
+findClues(Sherlock, Theft, Bat, Downtown) -> 6
+
+[PROMPT]... The story begins with the following steps:\n
+Alice travels from downtown to Bob's house.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+Bob gives Alice the basketball.
+Alice and Bob play basketball together.
+
+RANKS:
+travel(Alice, HomeB, BasketballCourt) -> 4
+kill(Bob, Alice, Murder, Basketball, HomeB) -> 2
+findClues(Sherlock, Murder, Basketball, Downtown) -> 12
+travel(Alice, HomeB, Downtown) -> 7
+findClues(Sherlock, Murder, Bat, Downtown) -> 12
+travel(Bob, HomeB, BasketballCourt) -> 5
+travel(Bob, HomeB, Downtown) -> 8
+steal(Alice, Bob, Theft, Basketball, HomeB) -> 3
+travel(Charlie, Downtown, HomeB) -> 8
+travel(Charlie, Downtown, BasketballCourt) -> 8
+travel(Sherlock, Downtown, HomeB) -> 9
+travel(Sherlock, Downtown, BasketballCourt) -> 9
+findClues(Sherlock, Theft, Basketball, Downtown) -> 12
+findClues(Sherlock, Theft, Bat, Downtown) -> 12
+
+[PROMPT]... The story begins with the following steps:\n
+Charlie kills Alice with the bat.
+The detective travels from downtown to Bob's house.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+Bob steals the bat from Charlie.
+The detective arrests Charlie for murder.
+
+RANKS:
+travel(Charlie, Downtown, HomeB) -> 8
+findClues(Sherlock, Murder, Bat, HomeB) -> 7
+travel(Charlie, Downtown, BasketballCourt) -> 9
+travel(Sherlock, HomeB, BasketballCourt) -> 8
+travel(Sherlock, HomeB, Downtown) -> 8
+travel(Bob, HomeB, BasketballCourt) -> 8
+travel(Bob, HomeB, Downtown) -> 9
+findClues(Sherlock, Theft, Basketball, HomeB) -> 7
+findClues(Sherlock, Theft, Bat, HomeB) -> 7
+findClues(Sherlock, Murder, Basketball, HomeB) -> 7
+
+[PROMPT]... The story begins with the following steps:\n
+The detective travels from downtown to the basketball court.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+Alice steals the basketball from Bob.
+The detective arrests Alice.
+
+RANKS:
+findClues(Sherlock, Murder, Bat, BasketballCourt) -> 8
+travel(Alice, Downtown, HomeB) -> 7
+travel(Alice, Downtown, BasketballCourt) -> 6
+travel(Bob, HomeB, BasketballCourt) -> 6
+travel(Bob, HomeB, Downtown) -> 9
+travel(Charlie, Downtown, HomeB) -> 9
+kill(Charlie, Alice, Murder, Bat, Downtown) -> 7
+travel(Charlie, Downtown, BasketballCourt) -> 9
+travel(Sherlock, BasketballCourt, HomeB) -> 7
+steal(Alice, Charlie, Theft, Bat, Downtown) -> 4
+travel(Sherlock, BasketballCourt, Downtown) -> 8
+findClues(Sherlock, Theft, Basketball, BasketballCourt) -> 8
+findClues(Sherlock, Theft, Bat, BasketballCourt) -> 8
+findClues(Sherlock, Murder, Basketball, BasketballCourt) -> 8
+
+[PROMPT]... The story begins with the following steps:\n
+Charlie kills Alice with the bat.
+The detective travels from downtown to the basketball court.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+Bob steals the bat from Charlie.
+The detective arrests Charlie for murder.
+
+RANKS:
+travel(Charlie, Downtown, HomeB) -> 8
+travel(Charlie, Downtown, BasketballCourt) -> 9
+findClues(Sherlock, Murder, Bat, BasketballCourt) -> 8
+travel(Sherlock, BasketballCourt, HomeB) -> 8
+travel(Sherlock, BasketballCourt, Downtown) -> 8
+travel(Bob, HomeB, BasketballCourt) -> 8
+travel(Bob, HomeB, Downtown) -> 9
+findClues(Sherlock, Theft, Basketball, BasketballCourt) -> 8
+findClues(Sherlock, Theft, Bat, BasketballCourt) -> 8
+findClues(Sherlock, Murder, Basketball, BasketballCourt) -> 8
+
+[PROMPT]... The story begins with the following steps:\n
+Alice steals the bat from Charlie.
+The detective searches downtown for clues.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+Alice returns the bat to Charlie.
+The detective arrests Alice.
+
+RANKS:
+findClues(Sherlock, Murder, Basketball, Downtown) -> 7
+findClues(Sherlock, Murder, Bat, Downtown) -> 7
+travel(Alice, Downtown, HomeB) -> 8
+travel(Alice, Downtown, BasketballCourt) -> 9
+travel(Bob, HomeB, BasketballCourt) -> 9
+steal(Charlie, Alice, Theft, Bat, Downtown) -> 3
+travel(Bob, HomeB, Downtown) -> 9
+travel(Charlie, Downtown, HomeB) -> 8
+travel(Charlie, Downtown, BasketballCourt) -> 9
+travel(Sherlock, Downtown, HomeB) -> 7
+travel(Sherlock, Downtown, BasketballCourt) -> 8
+findClues(Sherlock, Theft, Basketball, Downtown) -> 7
+findClues(Sherlock, Theft, Bat, Downtown) -> 7
+kill(Alice, Charlie, Murder, Bat, Downtown) -> 3
+
+[PROMPT]... The story begins with the following steps:\n
+Alice steals the bat from Charlie.
+The detective searches downtown for clues.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+Alice returns the bat to Charlie.
+The detective arrests Alice for theft.
+
+RANKS:
+findClues(Sherlock, Murder, Basketball, Downtown) -> 7
+findClues(Sherlock, Murder, Bat, Downtown) -> 7
+travel(Alice, Downtown, HomeB) -> 8
+travel(Alice, Downtown, BasketballCourt) -> 9
+travel(Bob, HomeB, BasketballCourt) -> 9
+steal(Charlie, Alice, Theft, Bat, Downtown) -> 3
+travel(Bob, HomeB, Downtown) -> 9
+suspectOfCrime(Sherlock, Alice, Theft, Bat, Downtown) -> 1
+travel(Charlie, Downtown, HomeB) -> 8
+travel(Charlie, Downtown, BasketballCourt) -> 9
+travel(Sherlock, Downtown, HomeB) -> 8
+travel(Sherlock, Downtown, BasketballCourt) -> 8
+findClues(Sherlock, Theft, Basketball, Downtown) -> 7
+findClues(Sherlock, Theft, Bat, Downtown) -> 7
+kill(Alice, Charlie, Murder, Bat, Downtown) -> 3
+
+[PROMPT]... The story begins with the following steps:\n
+Alice steals the bat from Charlie.
+The detective searches downtown for clues.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+Bob plays basketball to cheer Alice up.
+The detective arrests Charlie for stealing the bat from Alice.
+
+RANKS:
+findClues(Sherlock, Murder, Basketball, Downtown) -> 8
+findClues(Sherlock, Murder, Bat, Downtown) -> 8
+travel(Alice, Downtown, HomeB) -> 7
+travel(Alice, Downtown, BasketballCourt) -> 6
+travel(Bob, HomeB, BasketballCourt) -> 5
+steal(Charlie, Alice, Theft, Bat, Downtown) -> 3
+travel(Bob, HomeB, Downtown) -> 8
+travel(Charlie, Downtown, HomeB) -> 9
+travel(Charlie, Downtown, BasketballCourt) -> 8
+travel(Sherlock, Downtown, HomeB) -> 8
+travel(Sherlock, Downtown, BasketballCourt) -> 9
+findClues(Sherlock, Theft, Basketball, Downtown) -> 8
+findClues(Sherlock, Theft, Bat, Downtown) -> 8
+kill(Alice, Charlie, Murder, Bat, Downtown) -> 5
+
+[PROMPT]... The story begins with the following steps:\n
+Alice steals the bat from Charlie.
+The detective searches downtown for clues.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+Alice returns the bat to Charlie.
+The detective arrests Alice.
+
+RANKS:
+findClues(Sherlock, Murder, Basketball, Downtown) -> 7
+findClues(Sherlock, Murder, Bat, Downtown) -> 7
+travel(Alice, Downtown, HomeB) -> 8
+travel(Alice, Downtown, BasketballCourt) -> 9
+travel(Bob, HomeB, BasketballCourt) -> 9
+steal(Charlie, Alice, Theft, Bat, Downtown) -> 3
+travel(Bob, HomeB, Downtown) -> 9
+travel(Charlie, Downtown, HomeB) -> 8
+travel(Charlie, Downtown, BasketballCourt) -> 9
+travel(Sherlock, Downtown, HomeB) -> 7
+travel(Sherlock, Downtown, BasketballCourt) -> 8
+findClues(Sherlock, Theft, Basketball, Downtown) -> 7
+findClues(Sherlock, Theft, Bat, Downtown) -> 7
+kill(Alice, Charlie, Murder, Bat, Downtown) -> 3
+
+[PROMPT]... The story begins with the following steps:\n
+The detective travels from downtown to Bob's house.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+Alice takes the basketball from Bob.
+The detective arrests Alice.
+
+RANKS:
+findClues(Sherlock, Murder, Bat, HomeB) -> 6
+travel(Alice, Downtown, HomeB) -> 6
+travel(Alice, Downtown, BasketballCourt) -> 6
+travel(Bob, HomeB, BasketballCourt) -> 5
+travel(Bob, HomeB, Downtown) -> 8
+travel(Charlie, Downtown, HomeB) -> 8
+kill(Charlie, Alice, Murder, Bat, Downtown) -> 7
+travel(Charlie, Downtown, BasketballCourt) -> 8
+travel(Sherlock, HomeB, BasketballCourt) -> 7
+travel(Sherlock, HomeB, Downtown) -> 7
+steal(Alice, Charlie, Theft, Bat, Downtown) -> 6
+findClues(Sherlock, Theft, Basketball, HomeB) -> 6
+findClues(Sherlock, Theft, Bat, HomeB) -> 6
+findClues(Sherlock, Murder, Basketball, HomeB) -> 6
+
+[PROMPT]... The story begins with the following steps:\n
+Bob travels from Bob's house to downtown.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+Alice confronts Charlie about his desire for her to be dead. 
+The detective overhears the conversation and arrests Charlie.
+
+RANKS:
+findClues(Sherlock, Murder, Basketball, Downtown) -> 8
+steal(Bob, Charlie, Theft, Bat, Downtown) -> 8
+kill(Bob, Alice, Murder, Basketball, Downtown) -> 9
+findClues(Sherlock, Murder, Bat, Downtown) -> 8
+travel(Alice, Downtown, HomeB) -> 10
+travel(Alice, Downtown, BasketballCourt) -> 10
+kill(Bob, Charlie, Murder, Basketball, Downtown) -> 8
+steal(Charlie, Bob, Theft, Basketball, Downtown) -> 8
+travel(Bob, Downtown, HomeB) -> 11
+travel(Bob, Downtown, BasketballCourt) -> 11
+steal(Alice, Bob, Theft, Basketball, Downtown) -> 9
+travel(Charlie, Downtown, HomeB) -> 9
+kill(Charlie, Alice, Murder, Bat, Downtown) -> 7
+travel(Charlie, Downtown, BasketballCourt) -> 9
+steal(Alice, Charlie, Theft, Bat, Downtown) -> 8
+travel(Sherlock, Downtown, HomeB) -> 8
+travel(Sherlock, Downtown, BasketballCourt) -> 9
+kill(Charlie, Bob, Murder, Bat, Downtown) -> 8
+findClues(Sherlock, Theft, Basketball, Downtown) -> 8
+findClues(Sherlock, Theft, Bat, Downtown) -> 8
+
+[PROMPT]... The story begins with the following steps:\n
+Charlie travels from downtown to Bob's house.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+Alice steals the basketball from Bob.
+The detective arrests Charlie for attempted murder.
+
+RANKS:
+findClues(Sherlock, Murder, Basketball, Downtown) -> 8
+findClues(Sherlock, Murder, Bat, Downtown) -> 8
+travel(Alice, Downtown, HomeB) -> 7
+travel(Alice, Downtown, BasketballCourt) -> 6
+kill(Bob, Charlie, Murder, Basketball, HomeB) -> 5
+travel(Bob, HomeB, BasketballCourt) -> 6
+travel(Bob, HomeB, Downtown) -> 9
+steal(Charlie, Bob, Theft, Basketball, HomeB) -> 3
+travel(Charlie, HomeB, BasketballCourt) -> 7
+travel(Charlie, HomeB, Downtown) -> 9
+kill(Charlie, Bob, Murder, Bat, HomeB) -> 7
+travel(Sherlock, Downtown, HomeB) -> 8
+travel(Sherlock, Downtown, BasketballCourt) -> 8
+findClues(Sherlock, Theft, Basketball, Downtown) -> 8
+findClues(Sherlock, Theft, Bat, Downtown) -> 8
+steal(Bob, Charlie, Theft, Bat, HomeB) -> 6
+
+[PROMPT]... The story begins with the following steps:\n
+Charlie travels from downtown to the basketball court.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+Alice follows Charlie to the basketball court.
+The detective arrives at the basketball court and begins to investigate.
+
+RANKS:
+findClues(Sherlock, Murder, Basketball, Downtown) -> 5
+findClues(Sherlock, Murder, Bat, Downtown) -> 5
+travel(Alice, Downtown, HomeB) -> 7
+travel(Alice, Downtown, BasketballCourt) -> 4
+travel(Sherlock, Downtown, HomeB) -> 6
+travel(Bob, HomeB, BasketballCourt) -> 5
+travel(Sherlock, Downtown, BasketballCourt) -> 3
+travel(Bob, HomeB, Downtown) -> 8
+findClues(Sherlock, Theft, Basketball, Downtown) -> 5
+findClues(Sherlock, Theft, Bat, Downtown) -> 5
+travel(Charlie, BasketballCourt, HomeB) -> 4
+travel(Charlie, BasketballCourt, Downtown) -> 5
+
+[PROMPT]... The story begins with the following steps:\n
+Charlie kills Alice with the bat.
+Bob travels from Bob's house to downtown.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+The detective finds clues that lead to Charlie's arrest.
+Bob finds closure and is able to move on with his life
+
+RANKS:
+findClues(Sherlock, Murder, Basketball, Downtown) -> 5
+steal(Bob, Charlie, Theft, Bat, Downtown) -> 8
+findClues(Sherlock, Murder, Bat, Downtown) -> 5
+kill(Bob, Charlie, Murder, Basketball, Downtown) -> 8
+steal(Charlie, Bob, Theft, Basketball, Downtown) -> 9
+travel(Bob, Downtown, HomeB) -> 8
+travel(Bob, Downtown, BasketballCourt) -> 9
+travel(Charlie, Downtown, HomeB) -> 8
+travel(Charlie, Downtown, BasketballCourt) -> 9
+travel(Sherlock, Downtown, HomeB) -> 6
+travel(Sherlock, Downtown, BasketballCourt) -> 7
+kill(Charlie, Bob, Murder, Bat, Downtown) -> 8
+findClues(Sherlock, Theft, Basketball, Downtown) -> 5
+findClues(Sherlock, Theft, Bat, Downtown) -> 5
+
+[PROMPT]... The story begins with the following steps:\n
+Charlie kills Alice with the bat.
+Charlie travels from downtown to Bob's house.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+The detective finds clues and suspects Charlie of the crime.
+Bob arrests Charlie for the murder of Alice.
+
+RANKS:
+findClues(Sherlock, Murder, Basketball, Downtown) -> 5
+findClues(Sherlock, Murder, Bat, Downtown) -> 5
+kill(Bob, Charlie, Murder, Basketball, HomeB) -> 6
+travel(Bob, HomeB, BasketballCourt) -> 9
+travel(Bob, HomeB, Downtown) -> 9
+steal(Charlie, Bob, Theft, Basketball, HomeB) -> 7
+travel(Charlie, HomeB, BasketballCourt) -> 8
+travel(Charlie, HomeB, Downtown) -> 8
+kill(Charlie, Bob, Murder, Bat, HomeB) -> 5
+travel(Sherlock, Downtown, HomeB) -> 7
+travel(Sherlock, Downtown, BasketballCourt) -> 7
+findClues(Sherlock, Theft, Basketball, Downtown) -> 5
+findClues(Sherlock, Theft, Bat, Downtown) -> 5
+steal(Bob, Charlie, Theft, Bat, HomeB) -> 6
+
+[PROMPT]... The story begins with the following steps:\n
+Charlie kills Alice with the bat.
+Charlie travels from downtown to the basketball court.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+The detective finds clues that lead to Charlie's arrest.
+Bob plays basketball and feels better.
+
+RANKS:
+findClues(Sherlock, Murder, Basketball, Downtown) -> 5
+findClues(Sherlock, Murder, Bat, Downtown) -> 5
+travel(Sherlock, Downtown, HomeB) -> 6
+travel(Bob, HomeB, BasketballCourt) -> 6
+travel(Sherlock, Downtown, BasketballCourt) -> 7
+travel(Bob, HomeB, Downtown) -> 9
+findClues(Sherlock, Theft, Basketball, Downtown) -> 5
+findClues(Sherlock, Theft, Bat, Downtown) -> 5
+travel(Charlie, BasketballCourt, HomeB) -> 7
+travel(Charlie, BasketballCourt, Downtown) -> 8
+
+[PROMPT]... The story begins with the following steps:\n
+Alice steals the bat from Charlie.
+The detective travels from downtown to Bob's house.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+Alice returns the bat to Charlie.
+The detective arrests Alice.
+
+RANKS:
+findClues(Sherlock, Murder, Bat, HomeB) -> 6
+travel(Alice, Downtown, HomeB) -> 8
+travel(Alice, Downtown, BasketballCourt) -> 9
+travel(Bob, HomeB, BasketballCourt) -> 9
+steal(Charlie, Alice, Theft, Bat, Downtown) -> 3
+travel(Bob, HomeB, Downtown) -> 9
+travel(Charlie, Downtown, HomeB) -> 8
+travel(Charlie, Downtown, BasketballCourt) -> 9
+travel(Sherlock, HomeB, BasketballCourt) -> 8
+travel(Sherlock, HomeB, Downtown) -> 7
+findClues(Sherlock, Theft, Basketball, HomeB) -> 6
+findClues(Sherlock, Theft, Bat, HomeB) -> 6
+findClues(Sherlock, Murder, Basketball, HomeB) -> 6
+kill(Alice, Charlie, Murder, Bat, Downtown) -> 3
+
+[PROMPT]... The story begins with the following steps:\n
+Alice steals the bat from Charlie.
+Bob travels from Bob's house to the basketball court.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+Alice apologizes to Charlie for stealing the bat.
+The detective arrests Alice for stealing the bat.
+
+RANKS:
+findClues(Sherlock, Murder, Basketball, Downtown) -> 8
+findClues(Sherlock, Murder, Bat, Downtown) -> 8
+travel(Alice, Downtown, HomeB) -> 10
+travel(Alice, Downtown, BasketballCourt) -> 10
+steal(Charlie, Alice, Theft, Bat, Downtown) -> 4
+travel(Bob, BasketballCourt, HomeB) -> 11
+travel(Bob, BasketballCourt, Downtown) -> 11
+travel(Charlie, Downtown, HomeB) -> 10
+travel(Charlie, Downtown, BasketballCourt) -> 11
+travel(Sherlock, Downtown, HomeB) -> 8
+travel(Sherlock, Downtown, BasketballCourt) -> 9
+findClues(Sherlock, Theft, Basketball, Downtown) -> 8
+findClues(Sherlock, Theft, Bat, Downtown) -> 8
+kill(Alice, Charlie, Murder, Bat, Downtown) -> 4
+
+[PROMPT]... The story begins with the following steps:\n
+Charlie kills Alice with the bat.
+The detective searches downtown for clues.
+The detective suspects Charlie of murder.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+The detective arrests Charlie.
+Bob finds the basketball and plays with it, feeling better.
+
+RANKS:
+findClues(Sherlock, Murder, Basketball, Downtown) -> 7
+travel(Charlie, Downtown, HomeB) -> 9
+travel(Charlie, Downtown, BasketballCourt) -> 9
+findClues(Sherlock, Murder, Bat, Downtown) -> 7
+travel(Sherlock, Downtown, HomeB) -> 7
+travel(Bob, HomeB, BasketballCourt) -> 5
+travel(Sherlock, Downtown, BasketballCourt) -> 8
+suspectOfCrime(Sherlock, Charlie, Murder, Bat, Downtown) -> 3
+travel(Bob, HomeB, Downtown) -> 8
+arrest(Sherlock, Charlie, Downtown, Murder) -> 1
+findClues(Sherlock, Theft, Basketball, Downtown) -> 7
+findClues(Sherlock, Theft, Bat, Downtown) -> 7
+
+[PROMPT]... The story begins with the following steps:\n
+Alice travels from downtown to Bob's house.
+Bob kills Alice with the basketball.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+The detective finds clues and suspects Bob of the crime.
+Bob is arrested for the murder of Alice.
+
+RANKS:
+findClues(Sherlock, Murder, Basketball, Downtown) -> 5
+travel(Charlie, Downtown, HomeB) -> 8
+travel(Charlie, Downtown, BasketballCourt) -> 11
+findClues(Sherlock, Murder, Bat, Downtown) -> 5
+travel(Sherlock, Downtown, HomeB) -> 4
+travel(Bob, HomeB, BasketballCourt) -> 8
+travel(Sherlock, Downtown, BasketballCourt) -> 7
+travel(Bob, HomeB, Downtown) -> 8
+findClues(Sherlock, Theft, Basketball, Downtown) -> 5
+findClues(Sherlock, Theft, Bat, Downtown) -> 5
+
+[PROMPT]... The story begins with the following steps:\n
+Alice steals the bat from Charlie.
+The detective searches downtown for clues.
+The detective suspects Alice of theft.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+Alice apologizes to Charlie and returns the bat.
+The detective arrests Alice for theft.
+
+RANKS:
+findClues(Sherlock, Murder, Basketball, Downtown) -> 7
+findClues(Sherlock, Murder, Bat, Downtown) -> 7
+travel(Alice, Downtown, HomeB) -> 9
+travel(Alice, Downtown, BasketballCourt) -> 9
+travel(Bob, HomeB, BasketballCourt) -> 10
+steal(Charlie, Alice, Theft, Bat, Downtown) -> 4
+travel(Bob, HomeB, Downtown) -> 11
+suspectOfCrime(Sherlock, Alice, Theft, Bat, Downtown) -> 1
+travel(Charlie, Downtown, HomeB) -> 10
+travel(Charlie, Downtown, BasketballCourt) -> 11
+travel(Sherlock, Downtown, HomeB) -> 8
+travel(Sherlock, Downtown, BasketballCourt) -> 8
+findClues(Sherlock, Theft, Basketball, Downtown) -> 7
+arrest(Sherlock, Alice, Downtown, Theft) -> 0
+findClues(Sherlock, Theft, Bat, Downtown) -> 7
+kill(Alice, Charlie, Murder, Bat, Downtown) -> 4

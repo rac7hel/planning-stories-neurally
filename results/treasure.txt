@@ -1,0 +1,99 @@
+PROMPT:
+Jim Hawkins is at Port Royal. Long John Silver is at Port Royal. The treasure is buried. Jim Hawkins believes that Long John Silver does not know where the treasure is. Long John Silver does not know where the treasure is. Jim Hawkins and Long John Silver each want to have the treasure for themselves. Characters can spread a rumor, sail, dig, and take. The story must end with Jim Hawkins having the treasure. List two different actions that could happen first. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+Jim Hawkins sails to the island where the treasure is buried.
+Long John Silver follows Jim Hawkins to the island.
+
+RANKS:
+rumor() -> 2
+sail() -> 3
+
+[PROMPT]... The story begins with the following steps:\n
+Jim Hawkins spreads a rumor that the treasure is buried on the island.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+Jim Hawkins and Long John Silver sail to the island.
+Jim Hawkins digs up the treasure.
+
+RANKS:
+rumor() -> 3
+sail() -> 1
+
+[PROMPT]... The story begins with the following steps:\n
+Jim Hawkins and Long John Silver sail from Port Royal to the island.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+Jim Hawkins and Long John Silver search the island for the treasure.
+Jim Hawkins finds the treasure and takes it.
+
+RANKS:
+rumor() -> 4
+dig() -> 1
+
+[PROMPT]... The story begins with the following steps:\n
+Jim Hawkins spreads a rumor that the treasure is buried on the island.
+Jim Hawkins and Long John Silver sail from Port Royal to the island.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+Jim Hawkins and Long John Silver start to dig for the treasure.
+Jim Hawkins finds the treasure and takes it for himself
+
+RANKS:
+rumor() -> 4
+dig() -> 2
+
+[PROMPT]... The story begins with the following steps:\n
+Jim Hawkins and Long John Silver sail from Port Royal to the island.
+Jim Hawkins digs up the treasure.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+Long John Silver attempts to take the treasure from Jim Hawkins.
+Jim Hawkins escapes with the treasure.
+
+RANKS:
+take(Hawkins, Treasure) -> 1
+take(Silver, Treasure) -> 2
+
+[PROMPT]... The story begins with the following steps:\n
+Jim Hawkins spreads a rumor that the treasure is buried on the island.
+Jim Hawkins spreads a rumor that the treasure is buried on the island.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+Jim Hawkins sails to the island to search for the treasure.
+Long John Silver follows Jim Hawkins to the island to search
+
+RANKS:
+rumor() -> 3
+sail() -> 3
+
+[PROMPT]... The story begins with the following steps:\n
+Jim Hawkins spreads a rumor that the treasure is buried on the island.
+Jim Hawkins and Long John Silver sail from Port Royal to the island.
+Jim Hawkins digs up the treasure.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+Jim Hawkins takes the treasure and sails away.
+Long John Silver is left behind, unable to get the treasure.
+
+RANKS:
+take(Hawkins, Treasure) -> 1
+take(Silver, Treasure) -> 3
+
+[PROMPT]... The story begins with the following steps:\n
+Jim Hawkins and Long John Silver sail from Port Royal to the island.
+Jim Hawkins digs up the treasure.
+Long John Silver takes the treasure.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+Jim Hawkins fights Long John Silver and takes back the treasure.
+Jim Hawkins tricks Long John Silver and takes back the treasure
+
+RANKS:

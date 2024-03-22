@@ -1,0 +1,64 @@
+PROMPT:
+Talia is alive. Rory is alive. Vince is alive. Gargax is alive. Talia is at the village. Rory is at the village. Vince is at the village. Gargax is at the cave. Vince has the money. The treasure is at the cave. Talia loves Rory. Rory loves Talia. Vince loves Talia. Talia wants to be happy and wealthy. Rory wants to be happy. Vince wants to be happy and wealthy. Gargax wants to be wealthy and does not want to be hungry. Characters can propose, accept, marry, travel, pick up, take, get hungry, and eat. The story must end with Talia either being married or having the treasure or the money. List two different actions that could happen first. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+Rory proposes to Talia. 
+Vince takes the money.
+
+RANKS:
+propose(Talia, Rory, Village) -> 1
+get_hungry(Talia) -> 7
+travel(Talia, Village, Cave) -> 8
+propose(Rory, Talia, Village) -> 0
+get_hungry(Rory) -> 6
+propose(Vince, Talia, Village) -> 4
+travel(Rory, Village, Cave) -> 7
+get_hungry(Vince) -> 5
+get_hungry(Gargax) -> 11
+travel(Vince, Village, Cave) -> 7
+travel(Gargax, Cave, Village) -> 11
+pickup(Gargax, Treasure, Cave) -> 9
+
+[PROMPT]... The story begins with the following steps:\n
+Rory proposes to Talia.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+Talia accepts Rory's proposal.
+Vince gives Talia the money.
+
+RANKS:
+propose(Talia, Rory, Village) -> 2
+get_hungry(Talia) -> 8
+travel(Talia, Village, Cave) -> 8
+get_hungry(Rory) -> 8
+propose(Vince, Talia, Village) -> 4
+travel(Rory, Village, Cave) -> 9
+get_hungry(Vince) -> 8
+get_hungry(Gargax) -> 12
+accept(Talia, Rory, Village) -> 0
+travel(Vince, Village, Cave) -> 9
+travel(Gargax, Cave, Village) -> 12
+pickup(Gargax, Treasure, Cave) -> 9
+
+[PROMPT]... The story begins with the following steps:\n
+Rory proposes to Talia.
+Talia accepts Rory's proposal.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+Vince and Gargax travel to the cave to get the treasure.
+Rory and Talia get married.
+
+RANKS:
+get_hungry(Talia) -> 8
+travel(Talia, Village, Cave) -> 7
+get_hungry(Rory) -> 7
+propose(Vince, Talia, Village) -> 5
+travel(Rory, Village, Cave) -> 7
+get_hungry(Vince) -> 8
+get_hungry(Gargax) -> 7
+travel(Vince, Village, Cave) -> 4
+travel(Gargax, Cave, Village) -> 4
+pickup(Gargax, Treasure, Cave) -> 5
+marry(Rory, Talia, Village) -> 0

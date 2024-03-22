@@ -1,0 +1,808 @@
+PROMPT:
+The bank has Money. The villain wants to control the President. Characters can steal, bribe, threaten, coerce, and give. The story must end with the villain controlling the President. List two different actions that could happen first. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+The villain bribes the President.
+The villain threatens the President.
+
+RANKS:
+steal(Hero, Money, Bank) -> 7
+steal(Villain, Money, Bank) -> 6
+steal(President, Money, Bank) -> 6
+threaten(Hero, Villain) -> 4
+threaten(Hero, President) -> 1
+threaten(Villain, Hero) -> 3
+threaten(Villain, President) -> 0
+threaten(President, Hero) -> 2
+threaten(President, Villain) -> 1
+
+[PROMPT]... The story begins with the following steps:\n
+The villain threatens the President.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+The President agrees to the villain's demands.
+The villain pays the President a large sum of money.
+
+RANKS:
+steal(Hero, Money, Bank) -> 7
+steal(Villain, Money, Bank) -> 6
+steal(President, Money, Bank) -> 6
+coerce(Villain, President, Money) -> 4
+threaten(Hero, Villain) -> 7
+threaten(Hero, President) -> 5
+threaten(Villain, Hero) -> 6
+threaten(Villain, President) -> 4
+threaten(President, Hero) -> 5
+threaten(President, Villain) -> 4
+
+[PROMPT]... The story begins with the following steps:\n
+The hero threatens the President.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+The President agrees to the villain's demands in exchange for money from the bank.
+The villain pays the President with the
+
+RANKS:
+steal(Hero, Money, Bank) -> 6
+coerce(Hero, President, Money) -> 4
+steal(Villain, Money, Bank) -> 6
+steal(President, Money, Bank) -> 5
+threaten(Hero, Villain) -> 8
+threaten(Hero, President) -> 6
+threaten(Villain, Hero) -> 7
+threaten(Villain, President) -> 5
+threaten(President, Hero) -> 6
+threaten(President, Villain) -> 5
+
+[PROMPT]... The story begins with the following steps:\n
+The President threatens the villain.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+The villain bribes the President.
+The President agrees to the villain's demands.
+
+RANKS:
+steal(Hero, Money, Bank) -> 7
+steal(Villain, Money, Bank) -> 6
+steal(President, Money, Bank) -> 6
+coerce(President, Villain, Money) -> 3
+threaten(Hero, Villain) -> 6
+threaten(Hero, President) -> 4
+threaten(Villain, Hero) -> 5
+threaten(Villain, President) -> 3
+threaten(President, Hero) -> 4
+threaten(President, Villain) -> 3
+
+[PROMPT]... The story begins with the following steps:\n
+The President threatens the hero.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+The hero bribes the President with money from the bank. 
+The villain coerces the President with threats of violence
+
+RANKS:
+steal(Hero, Money, Bank) -> 4
+steal(Villain, Money, Bank) -> 5
+steal(President, Money, Bank) -> 4
+coerce(President, Hero, Money) -> 3
+threaten(Hero, Villain) -> 5
+threaten(Hero, President) -> 3
+threaten(Villain, Hero) -> 5
+threaten(Villain, President) -> 2
+threaten(President, Hero) -> 4
+threaten(President, Villain) -> 3
+
+[PROMPT]... The story begins with the following steps:\n
+The villain threatens the hero.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+The hero attempts to bribe the villain with money from the bank.
+The villain accepts the bribe and uses it to
+
+RANKS:
+steal(Hero, Money, Bank) -> 3
+steal(Villain, Money, Bank) -> 3
+coerce(Villain, Hero, Money) -> 4
+steal(President, Money, Bank) -> 6
+threaten(Hero, Villain) -> 5
+threaten(Hero, President) -> 6
+threaten(Villain, Hero) -> 5
+threaten(Villain, President) -> 7
+threaten(President, Hero) -> 7
+threaten(President, Villain) -> 7
+
+[PROMPT]... The story begins with the following steps:\n
+The hero threatens the villain.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+The villain bribes the President with money from the bank.
+The villain coerces the President into submission with threats.
+
+RANKS:
+steal(Hero, Money, Bank) -> 5
+steal(Villain, Money, Bank) -> 4
+steal(President, Money, Bank) -> 4
+threaten(Hero, Villain) -> 5
+threaten(Hero, President) -> 3
+threaten(Villain, Hero) -> 4
+threaten(Villain, President) -> 2
+threaten(President, Hero) -> 4
+threaten(President, Villain) -> 2
+coerce(Hero, Villain, Money) -> 5
+
+[PROMPT]... The story begins with the following steps:\n
+The villain threatens the President.
+The villain threatens the President.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+The President agrees to the villain's demands.
+The villain bribes the President with money from the bank.
+
+RANKS:
+steal(Hero, Money, Bank) -> 5
+steal(Villain, Money, Bank) -> 4
+steal(President, Money, Bank) -> 4
+coerce(Villain, President, Money) -> 3
+threaten(Hero, Villain) -> 7
+threaten(Hero, President) -> 5
+threaten(Villain, Hero) -> 6
+threaten(Villain, President) -> 4
+threaten(President, Hero) -> 5
+threaten(President, Villain) -> 4
+
+[PROMPT]... The story begins with the following steps:\n
+The villain threatens the President.
+The President threatens the villain.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+The villain bribes the President.
+The President agrees to the villain's demands.
+
+RANKS:
+steal(Hero, Money, Bank) -> 7
+steal(Villain, Money, Bank) -> 6
+steal(President, Money, Bank) -> 6
+coerce(Villain, President, Money) -> 3
+coerce(President, Villain, Money) -> 3
+threaten(Hero, Villain) -> 6
+threaten(Hero, President) -> 4
+threaten(Villain, Hero) -> 5
+threaten(Villain, President) -> 3
+threaten(President, Hero) -> 4
+threaten(President, Villain) -> 3
+
+[PROMPT]... The story begins with the following steps:\n
+The villain threatens the President.
+The villain coerces the President into giving up Money.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+The villain bribes the President with Money.
+The villain steals the President's power and authority.
+
+RANKS:
+steal(Hero, Money, Bank) -> 6
+steal(Villain, Money, Bank) -> 5
+steal(President, Money, Bank) -> 5
+coerce(Villain, President, Money) -> 2
+threaten(Hero, Villain) -> 6
+threaten(Hero, President) -> 5
+threaten(Villain, Hero) -> 5
+threaten(Villain, President) -> 3
+threaten(President, Hero) -> 5
+threaten(President, Villain) -> 4
+
+[PROMPT]... The story begins with the following steps:\n
+The President threatens the villain.
+The villain threatens the President.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+The President bribes the villain.
+The villain steals the bank's money.
+
+RANKS:
+steal(Hero, Money, Bank) -> 2
+steal(Villain, Money, Bank) -> 1
+steal(President, Money, Bank) -> 5
+coerce(Villain, President, Money) -> 3
+coerce(President, Villain, Money) -> 3
+threaten(Hero, Villain) -> 6
+threaten(Hero, President) -> 4
+threaten(Villain, Hero) -> 5
+threaten(Villain, President) -> 4
+threaten(President, Hero) -> 4
+threaten(President, Villain) -> 3
+
+[PROMPT]... The story begins with the following steps:\n
+The President threatens the villain.
+The President threatens the villain.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+The villain bribes the President.
+The villain coerces the President.
+
+RANKS:
+steal(Hero, Money, Bank) -> 7
+steal(Villain, Money, Bank) -> 6
+steal(President, Money, Bank) -> 6
+coerce(President, Villain, Money) -> 3
+threaten(Hero, Villain) -> 6
+threaten(Hero, President) -> 4
+threaten(Villain, Hero) -> 5
+threaten(Villain, President) -> 2
+threaten(President, Hero) -> 4
+threaten(President, Villain) -> 3
+
+[PROMPT]... The story begins with the following steps:\n
+The President threatens the villain.
+The President coerces the villain into giving up Money.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+The villain bribes the President with Money.
+The villain threatens the President with dire consequences if they do not comply.
+
+RANKS:
+steal(Hero, Money, Bank) -> 6
+steal(Villain, Money, Bank) -> 5
+steal(President, Money, Bank) -> 5
+coerce(President, Villain, Money) -> 2
+threaten(Hero, Villain) -> 6
+threaten(Hero, President) -> 3
+threaten(Villain, Hero) -> 5
+threaten(Villain, President) -> 2
+threaten(President, Hero) -> 4
+threaten(President, Villain) -> 2
+
+[PROMPT]... The story begins with the following steps:\n
+The President threatens the hero.
+The villain threatens the President.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+The hero bribes the President with money from the bank.
+The villain coerces the President into submission.
+
+RANKS:
+steal(Hero, Money, Bank) -> 4
+steal(Villain, Money, Bank) -> 5
+steal(President, Money, Bank) -> 4
+coerce(Villain, President, Money) -> 3
+coerce(President, Hero, Money) -> 4
+threaten(Hero, Villain) -> 6
+threaten(Hero, President) -> 4
+threaten(Villain, Hero) -> 5
+threaten(Villain, President) -> 3
+threaten(President, Hero) -> 4
+threaten(President, Villain) -> 3
+
+[PROMPT]... The story begins with the following steps:\n
+The villain threatens the President.
+The hero threatens the President.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+The villain bribes the President. 
+The hero steals the bank's money.
+
+RANKS:
+steal(Hero, Money, Bank) -> 1
+coerce(Hero, President, Money) -> 4
+steal(Villain, Money, Bank) -> 2
+steal(President, Money, Bank) -> 5
+coerce(Villain, President, Money) -> 3
+threaten(Hero, Villain) -> 6
+threaten(Hero, President) -> 4
+threaten(Villain, Hero) -> 5
+threaten(Villain, President) -> 3
+threaten(President, Hero) -> 4
+threaten(President, Villain) -> 3
+
+[PROMPT]... The story begins with the following steps:\n
+The villain threatens the President.
+The President threatens the hero.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+The hero bribes the President with money from the bank.
+The villain coerces the President with threats of violence.
+
+RANKS:
+steal(Hero, Money, Bank) -> 4
+steal(Villain, Money, Bank) -> 5
+steal(President, Money, Bank) -> 4
+coerce(Villain, President, Money) -> 4
+coerce(President, Hero, Money) -> 4
+threaten(Hero, Villain) -> 5
+threaten(Hero, President) -> 3
+threaten(Villain, Hero) -> 4
+threaten(Villain, President) -> 2
+threaten(President, Hero) -> 3
+threaten(President, Villain) -> 2
+
+[PROMPT]... The story begins with the following steps:\n
+The hero threatens the President.
+The hero coerces the President into giving up Money.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+The villain bribes the President with Money.
+The villain threatens the President with violence.
+
+RANKS:
+steal(Hero, Money, Bank) -> 6
+coerce(Hero, President, Money) -> 3
+steal(Villain, Money, Bank) -> 5
+steal(President, Money, Bank) -> 5
+threaten(Hero, Villain) -> 5
+threaten(Hero, President) -> 2
+threaten(Villain, Hero) -> 4
+threaten(Villain, President) -> 1
+threaten(President, Hero) -> 3
+threaten(President, Villain) -> 2
+
+[PROMPT]... The story begins with the following steps:\n
+The President threatens the villain.
+The hero threatens the President.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+The villain bribes the President.
+The President agrees to the villain's demands.
+
+RANKS:
+steal(Hero, Money, Bank) -> 7
+coerce(Hero, President, Money) -> 4
+steal(Villain, Money, Bank) -> 6
+steal(President, Money, Bank) -> 6
+coerce(President, Villain, Money) -> 3
+threaten(Hero, Villain) -> 6
+threaten(Hero, President) -> 4
+threaten(Villain, Hero) -> 5
+threaten(Villain, President) -> 3
+threaten(President, Hero) -> 4
+threaten(President, Villain) -> 3
+
+[PROMPT]... The story begins with the following steps:\n
+The President threatens the villain.
+The President threatens the hero.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+The villain bribes the President with money from the bank.
+The villain coerces the President with threats of violence.
+
+RANKS:
+steal(Hero, Money, Bank) -> 5
+steal(Villain, Money, Bank) -> 4
+steal(President, Money, Bank) -> 4
+coerce(President, Hero, Money) -> 4
+coerce(President, Villain, Money) -> 3
+threaten(Hero, Villain) -> 5
+threaten(Hero, President) -> 3
+threaten(Villain, Hero) -> 4
+threaten(Villain, President) -> 2
+threaten(President, Hero) -> 3
+threaten(President, Villain) -> 2
+
+[PROMPT]... The story begins with the following steps:\n
+The President threatens the hero.
+The hero threatens the President.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+The President bribes the hero.
+The hero steals the bank's money.
+
+RANKS:
+steal(Hero, Money, Bank) -> 1
+coerce(Hero, President, Money) -> 4
+steal(Villain, Money, Bank) -> 2
+steal(President, Money, Bank) -> 5
+coerce(President, Hero, Money) -> 3
+threaten(Hero, Villain) -> 6
+threaten(Hero, President) -> 4
+threaten(Villain, Hero) -> 6
+threaten(Villain, President) -> 6
+threaten(President, Hero) -> 3
+threaten(President, Villain) -> 5
+
+[PROMPT]... The story begins with the following steps:\n
+The President threatens the hero.
+The President threatens the villain.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+The villain bribes the President.
+The hero steals the money from the bank.
+
+RANKS:
+steal(Hero, Money, Bank) -> 0
+steal(Villain, Money, Bank) -> 2
+steal(President, Money, Bank) -> 5
+coerce(President, Hero, Money) -> 4
+coerce(President, Villain, Money) -> 3
+threaten(Hero, Villain) -> 6
+threaten(Hero, President) -> 4
+threaten(Villain, Hero) -> 5
+threaten(Villain, President) -> 3
+threaten(President, Hero) -> 4
+threaten(President, Villain) -> 3
+
+[PROMPT]... The story begins with the following steps:\n
+The President threatens the hero.
+The President coerces the hero into giving up Money.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+The villain bribes the President.
+The villain threatens the President.
+
+RANKS:
+steal(Hero, Money, Bank) -> 7
+steal(Villain, Money, Bank) -> 6
+steal(President, Money, Bank) -> 6
+coerce(President, Hero, Money) -> 4
+threaten(Hero, Villain) -> 4
+threaten(Hero, President) -> 1
+threaten(Villain, Hero) -> 3
+threaten(Villain, President) -> 0
+threaten(President, Hero) -> 2
+threaten(President, Villain) -> 1
+
+[PROMPT]... The story begins with the following steps:\n
+The villain steals Money from the bank.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+The villain bribes the President with Money.
+The villain threatens the President with harm if they do not comply.
+
+RANKS:
+bribe(Villain, Hero, Money) -> 2
+bribe(Villain, President, Money) -> 0
+give(Villain, Hero, Money) -> 4
+give(Villain, President, Money) -> 2
+threaten(Hero, Villain) -> 5
+threaten(Hero, President) -> 3
+threaten(Villain, Hero) -> 4
+threaten(Villain, President) -> 2
+threaten(President, Hero) -> 4
+threaten(President, Villain) -> 2
+
+[PROMPT]... The story begins with the following steps:\n
+The President steals Money from the bank.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+The President bribes the villain with the Money.
+The villain threatens the President with consequences if they do not comply with their
+
+RANKS:
+bribe(President, Hero, Money) -> 1
+bribe(President, Villain, Money) -> 0
+threaten(Hero, Villain) -> 7
+give(President, Hero, Money) -> 4
+threaten(Hero, President) -> 5
+give(President, Villain, Money) -> 2
+threaten(Villain, Hero) -> 6
+threaten(Villain, President) -> 5
+threaten(President, Hero) -> 5
+threaten(President, Villain) -> 4
+
+[PROMPT]... The story begins with the following steps:\n
+The villain threatens the President.
+The villain threatens the hero.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+The villain bribes the President with money from the bank.
+The villain coerces the President into submission with a threat of
+
+RANKS:
+steal(Hero, Money, Bank) -> 5
+steal(Villain, Money, Bank) -> 4
+coerce(Villain, Hero, Money) -> 5
+steal(President, Money, Bank) -> 4
+coerce(Villain, President, Money) -> 3
+threaten(Hero, Villain) -> 7
+threaten(Hero, President) -> 5
+threaten(Villain, Hero) -> 6
+threaten(Villain, President) -> 4
+threaten(President, Hero) -> 6
+threaten(President, Villain) -> 5
+
+[PROMPT]... The story begins with the following steps:\n
+The villain threatens the President.
+The villain steals Money from the bank.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+The villain bribes the President with Money.
+The villain coerces the President with threats of harm.
+
+RANKS:
+coerce(Villain, President, Money) -> 2
+bribe(Villain, Hero, Money) -> 2
+bribe(Villain, President, Money) -> 0
+give(Villain, Hero, Money) -> 4
+give(Villain, President, Money) -> 2
+threaten(Hero, Villain) -> 5
+threaten(Hero, President) -> 3
+threaten(Villain, Hero) -> 4
+threaten(Villain, President) -> 1
+threaten(President, Hero) -> 3
+threaten(President, Villain) -> 2
+
+[PROMPT]... The story begins with the following steps:\n
+The villain threatens the President.
+The President steals Money from the bank.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+The villain bribes the President with Money.
+The President agrees to be controlled by the villain.
+
+RANKS:
+coerce(Villain, President, Money) -> 2
+bribe(President, Hero, Money) -> 2
+bribe(President, Villain, Money) -> 1
+threaten(Hero, Villain) -> 6
+give(President, Hero, Money) -> 5
+threaten(Hero, President) -> 5
+give(President, Villain, Money) -> 2
+threaten(Villain, Hero) -> 6
+threaten(Villain, President) -> 4
+threaten(President, Hero) -> 5
+threaten(President, Villain) -> 4
+
+[PROMPT]... The story begins with the following steps:\n
+The hero threatens the President.
+The villain threatens the President.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+The hero bribes the President.
+The villain offers the President money from the bank.
+
+RANKS:
+steal(Hero, Money, Bank) -> 6
+coerce(Hero, President, Money) -> 3
+steal(Villain, Money, Bank) -> 5
+steal(President, Money, Bank) -> 5
+coerce(Villain, President, Money) -> 3
+threaten(Hero, Villain) -> 6
+threaten(Hero, President) -> 3
+threaten(Villain, Hero) -> 6
+threaten(Villain, President) -> 4
+threaten(President, Hero) -> 4
+threaten(President, Villain) -> 5
+
+[PROMPT]... The story begins with the following steps:\n
+The hero threatens the President.
+The President threatens the villain.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+The villain bribes the President. 
+The villain coerces the President with the bank's money.
+
+RANKS:
+steal(Hero, Money, Bank) -> 5
+coerce(Hero, President, Money) -> 3
+steal(Villain, Money, Bank) -> 4
+steal(President, Money, Bank) -> 4
+coerce(President, Villain, Money) -> 2
+threaten(Hero, Villain) -> 6
+threaten(Hero, President) -> 4
+threaten(Villain, Hero) -> 5
+threaten(Villain, President) -> 3
+threaten(President, Hero) -> 4
+threaten(President, Villain) -> 3
+
+[PROMPT]... The story begins with the following steps:\n
+The hero threatens the President.
+The President steals Money from the bank.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+The President bribes the villain with Money.
+The villain coerces the President into doing what they want.
+
+RANKS:
+coerce(Hero, President, Money) -> 3
+bribe(President, Hero, Money) -> 1
+bribe(President, Villain, Money) -> 0
+threaten(Hero, Villain) -> 6
+give(President, Hero, Money) -> 4
+threaten(Hero, President) -> 5
+give(President, Villain, Money) -> 2
+threaten(Villain, Hero) -> 5
+threaten(Villain, President) -> 3
+threaten(President, Hero) -> 5
+threaten(President, Villain) -> 4
+
+[PROMPT]... The story begins with the following steps:\n
+The President threatens the villain.
+The villain threatens the hero.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+The hero bribes the villain with money from the bank.
+The villain coerces the President into submission.
+
+RANKS:
+steal(Hero, Money, Bank) -> 3
+steal(Villain, Money, Bank) -> 3
+coerce(Villain, Hero, Money) -> 4
+steal(President, Money, Bank) -> 6
+coerce(President, Villain, Money) -> 3
+threaten(Hero, Villain) -> 5
+threaten(Hero, President) -> 4
+threaten(Villain, Hero) -> 5
+threaten(Villain, President) -> 3
+threaten(President, Hero) -> 4
+threaten(President, Villain) -> 3
+
+[PROMPT]... The story begins with the following steps:\n
+The President threatens the hero.
+The President threatens the hero.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+The hero bribes the President with money from the bank.
+The villain coerces the President into submission.
+
+RANKS:
+steal(Hero, Money, Bank) -> 4
+steal(Villain, Money, Bank) -> 5
+steal(President, Money, Bank) -> 4
+coerce(President, Hero, Money) -> 4
+threaten(Hero, Villain) -> 6
+threaten(Hero, President) -> 4
+threaten(Villain, Hero) -> 5
+threaten(Villain, President) -> 3
+threaten(President, Hero) -> 4
+threaten(President, Villain) -> 3
+
+[PROMPT]... The story begins with the following steps:\n
+The President threatens the hero.
+The hero steals Money from the bank.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+The hero bribes the President with Money.
+The villain coerces the President into submission.
+
+RANKS:
+bribe(Hero, Villain, Money) -> 2
+coerce(President, Hero, Money) -> 3
+bribe(Hero, President, Money) -> 0
+give(Hero, Villain, Money) -> 4
+give(Hero, President, Money) -> 2
+threaten(Hero, Villain) -> 6
+threaten(Hero, President) -> 4
+threaten(Villain, Hero) -> 5
+threaten(Villain, President) -> 3
+threaten(President, Hero) -> 4
+threaten(President, Villain) -> 3
+
+[PROMPT]... The story begins with the following steps:\n
+The President threatens the hero.
+The President steals Money from the bank.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+The villain bribes the President with Money.
+The villain coerces the President into submission.
+
+RANKS:
+coerce(President, Hero, Money) -> 3
+bribe(President, Hero, Money) -> 2
+bribe(President, Villain, Money) -> 1
+threaten(Hero, Villain) -> 6
+give(President, Hero, Money) -> 5
+threaten(Hero, President) -> 4
+give(President, Villain, Money) -> 2
+threaten(Villain, Hero) -> 5
+threaten(Villain, President) -> 3
+threaten(President, Hero) -> 4
+threaten(President, Villain) -> 3
+
+[PROMPT]... The story begins with the following steps:\n
+The villain threatens the hero.
+The hero steals Money from the bank.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+The hero bribes the President with Money.
+The villain coerces the President into submission.
+
+RANKS:
+coerce(Villain, Hero, Money) -> 5
+bribe(Hero, Villain, Money) -> 2
+bribe(Hero, President, Money) -> 0
+give(Hero, Villain, Money) -> 4
+give(Hero, President, Money) -> 2
+threaten(Hero, Villain) -> 6
+threaten(Hero, President) -> 4
+threaten(Villain, Hero) -> 5
+threaten(Villain, President) -> 3
+threaten(President, Hero) -> 4
+threaten(President, Villain) -> 3
+
+[PROMPT]... The story begins with the following steps:\n
+The villain threatens the hero.
+The villain steals Money from the bank.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+The villain bribes the President with Money.
+The villain coerces the President into submission.
+
+RANKS:
+coerce(Villain, Hero, Money) -> 4
+bribe(Villain, Hero, Money) -> 2
+bribe(Villain, President, Money) -> 0
+give(Villain, Hero, Money) -> 4
+give(Villain, President, Money) -> 2
+threaten(Hero, Villain) -> 6
+threaten(Hero, President) -> 4
+threaten(Villain, Hero) -> 5
+threaten(Villain, President) -> 3
+threaten(President, Hero) -> 4
+threaten(President, Villain) -> 3
+
+[PROMPT]... The story begins with the following steps:\n
+The hero threatens the villain.
+The villain threatens the President.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+The hero bribes the President.
+The villain steals the bank's money.
+
+RANKS:
+steal(Hero, Money, Bank) -> 2
+steal(Villain, Money, Bank) -> 1
+steal(President, Money, Bank) -> 5
+coerce(Villain, President, Money) -> 4
+threaten(Hero, Villain) -> 6
+threaten(Hero, President) -> 3
+threaten(Villain, Hero) -> 5
+threaten(Villain, President) -> 5
+threaten(President, Hero) -> 4
+threaten(President, Villain) -> 5
+coerce(Hero, Villain, Money) -> 5
+
+[PROMPT]... The story begins with the following steps:\n
+The hero threatens the villain.
+The President threatens the villain.
+List two different actions that could happen next. State each as a short sentence on its own line. 
+
+SUGGESTIONS:
+The villain bribes the President with money from the bank.
+The villain coerces the President with threats of violence.
+
+RANKS:
+steal(Hero, Money, Bank) -> 5
+steal(Villain, Money, Bank) -> 4
+steal(President, Money, Bank) -> 4
+coerce(President, Villain, Money) -> 3
+threaten(Hero, Villain) -> 5
+threaten(Hero, President) -> 3
+threaten(Villain, Hero) -> 4
+threaten(Villain, President) -> 2
+threaten(President, Hero) -> 3
+threaten(President, Villain) -> 2
+coerce(Hero, Villain, Money) -> 5

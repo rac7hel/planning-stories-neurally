@@ -26,3 +26,12 @@ Writes two output files:
 - `out/search.txt` lists each node in the order visited 
 - `out/transcript.txt` shows the full conversation with GPT and resulting action costs at each step.
 
+## Paper
+
+[Preprint](https://www.techrxiv.org/doi/full/10.36227/techrxiv.171085113.35202301/v1)
+
+Rachelyn Farrell, Stephen G Ware. Planning Stories Neurally. TechRxiv. March 19, 2024. DOI: 10.36227/techrxiv.171085113.35202301/v1
+
+## Results 
+
+Search results for the [Sabre benchmark problems](https://github.com/sgware/sabre-benchmarks) are included [here](results/).
